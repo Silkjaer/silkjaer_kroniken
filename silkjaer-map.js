@@ -71,6 +71,10 @@
       if (this._pending) this.setPlace(this._pending);
     }
 
+    refresh() {
+      if (this._map) setTimeout(() => this._map.invalidateSize(), 30);
+    }
+
     setPlace(key) {
       if (!PLACES[key]) return;
       if (!this._ready) { this._pending = key; return; }

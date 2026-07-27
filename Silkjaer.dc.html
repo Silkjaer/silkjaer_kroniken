@@ -51,7 +51,47 @@ button{font-family:inherit}
   <button type="button" data-goto="kap17" onClick="{{ goChapter }}" style="display:flex;align-items:center;gap:10px;background:none;border:0;padding:3px 0;cursor:pointer;text-align:left;"><span data-dot style="width:18px;height:1px;background:#1e1c18;opacity:.3;display:block;"></span><span data-lbl style="font:10px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#1e1c18;opacity:.35;">Grenene</span></button>
   <button type="button" data-goto="kap18" onClick="{{ goChapter }}" style="display:flex;align-items:center;gap:10px;background:none;border:0;padding:3px 0;cursor:pointer;text-align:left;"><span data-dot style="width:18px;height:1px;background:#1e1c18;opacity:.3;display:block;"></span><span data-lbl style="font:10px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#1e1c18;opacity:.35;">1960 · Gården</span></button>
   <button type="button" data-goto="kap19" onClick="{{ goChapter }}" style="display:flex;align-items:center;gap:10px;background:none;border:0;padding:3px 0;cursor:pointer;text-align:left;"><span data-dot style="width:18px;height:1px;background:#1e1c18;opacity:.3;display:block;"></span><span data-lbl style="font:10px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#1e1c18;opacity:.35;">Arven</span></button>
+  <button type="button" data-goto="navnenoegle" onClick="{{ goChapter }}" style="display:flex;align-items:center;gap:10px;background:none;border:0;padding:3px 0;cursor:pointer;text-align:left;"><span data-dot style="width:18px;height:1px;background:#1e1c18;opacity:.3;display:block;"></span><span data-lbl style="font:10px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#1e1c18;opacity:.35;">Navnenøgle</span></button>
   <button type="button" data-goto="stamtavle" onClick="{{ goChapter }}" style="display:flex;align-items:center;gap:10px;background:none;border:0;padding:3px 0;cursor:pointer;text-align:left;"><span data-dot style="width:18px;height:1px;background:#1e1c18;opacity:.3;display:block;"></span><span data-lbl style="font:10px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#1e1c18;opacity:.35;">Slægtstavlen</span></button>
+</nav>
+
+<button type="button" data-toc-open style="display:none;position:fixed;right:12px;top:12px;z-index:82;background:rgba(20,24,28,.9);color:#f0ebe0;border:1px solid rgba(220,214,200,.28);padding:10px 14px;font:10px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;cursor:pointer;">Indhold</button>
+
+<nav data-toc style="display:none;position:fixed;inset:0;z-index:90;background:rgba(15,19,23,.98);overflow-y:auto;-webkit-overflow-scrolling:touch;padding:clamp(18px,5vw,40px);">
+  <div style="max-width:640px;margin:0 auto;">
+    <div style="display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:22px;">
+      <div>
+        <div style="font:10px/1 'IBM Plex Mono',monospace;letter-spacing:.24em;text-transform:uppercase;color:#7fa3ae;">Silkjær · indhold</div>
+        <div style="font-size:28px;line-height:1.1;color:#f0ebe0;margin-top:8px;font-weight:300;">Tyve kapitler</div>
+      </div>
+      <button type="button" data-toc-close style="background:none;border:1px solid rgba(220,214,200,.3);color:#dcd6c8;padding:10px 13px;font:10px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;cursor:pointer;">LUK ×</button>
+    </div>
+    <button type="button" data-goto="kap1" onClick="{{ goChapter }}" style="display:flex;align-items:baseline;gap:14px;width:100%;background:none;border:0;border-bottom:1px solid rgba(220,214,200,.14);padding:14px 2px;cursor:pointer;text-align:left;color:#dcd6c8;font-family:inherit;"><span style="font:10px/1.6 'IBM Plex Mono',monospace;color:#7fa3ae;min-width:26px;">1</span><span style="flex:1;"><span style="display:block;font-size:19px;line-height:1.3;color:#f0ebe0;">Kæret</span><span style="display:block;font:10px/1.6 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#8d9aa0;margin-top:2px;">ca. 1650</span></span></button>
+    <button type="button" data-goto="kap2" onClick="{{ goChapter }}" style="display:flex;align-items:baseline;gap:14px;width:100%;background:none;border:0;border-bottom:1px solid rgba(220,214,200,.14);padding:14px 2px;cursor:pointer;text-align:left;color:#dcd6c8;font-family:inherit;"><span style="font:10px/1.6 'IBM Plex Mono',monospace;color:#7fa3ae;min-width:26px;">2</span><span style="flex:1;"><span style="display:block;font-size:19px;line-height:1.3;color:#f0ebe0;">Havbjergene</span><span style="display:block;font:10px/1.6 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#8d9aa0;margin-top:2px;">1800-tallet</span></span></button>
+    <button type="button" data-goto="kap3" onClick="{{ goChapter }}" style="display:flex;align-items:baseline;gap:14px;width:100%;background:none;border:0;border-bottom:1px solid rgba(220,214,200,.14);padding:14px 2px;cursor:pointer;text-align:left;color:#dcd6c8;font-family:inherit;"><span style="font:10px/1.6 'IBM Plex Mono',monospace;color:#7fa3ae;min-width:26px;">3</span><span style="flex:1;"><span style="display:block;font-size:19px;line-height:1.3;color:#f0ebe0;">Thomas og Anne Marie</span><span style="display:block;font:10px/1.6 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#8d9aa0;margin-top:2px;">1710—1863</span></span></button>
+    <button type="button" data-goto="kap4" onClick="{{ goChapter }}" style="display:flex;align-items:baseline;gap:14px;width:100%;background:none;border:0;border-bottom:1px solid rgba(220,214,200,.14);padding:14px 2px;cursor:pointer;text-align:left;color:#dcd6c8;font-family:inherit;"><span style="font:10px/1.6 'IBM Plex Mono',monospace;color:#7fa3ae;min-width:26px;">4</span><span style="flex:1;"><span style="display:block;font-size:19px;line-height:1.3;color:#f0ebe0;">Da døden kom til huset</span><span style="display:block;font:10px/1.6 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#8d9aa0;margin-top:2px;">1863—1869</span></span></button>
+    <button type="button" data-goto="kap5" onClick="{{ goChapter }}" style="display:flex;align-items:baseline;gap:14px;width:100%;background:none;border:0;border-bottom:1px solid rgba(220,214,200,.14);padding:14px 2px;cursor:pointer;text-align:left;color:#dcd6c8;font-family:inherit;"><span style="font:10px/1.6 'IBM Plex Mono',monospace;color:#7fa3ae;min-width:26px;">5</span><span style="flex:1;"><span style="display:block;font-size:19px;line-height:1.3;color:#f0ebe0;">Den 9. november 1878</span><span style="display:block;font:10px/1.6 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#8d9aa0;margin-top:2px;">1878</span></span></button>
+    <button type="button" data-goto="kap6" onClick="{{ goChapter }}" style="display:flex;align-items:baseline;gap:14px;width:100%;background:none;border:0;border-bottom:1px solid rgba(220,214,200,.14);padding:14px 2px;cursor:pointer;text-align:left;color:#dcd6c8;font-family:inherit;"><span style="font:10px/1.6 'IBM Plex Mono',monospace;color:#7fa3ae;min-width:26px;">6</span><span style="flex:1;"><span style="display:block;font-size:19px;line-height:1.3;color:#f0ebe0;">Niels Thomsen bliver Silkjær</span><span style="display:block;font:10px/1.6 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#8d9aa0;margin-top:2px;">1855—1928</span></span></button>
+    <button type="button" data-goto="kap7" onClick="{{ goChapter }}" style="display:flex;align-items:baseline;gap:14px;width:100%;background:none;border:0;border-bottom:1px solid rgba(220,214,200,.14);padding:14px 2px;cursor:pointer;text-align:left;color:#dcd6c8;font-family:inherit;"><span style="font:10px/1.6 'IBM Plex Mono',monospace;color:#7fa3ae;min-width:26px;">7</span><span style="flex:1;"><span style="display:block;font-size:19px;line-height:1.3;color:#f0ebe0;">Børnene fra Økjær</span><span style="display:block;font:10px/1.6 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#8d9aa0;margin-top:2px;">1880—1902</span></span></button>
+    <button type="button" data-goto="kap8" onClick="{{ goChapter }}" style="display:flex;align-items:baseline;gap:14px;width:100%;background:none;border:0;border-bottom:1px solid rgba(220,214,200,.14);padding:14px 2px;cursor:pointer;text-align:left;color:#dcd6c8;font-family:inherit;"><span style="font:10px/1.6 'IBM Plex Mono',monospace;color:#7fa3ae;min-width:26px;">8</span><span style="flex:1;"><span style="display:block;font-size:19px;line-height:1.3;color:#f0ebe0;">Redningsmændene ved Vedersø</span><span style="display:block;font:10px/1.6 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#8d9aa0;margin-top:2px;">1915</span></span></button>
+    <button type="button" data-goto="kap9" onClick="{{ goChapter }}" style="display:flex;align-items:baseline;gap:14px;width:100%;background:none;border:0;border-bottom:1px solid rgba(220,214,200,.14);padding:14px 2px;cursor:pointer;text-align:left;color:#dcd6c8;font-family:inherit;"><span style="font:10px/1.6 'IBM Plex Mono',monospace;color:#7fa3ae;min-width:26px;">9</span><span style="flex:1;"><span style="display:block;font-size:19px;line-height:1.3;color:#f0ebe0;">Ane Johanne</span><span style="display:block;font:10px/1.6 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#8d9aa0;margin-top:2px;">1883—1956</span></span></button>
+    <button type="button" data-goto="kap10" onClick="{{ goChapter }}" style="display:flex;align-items:baseline;gap:14px;width:100%;background:none;border:0;border-bottom:1px solid rgba(220,214,200,.14);padding:14px 2px;cursor:pointer;text-align:left;color:#dcd6c8;font-family:inherit;"><span style="font:10px/1.6 'IBM Plex Mono',monospace;color:#7fa3ae;min-width:26px;">10</span><span style="flex:1;"><span style="display:block;font-size:19px;line-height:1.3;color:#f0ebe0;">Fra Husby til Rækker Mølle</span><span style="display:block;font:10px/1.6 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#8d9aa0;margin-top:2px;">1906—1930</span></span></button>
+    <button type="button" data-goto="kap11" onClick="{{ goChapter }}" style="display:flex;align-items:baseline;gap:14px;width:100%;background:none;border:0;border-bottom:1px solid rgba(220,214,200,.14);padding:14px 2px;cursor:pointer;text-align:left;color:#dcd6c8;font-family:inherit;"><span style="font:10px/1.6 'IBM Plex Mono',monospace;color:#7fa3ae;min-width:26px;">11</span><span style="flex:1;"><span style="display:block;font-size:19px;line-height:1.3;color:#f0ebe0;">Laura</span><span style="display:block;font:10px/1.6 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#8d9aa0;margin-top:2px;">1917—1997</span></span></button>
+    <button type="button" data-goto="kap12" onClick="{{ goChapter }}" style="display:flex;align-items:baseline;gap:14px;width:100%;background:none;border:0;border-bottom:1px solid rgba(220,214,200,.14);padding:14px 2px;cursor:pointer;text-align:left;color:#dcd6c8;font-family:inherit;"><span style="font:10px/1.6 'IBM Plex Mono',monospace;color:#7fa3ae;min-width:26px;">12</span><span style="flex:1;"><span style="display:block;font-size:19px;line-height:1.3;color:#f0ebe0;">Enken fra Årgab</span><span style="display:block;font:10px/1.6 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#8d9aa0;margin-top:2px;">1873—1963</span></span></button>
+    <button type="button" data-goto="kap13" onClick="{{ goChapter }}" style="display:flex;align-items:baseline;gap:14px;width:100%;background:none;border:0;border-bottom:1px solid rgba(220,214,200,.14);padding:14px 2px;cursor:pointer;text-align:left;color:#dcd6c8;font-family:inherit;"><span style="font:10px/1.6 'IBM Plex Mono',monospace;color:#7fa3ae;min-width:26px;">13</span><span style="flex:1;"><span style="display:block;font-size:19px;line-height:1.3;color:#f0ebe0;">Fiskeskipperen</span><span style="display:block;font:10px/1.6 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#8d9aa0;margin-top:2px;">1882—1950</span></span></button>
+    <button type="button" data-goto="kap14" onClick="{{ goChapter }}" style="display:flex;align-items:baseline;gap:14px;width:100%;background:none;border:0;border-bottom:1px solid rgba(220,214,200,.14);padding:14px 2px;cursor:pointer;text-align:left;color:#dcd6c8;font-family:inherit;"><span style="font:10px/1.6 'IBM Plex Mono',monospace;color:#7fa3ae;min-width:26px;">14</span><span style="flex:1;"><span style="display:block;font-size:19px;line-height:1.3;color:#f0ebe0;">Anne Kirstine og krigen i Nordsøen</span><span style="display:block;font:10px/1.6 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#8d9aa0;margin-top:2px;">1945</span></span></button>
+    <button type="button" data-goto="kap15" onClick="{{ goChapter }}" style="display:flex;align-items:baseline;gap:14px;width:100%;background:none;border:0;border-bottom:1px solid rgba(220,214,200,.14);padding:14px 2px;cursor:pointer;text-align:left;color:#dcd6c8;font-family:inherit;"><span style="font:10px/1.6 'IBM Plex Mono',monospace;color:#7fa3ae;min-width:26px;">15</span><span style="flex:1;"><span style="display:block;font-size:19px;line-height:1.3;color:#f0ebe0;">Kutteren</span><span style="display:block;font:10px/1.6 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#8d9aa0;margin-top:2px;">1897—1990</span></span></button>
+    <button type="button" data-goto="kap16" onClick="{{ goChapter }}" style="display:flex;align-items:baseline;gap:14px;width:100%;background:none;border:0;border-bottom:1px solid rgba(220,214,200,.14);padding:14px 2px;cursor:pointer;text-align:left;color:#dcd6c8;font-family:inherit;"><span style="font:10px/1.6 'IBM Plex Mono',monospace;color:#7fa3ae;min-width:26px;">16</span><span style="flex:1;"><span style="display:block;font-size:19px;line-height:1.3;color:#f0ebe0;">Da navnet drog mod øst</span><span style="display:block;font:10px/1.6 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#8d9aa0;margin-top:2px;">1886—1930</span></span></button>
+    <button type="button" data-goto="kap17" onClick="{{ goChapter }}" style="display:flex;align-items:baseline;gap:14px;width:100%;background:none;border:0;border-bottom:1px solid rgba(220,214,200,.14);padding:14px 2px;cursor:pointer;text-align:left;color:#dcd6c8;font-family:inherit;"><span style="font:10px/1.6 'IBM Plex Mono',monospace;color:#7fa3ae;min-width:26px;">17</span><span style="flex:1;"><span style="display:block;font-size:19px;line-height:1.3;color:#f0ebe0;">Grenene</span><span style="display:block;font:10px/1.6 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#8d9aa0;margin-top:2px;">1880—2009</span></span></button>
+    <button type="button" data-goto="kap18" onClick="{{ goChapter }}" style="display:flex;align-items:baseline;gap:14px;width:100%;background:none;border:0;border-bottom:1px solid rgba(220,214,200,.14);padding:14px 2px;cursor:pointer;text-align:left;color:#dcd6c8;font-family:inherit;"><span style="font:10px/1.6 'IBM Plex Mono',monospace;color:#7fa3ae;min-width:26px;">18</span><span style="flex:1;"><span style="display:block;font-size:19px;line-height:1.3;color:#f0ebe0;">De to navne</span><span style="display:block;font:10px/1.6 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#8d9aa0;margin-top:2px;">hullet</span></span></button>
+    <button type="button" data-goto="kap19" onClick="{{ goChapter }}" style="display:flex;align-items:baseline;gap:14px;width:100%;background:none;border:0;border-bottom:1px solid rgba(220,214,200,.14);padding:14px 2px;cursor:pointer;text-align:left;color:#dcd6c8;font-family:inherit;"><span style="font:10px/1.6 'IBM Plex Mono',monospace;color:#7fa3ae;min-width:26px;">19</span><span style="flex:1;"><span style="display:block;font-size:19px;line-height:1.3;color:#f0ebe0;">Navnet som arv</span></span></button>
+    <button type="button" data-goto="kap20" onClick="{{ goChapter }}" style="display:flex;align-items:baseline;gap:14px;width:100%;background:none;border:0;border-bottom:1px solid rgba(220,214,200,.14);padding:14px 2px;cursor:pointer;text-align:left;color:#dcd6c8;font-family:inherit;"><span style="font:10px/1.6 'IBM Plex Mono',monospace;color:#7fa3ae;min-width:26px;">20</span><span style="flex:1;"><span style="display:block;font-size:19px;line-height:1.3;color:#f0ebe0;">Navnet nu</span><span style="display:block;font:10px/1.6 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#8d9aa0;margin-top:2px;">i dag</span></span></button>
+    <button type="button" data-goto="navnenoegle" onClick="{{ goChapter }}" style="display:flex;align-items:baseline;gap:14px;width:100%;background:none;border:0;border-bottom:1px solid rgba(220,214,200,.14);padding:14px 2px;cursor:pointer;text-align:left;color:#dcd6c8;font-family:inherit;"><span style="font:10px/1.6 'IBM Plex Mono',monospace;color:#7fa3ae;min-width:26px;">·</span><span style="flex:1;"><span style="display:block;font-size:19px;line-height:1.3;color:#f0ebe0;">Navnenøgle</span><span style="display:block;font:10px/1.6 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#8d9aa0;margin-top:2px;">hvem er hvem</span></span></button>
+    <button type="button" data-goto="stamtavle" onClick="{{ goChapter }}" style="display:flex;align-items:baseline;gap:14px;width:100%;background:none;border:0;border-bottom:1px solid rgba(220,214,200,.14);padding:14px 2px;cursor:pointer;text-align:left;color:#dcd6c8;font-family:inherit;"><span style="font:10px/1.6 'IBM Plex Mono',monospace;color:#7fa3ae;min-width:26px;">·</span><span style="flex:1;"><span style="display:block;font-size:19px;line-height:1.3;color:#f0ebe0;">Slægtstavlen</span><span style="display:block;font:10px/1.6 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#8d9aa0;margin-top:2px;">ni generationer</span></span></button>
+    <button type="button" data-goto="billeder" onClick="{{ goChapter }}" style="display:flex;align-items:baseline;gap:14px;width:100%;background:none;border:0;border-bottom:1px solid rgba(220,214,200,.14);padding:14px 2px;cursor:pointer;text-align:left;color:#dcd6c8;font-family:inherit;"><span style="font:10px/1.6 'IBM Plex Mono',monospace;color:#7fa3ae;min-width:26px;">·</span><span style="flex:1;"><span style="display:block;font-size:19px;line-height:1.3;color:#f0ebe0;">Billedregister</span></span></button>
+    <button type="button" data-goto="kilder" onClick="{{ goChapter }}" style="display:flex;align-items:baseline;gap:14px;width:100%;background:none;border:0;border-bottom:1px solid rgba(220,214,200,.14);padding:14px 2px;cursor:pointer;text-align:left;color:#dcd6c8;font-family:inherit;"><span style="font:10px/1.6 'IBM Plex Mono',monospace;color:#7fa3ae;min-width:26px;">·</span><span style="flex:1;"><span style="display:block;font-size:19px;line-height:1.3;color:#f0ebe0;">Om kilderne</span></span></button>
+    <div style="font:10px/1.7 'IBM Plex Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:#8d9aa0;padding:18px 2px 6px;">Tryk på et kapitel for at hoppe dertil</div>
+  </div>
 </nav>
 
 <aside data-locator style="display:none;position:fixed;right:22px;bottom:22px;z-index:75;width:min(300px,42vw);border:1px solid rgba(30,28,24,.22);background:#f2efe8;box-shadow:0 18px 44px rgba(20,24,28,.22);">
@@ -94,6 +134,7 @@ button{font-family:inherit}
     <p style="font-size:clamp(22px,3vw,30px);line-height:1.5;font-weight:300;margin:0 0 28px;">Og et af dem hed Silkjær.</p>
     <p style="font-size:17px;line-height:1.7;color:#57534a;margin:36px 0 0;border-top:1px solid rgba(30,28,24,.16);padding-top:20px;max-width:34em;">Dette er historien om det sted — og om de mennesker, der tog dets navn med sig, da de gik derfra.</p>
     <p style="font-size:clamp(20px,2.6vw,26px);line-height:1.5;font-weight:300;margin:24px 0 0;max-width:26em;text-wrap:pretty;">Men det er ikke mændene, der bærer den. Navnet nåede frem, fordi kvinderne blev ved med at give det videre — hver gang de selv havde mistet det ved altret.</p>
+    <p style="font-size:16px;line-height:1.7;color:#57534a;margin:26px 0 0;padding-top:18px;border-top:1px solid rgba(30,28,24,.16);">De samme fornavne går igen i hver generation — der er seks Niels’er og tre Ane Johanne’r i det følgende. Bliver trådene svære at holde, står de skilt ud i <a href="#navnenoegle">navnenøglen</a> bagest, sammen med <a href="#stamtavle">slægtstavlen</a>.</p>
   </div>
 </section>
 
@@ -113,7 +154,7 @@ button{font-family:inherit}
       <div style="font:11px/1 'IBM Plex Mono',monospace;letter-spacing:.24em;text-transform:uppercase;color:#8a5a3c;margin-bottom:18px;">Kapitel 1 · ca. 1650</div>
       <h2 style="font-weight:400;font-size:clamp(34px,5.4vw,62px);line-height:1.02;letter-spacing:-.015em;margin:0 0 28px;">Kæret</h2>
       <p style="font-size:19px;line-height:1.72;margin:0 0 20px;color:#33302a;text-wrap:pretty;">Silkjær var et sted, længe før det var en familie. Navnet står som selvstændig lokalitet i Husby Sogn i <em>Danmarks Stednavne</em>, med en kildeform der rækker tilbage til omkring 1650 — mere end to hundrede år før nogen i denne fortælling blev født.</p>
-      <p style="font-size:19px;line-height:1.72;margin:0 0 20px;color:#33302a;text-wrap:pretty;">I dag ligger stedet på Øhusevej 1B i Vester Husby; nabogården Økjær på nummer 3. De to navne hører sammen som to sider af det samme landskab.</p>
+      <p style="font-size:19px;line-height:1.72;margin:0 0 20px;color:#33302a;text-wrap:pretty;">I dag ligger stedet på Øhusevej 1B i Vester Husby, og navnet Økjær forbindes med ejendommen på nummer 3. De to navne hører sammen som to sider af det samme landskab — men Økjær er det løsere af dem.<button type="button" onClick="{{ toggleNext }}" title="Forbehold" style="margin-left:6px;width:17px;height:17px;border-radius:50%;border:1px solid #8a5a3c;background:none;color:#8a5a3c;font:10px/1 'IBM Plex Mono',monospace;cursor:pointer;vertical-align:super;padding:0;">?</button><span data-panel style="display:none;margin-top:12px;padding:12px 14px;background:rgba(138,90,60,.08);border-left:2px solid #8a5a3c;font-size:15px;line-height:1.6;color:#57534a;">Kirkebøgerne skriver blot »Økjær«. I 1878 bor både Thomas Jensen og Iver Christian Olesen dér som husmænd og fiskere, og i 1911 dør en Ane Sand Madsen Græm i Økjær uden tilknytning til slægtens husstand. Økjær kan altså have været en lille bebyggelse med flere husmandssteder — eller et områdenavn, præsten brugte løst — snarere end netop den ene bygning, der i dag bærer navnet. Ejer- og fæsterække, matrikelnummer og skøder er endnu ikke fundet.</span></p>
 
       <div style="margin:36px 0;border:1px solid rgba(30,28,24,.18);background:#eae5da;padding:clamp(20px,3vw,30px);">
         <div style="font:10px/1 'IBM Plex Mono',monospace;letter-spacing:.18em;text-transform:uppercase;color:#8a8377;margin-bottom:18px;">Navnet, delt i to</div>
@@ -260,7 +301,7 @@ button{font-family:inherit}
       <div style="font:11px/1 'IBM Plex Mono',monospace;letter-spacing:.24em;text-transform:uppercase;color:#8a5a3c;margin-bottom:18px;">Kapitel 4 · 1863—1869</div>
       <h2 style="font-weight:400;font-size:clamp(34px,5.4vw,62px);line-height:1.02;letter-spacing:-.015em;margin:0 0 28px;">Da døden<br>kom til huset</h2>
       <p style="font-size:clamp(20px,2.4vw,26px);line-height:1.55;font-weight:300;margin:0 0 24px;color:#33302a;">I Økjær tog sommeren 1863 to fra det samme hus.</p>
-      <p style="font-size:19px;line-height:1.72;margin:0 0 20px;color:#33302a;text-wrap:pretty;"><strong style="font-weight:500;">Anna Marie Jansen Tarpgaard</strong>, Thomas Jensens hustru, døde den 15. august 1863, 35 år gammel. Otte dage senere, den 23. august, døde deres lille datter <strong style="font-weight:500;">Kirstine</strong>, der var døbt i julen 1860 og altså ikke fyldt tre år.</p>
+      <p style="font-size:19px;line-height:1.72;margin:0 0 20px;color:#33302a;text-wrap:pretty;"><strong style="font-weight:500;">Anne Marie Jansdatter</strong>, Thomas Jensens hustru, døde den 15. august 1863, 35 år gammel. Otte dage senere, den 23. august, døde deres lille datter <strong style="font-weight:500;">Kirstine</strong>, der var døbt i julen 1860 og altså ikke fyldt tre år.</p>
       <p style="font-size:19px;line-height:1.72;margin:0 0 20px;color:#33302a;text-wrap:pretty;">Seks år efter, den 6. juli 1869, døde endnu en datter, <strong style="font-weight:500;">Karen Marie</strong>, født den 1. juni 1862. Hun blev syv år.</p>
 
       <div style="display:grid;gap:0;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));border-top:1px solid rgba(30,28,24,.2);border-bottom:1px solid rgba(30,28,24,.2);margin:32px 0;">
@@ -286,7 +327,7 @@ button{font-family:inherit}
       <p style="font-size:19px;line-height:1.72;margin:0 0 32px;color:#33302a;text-wrap:pretty;">Så kom den femtende sommer, og efter den en novemberdag.</p>
       <figure style="margin:0;">
         <div style="border:1px solid rgba(30,28,24,.2);background:#dcd6c8;overflow:hidden;"><img src="billeder/29-husby-kirke-kirkegaard.jpg" alt="Husby Kirke: hvidkalket tårn med spir, granitkvadre i skibets murværk og kirkegård med klippede bøgehegn og gravsten" style="display:block;width:100%;height:auto;filter:sepia(.08) contrast(1.03);" loading="lazy" decoding="async"></div>
-        <figcaption style="margin-top:12px;font-size:16px;line-height:1.6;color:#33302a;max-width:44em;">»Husby Kirke og kirkegård. Skibets nederste murværk er de gamle granitkvadre; tårnet med spiret er kalket hvidt. Her blev Anna Marie Jansen Tarpgaard begravet i august 1863, otte dage senere datteren Kirstine, i 1869 datteren Karen Marie — og 17. november 1878 Thomas Jensen selv.«<div style="font:10px/1.6 'IBM Plex Mono',monospace;color:#8a8377;margin-top:8px;text-transform:uppercase;letter-spacing:.05em;">Wikimedia Commons · nutidigt foto</div></figcaption>
+        <figcaption style="margin-top:12px;font-size:16px;line-height:1.6;color:#33302a;max-width:44em;">»Husby Kirke og kirkegård. Skibets nederste murværk er de gamle granitkvadre; tårnet med spiret er kalket hvidt. Her blev Anne Marie Jansdatter begravet i august 1863, otte dage senere datteren Kirstine, i 1869 datteren Karen Marie — og 17. november 1878 Thomas Jensen selv.«<div style="font:10px/1.6 'IBM Plex Mono',monospace;color:#8a8377;margin-top:8px;text-transform:uppercase;letter-spacing:.05em;">Wikimedia Commons · nutidigt foto</div></figcaption>
       </figure>
     </div>
   </div>
@@ -392,7 +433,7 @@ button{font-family:inherit}
 <section id="kap7" data-place="oekjaer" data-chap="7" style="background:#eae5da;padding:clamp(72px,11vw,160px) clamp(20px,6vw,56px);">
   <div style="max-width:1180px;margin:0 auto;">
     <div data-reveal="1" style="max-width:700px;opacity:0;transform:translateY(30px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1);">
-      <div style="font:11px/1 'IBM Plex Mono',monospace;letter-spacing:.24em;text-transform:uppercase;color:#8a5a3c;margin-bottom:18px;">Kapitel 7 · 1880—1896</div>
+      <div style="font:11px/1 'IBM Plex Mono',monospace;letter-spacing:.24em;text-transform:uppercase;color:#8a5a3c;margin-bottom:18px;">Kapitel 7 · 1880—1902</div>
       <h2 style="font-weight:400;font-size:clamp(34px,5.4vw,62px);line-height:1.02;letter-spacing:-.015em;margin:0 0 28px;">Børnene fra Økjær</h2>
       <p style="font-size:19px;line-height:1.72;margin:0 0 28px;color:#33302a;text-wrap:pretty;">Niels Thomsen Silkjær fik en stor børneflok, som voksede op i og omkring Økjær. Alle bar de Silkjær i navnet, i vekslende former: <em>Nielsen Silkjær</em>, <em>Jensen Silkjær</em>, eller blot Silkjær. Det bliver afgørende for alt, hvad der følger — for navnet gik ikke kun til den, der blev boende. Det gik ud i verden med hvert eneste barn.</p>
     </div>
@@ -406,12 +447,12 @@ button{font-family:inherit}
       <button type="button" data-person="thomasns" onClick="{{ openPerson }}" data-reveal="1" style="text-align:left;cursor:pointer;background:#f2efe8;border:1px solid rgba(30,28,24,.16);padding:18px;font-family:inherit;color:inherit;opacity:0;transform:translateY(24px);transition:opacity .8s cubic-bezier(.2,.7,.2,1) .05s,transform .8s cubic-bezier(.2,.7,.2,1) .05s;" style-hover="border-color:#8a5a3c">
         <div style="font:10px/1 'IBM Plex Mono',monospace;color:#8a8377;">f. 10.1.1882</div>
         <div style="font-size:22px;line-height:1.2;margin:8px 0 6px;">Thomas</div>
-        <div style="font-size:14px;line-height:1.55;color:#57534a;">Fiskeskipper i Esbjerg. Fører af E.94 ANNE KIRSTINE. → kapitel 11</div>
+        <div style="font-size:14px;line-height:1.55;color:#57534a;">Fiskeskipper i Esbjerg. Fører af E.94 ANNE KIRSTINE. → kapitel 13</div>
       </button>
       <button type="button" data-person="anejohanne" onClick="{{ openPerson }}" data-reveal="1" style="text-align:left;cursor:pointer;background:#f2efe8;border:1px solid rgba(30,28,24,.16);padding:18px;font-family:inherit;color:inherit;opacity:0;transform:translateY(24px);transition:opacity .8s cubic-bezier(.2,.7,.2,1) .1s,transform .8s cubic-bezier(.2,.7,.2,1) .1s;" style-hover="border-color:#8a5a3c">
         <div style="font:10px/1 'IBM Plex Mono',monospace;color:#8a8377;">f. 22.10.1883</div>
         <div style="font-size:22px;line-height:1.2;margin:8px 0 6px;">Ane Johanne</div>
-        <div style="font-size:14px;line-height:1.55;color:#57534a;">Gift med murermester Mads Erik Madsen. Den første, der forlod kysten helt. → kapitel 8</div>
+        <div style="font-size:14px;line-height:1.55;color:#57534a;">Gift med murermester Mads Erik Madsen. Den første, der forlod kysten helt. → kapitel 9</div>
       </button>
       <button type="button" data-person="jensclaus" onClick="{{ openPerson }}" data-reveal="1" style="text-align:left;cursor:pointer;background:#f2efe8;border:1px solid rgba(30,28,24,.16);padding:18px;font-family:inherit;color:inherit;opacity:0;transform:translateY(24px);transition:opacity .8s cubic-bezier(.2,.7,.2,1) .15s,transform .8s cubic-bezier(.2,.7,.2,1) .15s;" style-hover="border-color:#8a5a3c">
         <div style="font:10px/1 'IBM Plex Mono',monospace;color:#8a8377;">f. 6.5.1886</div>
@@ -435,7 +476,7 @@ button{font-family:inherit}
       </button>
       <button type="button" data-person="jensine" onClick="{{ openPerson }}" data-reveal="1" style="text-align:left;cursor:pointer;background:#f2efe8;border:1px solid rgba(30,28,24,.16);padding:18px;font-family:inherit;color:inherit;opacity:0;transform:translateY(24px);transition:opacity .8s cubic-bezier(.2,.7,.2,1) .3s,transform .8s cubic-bezier(.2,.7,.2,1) .3s;" style-hover="border-color:#8a5a3c">
         <div style="font:10px/1 'IBM Plex Mono',monospace;color:#8a8377;">f. 17.12.1896 · d. 23.2.1964</div>
-        <div style="font-size:22px;line-height:1.2;margin:8px 0 6px;">Jensine Kirstine</div>
+        <div style="font-size:22px;line-height:1.2;margin:8px 0 6px;">Jensine Kristine</div>
         <div style="font-size:14px;line-height:1.55;color:#57534a;">Gift med Martin Jeppesen Nørfjand fra Sønder Nissum. Blev boende ved kysten og døde i Fjand.</div>
       </button>
       <div data-reveal="1" style="background:#f2efe8;border:1px solid rgba(30,28,24,.16);padding:18px;font-size:14px;line-height:1.6;color:#57534a;opacity:0;transform:translateY(24px);transition:opacity .8s cubic-bezier(.2,.7,.2,1) .35s,transform .8s cubic-bezier(.2,.7,.2,1) .35s;"><div style="font:10px/1 'IBM Plex Mono',monospace;color:#8a8377;">og desuden</div><div style="font-size:22px;line-height:1.2;margin:8px 0 6px;">Sidsel Kathrine<br>&amp; Ellen</div>Sidsel Kathrine født juleaften 1894. Ellen født 6. oktober 1902, død i Esbjerg 1980 — hun er formentlig den »Ellen Silkjær«, der står på skolebilledet fra Husby 1915, tolv år gammel.</div>
@@ -444,7 +485,7 @@ button{font-family:inherit}
     <div data-reveal="1" style="border:1px solid rgba(30,28,24,.24);background:#f2efe8;padding:clamp(22px,4vw,34px);margin:0 0 clamp(36px,5vw,56px);max-width:900px;opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1);">
       <div style="font:10px/1 'IBM Plex Mono',monospace;letter-spacing:.18em;text-transform:uppercase;color:#8a5a3c;margin-bottom:18px;">Husby-sognebogen, s. 334</div>
       <p style="font-size:19px;line-height:1.72;margin:0 0 18px;color:#33302a;text-wrap:pretty;">Den ældste af søskendeflokken får sit eget opslag i sognebogen — under sin mands navn. <strong style="font-weight:500;">Ole Lauridsen</strong> var født i Husby 29. maj 1861 og døde 11. juli 1916; han var altså <strong style="font-weight:500;">nitten år ældre</strong> end sin kone. De fik <strong style="font-weight:500;">otte børn</strong>. Da han døde, var Ane Marie seksogtredive år og stod med flokken alene — samme alder, og næsten samme situation, som hendes egen farmor og stedmor havde stået i.</p>
-      <p style="font-size:19px;line-height:1.72;margin:0 0 18px;color:#33302a;text-wrap:pretty;">Hun blev på gården i mere end tredive år efter hans død. Omkring 1950 står der om stedet:</p>
+      <p style="font-size:19px;line-height:1.72;margin:0 0 18px;color:#33302a;text-wrap:pretty;">Hun blev på gården i fireogfyrre år efter hans død. Omkring 1950 står der om stedet:</p>
       <blockquote style="margin:0 0 18px;padding:20px 22px;background:#eae5da;border-left:3px solid #8a5a3c;font-size:19px;line-height:1.6;color:#1e1c18;">»Fru Lauridsen har Gaarden her i Dag, men al Jorden er lejet ud, og om Sommeren har Fruen en Del af Stuehuset lejet ud til Sommergæster.«</blockquote>
       <p style="font-size:18px;line-height:1.7;margin:0;color:#33302a;text-wrap:pretty;">Læs den sætning sammen med kapitel 2. Landskabet, der ikke var ferieland — mager jord, sandflugt, fiskeri fra åben strand — var ved at blive det. Og den første i slægten, der levede af det, var en enke, som lejede sine marker ud og sine stuer til gæster fra byen. Jorden gav ikke længere nok. Udsigten gjorde.</p>
       <div style="font:10px/1.6 'IBM Plex Mono',monospace;color:#8a8377;margin-top:12px;text-transform:uppercase;letter-spacing:.05em;"><em>Vort Sogns Historie</em>, Husby Sogn, s. 334 · Ulfborg-Vemb Lokalhist. Arkiv [S27]</div>
@@ -463,7 +504,7 @@ button{font-family:inherit}
       <div style="border:1px solid rgba(30,28,24,.18);background:#eae5da;overflow:hidden;"><img src="billeder/15-familien-niels-lauridsen.png" alt="Opslag fra sognebogen om Niels Silkjær Lauridsen med familiefoto: mand, kone og lille pige" style="display:block;width:100%;height:auto;" loading="lazy" decoding="async"></div>
       <div>
         <div style="font:10px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:#8a5a3c;margin-bottom:14px;">Drengen fra skolebilledet, voksen</div>
-        <p style="font-size:17px;line-height:1.7;margin:0 0 14px;color:#33302a;text-wrap:pretty;">Sognebogen har ham med som husmand i Damhus, Sønder Nissum: <strong style="font-weight:500;">Niels Silkjær Lauridsen</strong>, født i Husby 9. august 1911, søn af Ole Lauridsen og Ane Marie. Under bedsteforældre står der kort og godt: <em>MF Niels Silkjær, Husmand, Husby</em> — morfaderen, manden fra kapitel 5.</p>
+        <p style="font-size:17px;line-height:1.7;margin:0 0 14px;color:#33302a;text-wrap:pretty;">Sognebogen har ham med som husmand i Damhus, Sønder Nissum: <strong style="font-weight:500;">Niels Silkjær Lauridsen</strong>, født i Husby 9. august 1911, søn af Ole Lauridsen og Ane Marie. Under bedsteforældre står der kort og godt: <em>MF Niels Silkjær, Husmand, Husby</em> — morfaderen, manden fra kapitel 6.</p>
         <p style="font-size:17px;line-height:1.7;margin:0 0 14px;color:#33302a;">Gift med Elin Kamma Lillelund, én datter: Henny, født 16. april 1940. Han overtog ejendommen efter sin svigerfar i 1938 — otte tønder land, hvoraf to var krat, og et stuehus på firs-hundrede år.</p>
         <p style="font-size:15px;line-height:1.65;margin:0;color:#57534a;">Det er den samme bevægelse som hos Ane Johanne: navnet bliver båret videre af en mand, der officielt hedder noget andet.</p>
       </div>
@@ -707,7 +748,7 @@ button{font-family:inherit}
         <span style="font:11px/1.4 'IBM Plex Mono',monospace;padding:9px 13px;color:#8a8377;">Knud 1943 og Leif 1956 er bekræftet i træet</span>
       </div>
       <blockquote style="margin:0 0 28px;padding:26px 28px;background:#f2efe8;border-left:3px solid #8a5a3c;font-size:19px;line-height:1.65;color:#33302a;">Laura bar ikke selv Silkjær i sit officielle navn; det var hendes mors, ikke hendes. Hun kunne have ladet det ligge — ingen ville have bemærket det, og intet krævede det. I stedet blev det givet videre til næste generation, ligesom hendes mor havde gjort det før hende.</blockquote>
-      <p style="font-size:19px;line-height:1.72;margin:0 0 32px;color:#33302a;">Laurids døde 22. september 1996. Laura fulgte året efter, 30. september 1997, i Vorgod — otteoghalvfjerds år efter at hendes mor forlod kysten, og hundrede og fyrre kilometer fra det kær, navnet kom fra. De ligger sammen på kirkegården i Fjelstervang under fire linjer og tre ord.</p>
+      <p style="font-size:19px;line-height:1.72;margin:0 0 32px;color:#33302a;">Laurids døde 22. september 1996. Laura fulgte året efter, 30. september 1997, i Vorgod — enoghalvfems år efter at hendes mor forlod kysten, og hundrede og fyrre kilometer fra det kær, navnet kom fra. De ligger sammen på kirkegården i Fjelstervang under fire linjer og tre ord.</p>
 
       <div style="display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));">
         <figure style="margin:0;border:1px solid rgba(30,28,24,.2);background:#f2efe8;padding:18px;display:grid;gap:16px;grid-template-columns:auto 1fr;align-items:start;">
@@ -735,7 +776,7 @@ button{font-family:inherit}
       <h2 style="font-weight:400;font-size:clamp(34px,5.4vw,62px);line-height:1.02;letter-spacing:-.015em;margin:0 0 28px;color:#f0ebe0;">Enken<br>fra Årgab</h2>
       <p style="font-size:clamp(20px,2.4vw,26px);line-height:1.55;font-weight:300;margin:0 0 24px;color:#c9c2b4;">Der var ingen havn ved Årgab. Der var en strand, en række klitter og en åben, urolig sø.</p>
       <p style="font-size:18px;line-height:1.75;margin:0 0 20px;color:#b3ab9c;text-wrap:pretty;">Bådene blev sat ud i den med håndkraft og trukket op af den igen med håndkraft. Årgab var ét af de fire gamle fiskerlejer på den smalle Holmsland Klit — sammen med Haurvig, Brunbjerg og Kokkedal, som allerede i 1553 nævnes samlet i et kongebrev. I klitterne lå fiskerboderne, hvor fiskerne og esepigerne, der satte madding på krogene, opholdt sig fra april til Sankt Hans.</p>
-      <p style="font-size:18px;line-height:1.75;margin:0 0 20px;color:#b3ab9c;text-wrap:pretty;"><strong style="font-weight:500;color:#f0ebe0;">Kristiane Enevoldsen</strong> blev født på klitten den 27. marts 1873, datter af gårdmand Simon Enevoldsen og Ane Marie Christensen i Haurvig.</p>
+      <p style="font-size:18px;line-height:1.75;margin:0 0 20px;color:#b3ab9c;text-wrap:pretty;"><strong style="font-weight:500;color:#f0ebe0;">Kristiane Enevoldsen</strong> — i kilderne også skrevet Christiane — blev født på klitten den 27. marts 1873, datter af gårdmand Simon Enevoldsen og Ane Marie Christensen i Haurvig.</p>
       <p style="font-size:18px;line-height:1.75;margin:0 0 20px;color:#b3ab9c;text-wrap:pretty;">Den 1. april 1892 blev hun i <strong style="font-weight:500;color:#f0ebe0;">Haurvig Kirke</strong> — hvidkalket, nyromansk og rejst tre år før hendes egen fødsel — viet til <strong style="font-weight:500;color:#f0ebe0;">Christen Olesen Enevoldsen</strong>, husmand, fisker og bådfører i Årgab, født samme sted den 17. oktober 1871. De bar samme efternavn, men hørte til to forskellige Enevoldsen-slægter på klitten — navnet stammede i begge tilfælde fra en fjern forfader ved navn Enevold.</p>
       <p style="font-size:18px;line-height:1.75;margin:0 0 20px;color:#b3ab9c;text-wrap:pretty;">Som bådfører havde Christen ansvaret for båden og dens mandskab, når den blev sat ud gennem brændingen og trukket op igen.</p>
     </div>
@@ -801,8 +842,16 @@ button{font-family:inherit}
       </div>
       <div>
         <p style="font-size:18px;line-height:1.72;margin:0 0 18px;color:#33302a;text-wrap:pretty;">Læg mærke til to ting. Den ene er faderens titel: <em>dannebrogsmand</em>. Niels Thomsen Silkjær var hædret med Dannebrogsmændenes Hæderstegn. Hvad han fik det for, ved vi ikke; det er fristende at tænke på redningsstationen, men det er en formodning, indtil kilden er fundet.<button type="button" onClick="{{ toggleNext }}" title="Forbehold" style="margin-left:6px;width:17px;height:17px;border-radius:50%;border:1px solid #8a5a3c;background:none;color:#8a5a3c;font:10px/1 'IBM Plex Mono',monospace;cursor:pointer;vertical-align:super;padding:0;">?</button><span data-panel style="display:none;margin-top:12px;padding:12px 14px;background:rgba(138,90,60,.08);border-left:2px solid #8a5a3c;font-size:15px;line-height:1.65;color:#57534a;">Titlen står i Dansk Fiskeristat [S8]. Selve tildelingen — anledning og dato — er ikke fundet i ordensmaterialet. <a href="#kilder" style="color:inherit;text-decoration-thickness:1px;">Alle forbehold →</a></span></p>
-        <p style="font-size:18px;line-height:1.72;margin:0 0 18px;color:#33302a;text-wrap:pretty;">Den anden er adressen. <strong style="font-weight:500;">Havnegade 179</strong> er broen mellem slægtens to verdener. Her boede Thomas. Her registreres også hans søn Christian Lauritsen Silkjær, født 4. maj 1904 på Holmsland Klit, der tog skippereksamen i 1924 og førte kutteren E.426 BERGIT. Og her døde Niels Thomsens enke, Ane Jensen, 23. juni 1936.</p>
+        <p style="font-size:18px;line-height:1.72;margin:0 0 18px;color:#33302a;text-wrap:pretty;">Den anden er adressen. <strong style="font-weight:500;">Havnegade 179</strong> er broen mellem slægtens to verdener. Her boede Thomas. Her registreres også hans søn Christian Lauritsen Silkjær — i slægtsfilen kaldt Kristen Lauridsen Silkær — født 4. maj 1904 på Holmsland Klit, der tog skippereksamen i 1924 og førte kutteren E.426 BERGIT. Og her døde Niels Thomsens enke, Ane Jensen, 23. juni 1936.</p>
         <blockquote style="margin:24px 0;padding:22px 24px;background:#eae5da;border-left:3px solid #2f5d6e;font-size:17px;line-height:1.7;color:#33302a;">Tænk på den kvindes bue: født på Landting Mark i 1858, gift ind i et enkemandshjem i Økjær i 1881, en stor børneflok ved klit og kær — og de sidste år i en fiskeskippers hjem på havnen i Esbjerg, hvor hun døde 78 år gammel.</blockquote>
+        <div style="border:1px solid rgba(30,28,24,.24);background:#eae5da;padding:clamp(20px,3.5vw,30px);margin:0 0 22px;">
+          <div style="font:10px/1 'IBM Plex Mono',monospace;letter-spacing:.18em;text-transform:uppercase;color:#8a5a3c;margin-bottom:18px;">Ane Jensen · 1858—1936</div>
+          <p style="font-size:18px;line-height:1.7;color:#33302a;margin:0 0 14px;text-wrap:pretty;">Hun kom til Økjær som treogtyveårig i november 1881 og trådte ind i et hus, hvor der lige var død en kone. På bordet lå der sorg, og i vuggen lå der et halvandet år gammelt barn, <strong style="font-weight:500;">Ane Marie</strong>, som ikke var hendes. Fra den dag var hun barnets mor — sognebogen kalder hende siden helt enkelt »Hustru Ane«, uden at skelne.</p>
+          <p style="font-size:18px;line-height:1.7;color:#33302a;margin:0 0 14px;text-wrap:pretty;">I de næste enogtyve år fødte hun ni børn i det samme hus: Thomas i 1882, Ane Johanne i 1883, Jens Klaus, Esper, Karen Marie, Ane Kirstine, Sidsel Kathrine, Jensine Kristine — og Ellen i 1902, da hun var fireogfyrre. Det er hendes børn, der bærer navnet ud i landet. Hver eneste gren i denne krønike går gennem hende.</p>
+          <p style="font-size:18px;line-height:1.7;color:#33302a;margin:0 0 14px;text-wrap:pretty;">Og så flyttede de. Niels Thomsen Silkjær døde <strong style="font-weight:500;">17. juni 1928 i Esbjerg</strong> og blev begravet på Esbjerg Ny Kirkegård — ikke i Husby, hvor han var døbt, viet to gange og havde levet i treoghalvfjerds år. Hvornår de forlod klitten, siger kilderne ikke. Men de gjorde det begge to, og de gjorde det til sønnens by.</p>
+          <p style="font-size:18px;line-height:1.7;color:#33302a;margin:0 0 14px;text-wrap:pretty;">Ane Jensen blev enke i otte år og døde i sønnens hjem på <strong style="font-weight:500;">Havnegade 179</strong> den 23. juni 1936, seksoghalvfjerds år gammel — seks dage efter den dato, hun havde mistet sin mand på otte år tidligere. Hun var da den sidste voksne af Økjær-husstanden.</p>
+          <p style="font-size:17px;line-height:1.7;color:#4a4640;margin:0;text-wrap:pretty;">Det er en flytning, man kan læse på to måder. Den ene: to gamle mennesker, der fulgte arbejdet og børnene ind til byen, som hele Vestjylland gjorde i de årtier. Den anden: at parret, som havde levet et helt liv på en kyst uden havn, endte deres dage ved Danmarks største fiskerihavn — og at ingen af dem ligger begravet i det sogn, hvor navnet blev til.</p>
+        </div>
         <p style="font-size:18px;line-height:1.72;margin:0;color:#33302a;text-wrap:pretty;">Flytningen fra klit til by var ikke et brud med havet. Den var en forfremmelse: fra åbne både, man trak op på sandet, til dæksbåde med motor, der kunne blive ude i dagevis. I Fiskeri- og Søfartsmuseets fartøjsregister står Thomas som <strong style="font-weight:500;">T. N. Silkjær</strong>, ejer af E.94 ANNE KIRSTINE fra 1923 til 1948.</p>
       </div>
     </div>
@@ -812,7 +861,7 @@ button{font-family:inherit}
       <div style="display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));align-items:start;">
         <figure data-reveal="1" style="margin:0;background:#eae5da;border:1px solid rgba(30,28,24,.2);padding:20px;opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1);">
           <div style="max-width:150px;border:1px solid rgba(30,28,24,.18);background:#f2efe8;overflow:hidden;"><img src="billeder/21-christiane-enevoldsen.png" alt="Portræt af Christiane Enevoldsen med briller og mørk kjole" style="display:block;width:100%;height:auto;" loading="lazy" decoding="async"></div>
-          <figcaption style="margin-top:12px;font-size:15px;line-height:1.65;color:#33302a;"><strong style="font-weight:500;">Christiane Enevoldsen</strong>, f. 27. marts 1873 på Holmsland Klit — Thomas' hustru, viet 5. maj 1906. Datter af gårdmand Simon Enevoldsen og Ane Marie Christensen i Haurvig — og enke efter bådføreren Christen Olesen Enevoldsen, der druknede ud for Årgab i 1896. Hun overlevede Thomas i tretten år og døde 31. juli 1963 på De Gamles Hjem i Esbjerg.</figcaption>
+          <figcaption style="margin-top:12px;font-size:15px;line-height:1.65;color:#33302a;"><strong style="font-weight:500;">Kristiane Enevoldsen</strong>, f. 27. marts 1873 på Holmsland Klit — Thomas' hustru, viet 5. maj 1906. Datter af gårdmand Simon Enevoldsen og Ane Marie Christensen i Haurvig — og enke efter bådføreren Christen Olesen Enevoldsen, der druknede ud for Årgab i 1896. Hun overlevede Thomas i tretten år og døde 31. juli 1963 på De Gamles Hjem i Esbjerg.</figcaption>
         </figure>
         <figure data-reveal="1" style="margin:0;background:#eae5da;border:1px solid rgba(30,28,24,.2);padding:20px;opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1);">
           <div style="max-width:150px;border:1px solid rgba(30,28,24,.18);background:#f2efe8;overflow:hidden;"><img src="billeder/16-christian-lauritsen-silkjaer.png" alt="Opslag fra Dansk Fiskeristat om Christian Lauritsen Silkjær med portrætfoto" style="display:block;width:100%;height:auto;" loading="lazy" decoding="async"></div>
@@ -820,7 +869,7 @@ button{font-family:inherit}
         </figure>
         <figure data-reveal="1" style="margin:0;background:#eae5da;border:1px solid rgba(30,28,24,.2);padding:20px;opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.2,.7,.2,1) .08s,transform .9s cubic-bezier(.2,.7,.2,1) .08s;">
           <div style="max-width:150px;border:1px solid rgba(30,28,24,.18);background:#f2efe8;overflow:hidden;"><img src="billeder/19-christen-torbensen.png" alt="Portræt af Christen Torbensen, fiskeskipper i Esbjerg" style="display:block;width:100%;height:auto;" loading="lazy" decoding="async"></div>
-          <figcaption style="margin-top:12px;font-size:15px;line-height:1.65;color:#33302a;"><strong style="font-weight:500;">Christen Torbensen</strong>, f. 2. marts 1896 på Holmslands Klit — svogeren. Gift nytårsdag 1920 med Ane Kirstine f. Silkjær. Fiskeskippereksamen 1925, fører af »Chr. Fjord«, E.477. Adresse: Havnegade 132 — halvfjerds numre fra svigerfamilien.</figcaption>
+          <figcaption style="margin-top:12px;font-size:15px;line-height:1.65;color:#33302a;"><strong style="font-weight:500;">Christen Torbensen</strong>, f. 2. marts 1896 på Holmslands Klit — svogeren. Gift nytårsdag 1920 med Ane Kirstine f. Silkjær. Fiskeskippereksamen 1925, fører af »Chr. Fjord«, E.477. Adresse: Havnegade 132.</figcaption>
         </figure>
       </div>
       <p data-reveal="1" style="font-size:19px;line-height:1.7;margin:26px 0 0;max-width:44em;color:#33302a;opacity:0;transform:translateY(20px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1);text-wrap:pretty;">Tre mænd, tre kuttere, én gade. På halvtreds år var slægten gået fra åbne både på Husby Klit til en fast plads i landets største fiskerihavn — og et navn, der stod i erhvervets egen håndbog.</p>
@@ -868,7 +917,7 @@ button{font-family:inherit}
       <div>
         <p style="font-size:19px;line-height:1.7;margin:0 0 20px;color:#f0ebe0;font-style:italic;">Man skal hverken gøre historien større eller mindre, end den er. To fiskere sagde ja til at sejle våben gennem en overvåget havn i krigens sidste måneder, med dødsstraf som den oplagte konsekvens, hvis de blev opdaget. De hed Silkjær.</p>
         <p style="font-size:17px;line-height:1.75;margin:0 0 20px;color:#a49c8d;">Der blev straks gjort klar til den næste tur, og i alt seks Esbjerg-kuttere havde sagt ja. Den kom aldrig af sted. Så sent i krigen var der stor modstand mod at fiske til Tyskland, og den lokale modstandsbevægelse — som intet vidste om våbentransporterne — forbød kutterne at fiske efter andet end til hjemmemarkedet. Få dage senere opfordrede Danmarks Frihedsråd Esbjerg-kutterne til at sejle til England. Esbjerg var dermed ødelagt som modtagehavn, og arbejdet flyttede til Thyborøn. ANNE KIRSTINEs tur blev den ene, der lykkedes.</p>
-        <p style="font-size:17px;line-height:1.75;margin:0 0 20px;color:#a49c8d;">Og så forholdet: <strong style="font-weight:500;color:#f0ebe0;">i alt otte laster</strong> nåede Danmark ad søvejen — anslået mellem 16 og 32 tons. Målt mod det, der blev kastet ned fra luften, er det forsvindende lidt. Transporterne skal derfor ikke vejes på deres militære betydning, men på hvad de krævede: blev lasten fundet, havde fiskerne ikke engang våben at forsvare sig med. Skipperne i Thyborøn blev tilbudt 10.000 kroner pr. last og sagde alle tre nej — de ville kun have normal betaling for fisken. Anerkendelsen fra det officielle Danmark udeblev.<button type="button" onClick="{{ toggleNext }}" title="Kilde" style="margin-left:6px;width:17px;height:17px;border-radius:50%;border:1px solid #7fa3ae;background:none;color:#7fa3ae;font:10px/1 'IBM Plex Mono',monospace;cursor:pointer;vertical-align:super;padding:0;">?</button><span data-panel style="display:none;margin-top:14px;padding:14px 16px;background:rgba(127,163,174,.1);border-left:2px solid #7fa3ae;font-size:15px;line-height:1.65;color:#b3ab9c;">Forløbet, navnene og tallene i dette kapitel følger Knud Jakobsen, »Nordsøfiskernes krig«, afsnit 2—3, i <em>Under Dannebrog</em> nr. 4 og 5/2023 — en samtidsnær fremstilling bygget på Hans Kvists egen efterkrigsberetning og på interviews med de deltagende fiskere. Datoen påskelørdag er 31. marts 1945. [S30] <a href="#kilder" style="color:inherit;text-decoration-thickness:1px;">Alle forbehold →</a></span></p>
+        <p style="font-size:17px;line-height:1.75;margin:0 0 20px;color:#a49c8d;">Og så forholdet: <strong style="font-weight:500;color:#f0ebe0;">i alt otte laster</strong> nåede Danmark ad søvejen — anslået mellem 16 og 32 tons. Målt mod det, der blev kastet ned fra luften, er det forsvindende lidt. Transporterne skal derfor ikke vejes på deres militære betydning, men på hvad de krævede: blev lasten fundet, havde fiskerne ikke engang våben at forsvare sig med. Skipperne i Thyborøn blev tilbudt 10.000 kroner pr. last og sagde alle tre nej — de ville kun have normal betaling for fisken. Anerkendelsen fra det officielle Danmark udeblev.<button type="button" onClick="{{ toggleNext }}" title="Kilde" style="margin-left:6px;width:17px;height:17px;border-radius:50%;border:1px solid #7fa3ae;background:none;color:#7fa3ae;font:10px/1 'IBM Plex Mono',monospace;cursor:pointer;vertical-align:super;padding:0;">?</button><span data-panel style="display:none;margin-top:14px;padding:14px 16px;background:rgba(127,163,174,.1);border-left:2px solid #7fa3ae;font-size:15px;line-height:1.65;color:#b3ab9c;">Forløbet, navnene og tallene i dette kapitel følger Knud Jakobsen, »Nordsøfiskernes krig«, afsnit 2—3, i <em>Under Dannebrog</em> nr. 4 og 5/2023 — en samtidsnær fremstilling bygget på Hans Kvists egen efterkrigsberetning og på interviews med de deltagende fiskere. Datoen påskelørdag er 31. marts 1945. [S10] <a href="#kilder" style="color:inherit;text-decoration-thickness:1px;">Alle forbehold →</a></span></p>
         <p style="font-size:17px;line-height:1.75;margin:0 0 20px;color:#a49c8d;">Esbjergs eget flåderegister nævner det tørt i posten for E.94, mellem tonnage og ejerrække: »<em>Sejlede våben til Esbjerg under 2. verdenskrig fra engelske kuttere.</em>« Otte ord i et fartøjsregister — det er den nærmeste ting til en officiel anerkendelse, fiskerne fik. Efterspillet kan følges i samme register, og det ender med en dato, der lukker sig om historien: den gamle ANNE KIRSTINE grundstødte ved Hartlepool i marts 1948; en ny blev bygget i Hobro i 1949. Den <strong style="font-weight:500;color:#f0ebe0;">20. marts 1950 døde Thomas Nielsen Silkjær på Havnegade 179</strong> og blev begravet fire dage senere på Esbjerg Ny Kirkegård. Samme år gik kutteren fra T. N. Silkjær til Niels Silkjær. Sønnen overtog det fartøj, han fem år tidligere havde sejlet våben i — ikke ved et køb mellem fremmede, men fordi hans far var død.</p>
         <p style="font-size:17px;line-height:1.75;margin:0 0 20px;color:#a49c8d;">Niels beholdt den til 1976. Ejlert fortsatte i fiskeriet; kutteren E.714 LACERTA blev bygget til ham, og han sejlede stadig fra Esbjerg med den i 1984. Året efter døde de begge — med seks ugers mellemrum i 1985, Niels den 16. april og Ejlert den 28. maj. De ligger side om side på Fovrfeld Gravlund.</p>
         <p style="font-size:21px;line-height:1.6;margin:0;color:#f0ebe0;">Fra et kær i Husby til Nordsøen i krig. Navnet havde bevæget sig langt.</p>
@@ -974,9 +1023,9 @@ button{font-family:inherit}
     </div>
 
     <div data-reveal="1" style="display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));margin:clamp(28px,4vw,48px) 0;opacity:0;transform:translateY(30px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1);">
-      <div style="background:#f2efe8;border:1px solid rgba(30,28,24,.16);padding:16px;"><div style="font:10px/1 'IBM Plex Mono',monospace;color:#8a8377;">f. 28.2.1914 · Øster Alling</div><div style="font-size:20px;line-height:1.2;margin-top:8px;">Niels Silkjær</div></div>
+      <div style="background:#f2efe8;border:1px solid rgba(30,28,24,.16);padding:16px;"><div style="font:10px/1 'IBM Plex Mono',monospace;color:#8a8377;">f. 28.2.1914 · Oustrup</div><div style="font-size:20px;line-height:1.2;margin-top:8px;">Niels Silkjær</div></div>
       <div style="background:#f2efe8;border:1px solid rgba(30,28,24,.16);padding:16px;"><div style="font:10px/1 'IBM Plex Mono',monospace;color:#8a8377;">f. 11.10.1915 · Oustrup<br>d. 30.3.1989 i Hurup</div><div style="font-size:20px;line-height:1.2;margin-top:8px;">Henry Johan Silkjær</div></div>
-      <div style="background:#f2efe8;border:1px solid rgba(30,28,24,.16);padding:16px;"><div style="font:10px/1 'IBM Plex Mono',monospace;color:#8a8377;">f. 8.10.1917 · Øster Alling</div><div style="font-size:20px;line-height:1.2;margin-top:8px;">Tage Evald Silkjær</div></div>
+      <div style="background:#f2efe8;border:1px solid rgba(30,28,24,.16);padding:16px;"><div style="font:10px/1 'IBM Plex Mono',monospace;color:#8a8377;">f. 8.10.1917 · Oustrup</div><div style="font-size:20px;line-height:1.2;margin-top:8px;">Tage Ewald Silkjær</div></div>
       <div style="background:#f2efe8;border:1px solid rgba(30,28,24,.16);padding:16px;"><div style="font:10px/1 'IBM Plex Mono',monospace;color:#8a8377;">f. januar 1920 · d. 2005</div><div style="font-size:20px;line-height:1.2;margin-top:8px;">Oluf Kristian Silkjær</div></div>
       <div style="background:#f2efe8;border:1px solid rgba(30,28,24,.16);padding:16px;"><div style="font:10px/1 'IBM Plex Mono',monospace;color:#8a8377;">f. 2.9.1921 · Nimtofte</div><div style="font-size:20px;line-height:1.2;margin-top:8px;">Verner Silkjær</div></div>
       <div style="background:#f2efe8;border:1px solid rgba(30,28,24,.16);padding:16px;"><div style="font:10px/1 'IBM Plex Mono',monospace;color:#8a8377;">f. 13.9.1912 · Oustrup</div><div style="font-size:20px;line-height:1.2;margin:8px 0 6px;">Johannes Silkjær</div><div style="font-size:14px;line-height:1.6;color:#57534a;">Den ældste. Tjenestedreng i Vejlby som trettenårig, i 1925 og igen i 1930.</div></div>
@@ -1024,29 +1073,36 @@ button{font-family:inherit}
       <div data-reveal="1" style="border:1px solid rgba(220,214,200,.22);background:rgba(240,235,224,.05);padding:clamp(20px,3vw,28px);opacity:0;transform:translateY(30px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1);">
         <div style="font:10px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:#7fa3ae;margin-bottom:12px;">Gudum · Salling</div>
         <div style="font-size:clamp(22px,2.8vw,28px);line-height:1.2;color:#f0ebe0;margin-bottom:14px;">Møllebyggerens gren</div>
-        <p style="font-size:17px;line-height:1.7;color:#b3ab9c;margin:0 0 16px;text-wrap:pretty;"><strong style="font-weight:500;color:#dcd6c8;">Esper Nielsen Silkjær</strong> (1888—1960) blev landmand og møllebygger. Han giftede sig med <strong style="font-weight:500;color:#dcd6c8;">Jensine Mortensen</strong>, født i Gudum 9. juli 1889, og flyttede ind i hendes sogn — femogtyve kilometer fra havet, men stadig i Ringkøbing Amt.</p><p style="font-size:17px;line-height:1.7;color:#b3ab9c;margin:0 0 16px;text-wrap:pretty;">Alle tre børn blev født i Gudum: Knud Vagnsgaard (1913), Jens (1916—2000) og Anne Kristiane (1917—2009). Sønnen Jens blev gårdmand og <em>kværnbilder</em> — den håndværker, der hugger møllestenene skarpe igen — og siden sognerådsformand. Han giftede sig i Andst i 1952 og døde på Skive sygehus.</p><p style="font-size:17px;line-height:1.7;color:#b3ab9c;margin:0 0 0px;text-wrap:pretty;">Møllebyggerens søn skærpede møllesten. Faget gik videre, mens havet blev noget, man hørte om.</p>
+        <p style="font-size:17px;line-height:1.7;color:#b3ab9c;margin:0 0 16px;text-wrap:pretty;"><strong style="font-weight:500;color:#dcd6c8;">Esper Nielsen Silkjær</strong> (1888—1960) blev landmand og møllebygger. Han giftede sig med <strong style="font-weight:500;color:#dcd6c8;">Jensine Mortensen</strong>, født i Gudum 9. juli 1889, og flyttede ind i hendes sogn — femogtyve kilometer fra havet, men stadig i Ringkøbing Amt.</p><p style="font-size:17px;line-height:1.7;color:#b3ab9c;margin:0 0 16px;text-wrap:pretty;">Alle tre børn blev født i Gudum: Knud Vagnsgaard (1913), Jens (1916—2000) og Anne Kristiane (1917—2009, død i Holstebro). Sønnen Jens blev gårdmand og <em>kværnbilder</em> — den håndværker, der hugger møllestenene skarpe igen — og siden sognerådsformand, altså den første i slægten med et offentligt hverv. Han giftede sig i Andst i 1952 med Gertrud Marie, kaldet Misse, og døde på Skive sygehus i 2000. Enken Jensine blev treoghalvfems og døde i Struer i 1982.</p><p style="font-size:17px;line-height:1.7;color:#b3ab9c;margin:0 0 0px;text-wrap:pretty;">Møllebyggerens søn skærpede møllesten. Faget gik videre, mens havet blev noget, man hørte om.</p>
       </div>
       <div data-reveal="1" style="border:1px solid rgba(220,214,200,.22);background:rgba(240,235,224,.05);padding:clamp(20px,3vw,28px);opacity:0;transform:translateY(30px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1);">
         <div style="font:10px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:#7fa3ae;margin-bottom:12px;">Esbjerg · Havnegade</div>
         <div style="font-size:clamp(22px,2.8vw,28px);line-height:1.2;color:#f0ebe0;margin-bottom:14px;">Naboerne i havnebyen</div>
-        <p style="font-size:17px;line-height:1.7;color:#b3ab9c;margin:0 0 16px;text-wrap:pretty;"><strong style="font-weight:500;color:#dcd6c8;">Ane Kirstine</strong> (1892—1977) blev nytårsdag 1920 gift med fiskeren Christen Cilius Tarbensen. Deres fire børn blev født i Esbjerg og fik alle moderens gårdnavn ind i deres eget: Christian Fjord <em>Silkjær</em> Torbensen (1920—1985), Kamma (1926—1997), Anna Kirstine (1929—2018) og Gerda (1938—1986).</p><p style="font-size:17px;line-height:1.7;color:#b3ab9c;margin:0 0 16px;text-wrap:pretty;">Anna Kirstine kom til verden 15. april 1929 på <strong style="font-weight:500;color:#dcd6c8;">Havnegade 132</strong>. Halvfjerds numre længere op ad samme gade boede hendes onkel Thomas, fiskeskipperen, på nummer 179. To husstande fra Økjær, samme gade i den nye by.</p><p style="font-size:17px;line-height:1.7;color:#b3ab9c;margin:0 0 0px;text-wrap:pretty;">Hun blev gift i Zions Kirke i 1950 og døde på plejehjemmet i Hjerting som niogfirsårig — den sidste af de Esbjerg-fødte søskende.</p>
+        <p style="font-size:17px;line-height:1.7;color:#b3ab9c;margin:0 0 16px;text-wrap:pretty;"><strong style="font-weight:500;color:#dcd6c8;">Ane Kirstine</strong> (1892—1977) blev nytårsdag 1920 gift med fiskeren Christen Cilius Tarbensen. Deres fire børn blev født i Esbjerg og fik alle moderens gårdnavn ind i deres eget: Christian Fjord <em>Silkjær</em> Torbensen (1920—1985), Kamma (1926—1997), Anna Kirstine (1929—2018) og Gerda (1938—1986).</p><p style="font-size:17px;line-height:1.7;color:#b3ab9c;margin:0 0 16px;text-wrap:pretty;">Anna Kirstine kom til verden 15. april 1929 på <strong style="font-weight:500;color:#dcd6c8;">Havnegade 132</strong>. Halvfjerds numre længere op ad samme gade boede hendes onkel Thomas, fiskeskipperen, på nummer 179. To husstande fra Økjær, samme gade i den nye by.</p><p style="font-size:17px;line-height:1.7;color:#b3ab9c;margin:0 0 0px;text-wrap:pretty;">Hun blev gift i Zions Kirke 25. november 1950 med Jens Sand Christensen fra Sønder Lyngvig på Holmsland Klit — endnu et bånd tilbage til klitten — og døde på plejehjemmet i Hjerting som niogfirsårig, den sidste af de Esbjerg-fødte søskende. Deres datter Kirsten Sand Christensen (1951—2025) blev født og døde i Esbjerg.</p>
       </div>
       <div data-reveal="1" style="border:1px solid rgba(220,214,200,.22);background:rgba(240,235,224,.05);padding:clamp(20px,3vw,28px);opacity:0;transform:translateY(30px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1);">
         <div style="font:10px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:#7fa3ae;margin-bottom:12px;">Sjælborg · Esbjerg · Vallensbæk</div>
         <div style="font-size:clamp(22px,2.8vw,28px);line-height:1.2;color:#f0ebe0;margin-bottom:14px;">Bøndergaard-grenen</div>
-        <p style="font-size:17px;line-height:1.7;color:#b3ab9c;margin:0 0 16px;text-wrap:pretty;"><strong style="font-weight:500;color:#dcd6c8;">Karen Marie</strong> (1890—1933) blev husmandskone i Sjælborg med Kristian Kornelius Bøndergaard og fik tretten børn, før hun døde treogfyrre år gammel.</p><p style="font-size:17px;line-height:1.7;color:#b3ab9c;margin:0 0 16px;text-wrap:pretty;">Sønnen <strong style="font-weight:500;color:#dcd6c8;">Niels Silkjær Bøndergaard</strong> (1915—1996) blev fisker og siden tankbådsfører i Esbjerg — kystfaget i ny form, med motor og olie i stedet for sejl og sild. Datteren Anna Silkjær Bøndergaard (1916—1979) endte sine dage i Vallensbæk ved København.</p><p style="font-size:17px;line-height:1.7;color:#b3ab9c;margin:0 0 0px;text-wrap:pretty;">Med hende nåede navnet Sjælland.</p>
+        <p style="font-size:17px;line-height:1.7;color:#b3ab9c;margin:0 0 16px;text-wrap:pretty;"><strong style="font-weight:500;color:#dcd6c8;">Karen Marie</strong> (1890—1933) blev husmandskone i Sjælborg med Kristian Kornelius Bøndergaard og fik <strong style="font-weight:500;color:#dcd6c8;">tretten børn på fjorten år</strong>: Kristen Magnus (1913), Niels Silkjær (1915), Anna Silkjær (1916), Theodor Salomon (1917), Henry (1918—2016), Ida Marentha (1919), Kaj (1920), Anker (1921—2005), Ninna Dagny (1922), Edith (1923—1962), Josva (1925—2015), Inga (1926) og Bent Karl (1927). Seks år efter den yngste var hun død, treogfyrre år gammel.</p><p style="font-size:17px;line-height:1.7;color:#b3ab9c;margin:0 0 16px;text-wrap:pretty;">To af de tretten fik gårdnavnet med i deres eget. <strong style="font-weight:500;color:#dcd6c8;">Niels Silkjær Bøndergaard</strong> (1915—1996) blev fisker og siden tankbådsfører i Esbjerg — kystfaget i ny form, med motor og olie i stedet for sejl og sild; hans kone Mary Margrethe kom fra Holbæk Amt, var kontorassistent og levede til 2013. Søsteren <strong style="font-weight:500;color:#dcd6c8;">Anna Silkjær Bøndergaard</strong> (1916—1979) endte sine dage i Vallensbæk ved København.</p><p style="font-size:17px;line-height:1.7;color:#b3ab9c;margin:0 0 0px;text-wrap:pretty;">Med hende nåede navnet Sjælland.</p>
       </div>
       <div data-reveal="1" style="border:1px solid rgba(220,214,200,.22);background:rgba(240,235,224,.05);padding:clamp(20px,3vw,28px);opacity:0;transform:translateY(30px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1);">
         <div style="font:10px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:#7fa3ae;margin-bottom:12px;">Fjand · Damhus · Husby</div>
         <div style="font-size:clamp(22px,2.8vw,28px);line-height:1.2;color:#f0ebe0;margin-bottom:14px;">De, der blev</div>
-              <p style="font-size:17px;line-height:1.7;color:#b3ab9c;margin:0 0 16px;text-wrap:pretty;"><strong style="font-weight:500;color:#dcd6c8;">Jensine Kristine</strong> (1896—1964) giftede sig med Martin Jeppesen Nørfjand fra nabosognet Sønder Nissum, mistede ham i 1936 og blev boende i Fjand i otteogtyve år som enke.</p><p style="font-size:17px;line-height:1.7;color:#b3ab9c;margin:0 0 16px;text-wrap:pretty;"><strong style="font-weight:500;color:#dcd6c8;">Ellen</strong> (1902—1980) — pigen fra skolebilledet — giftede sig med Peder Christian Mathiesen fra Sjelborg og døde i Esbjerg. <strong style="font-weight:500;color:#dcd6c8;">Sidsel Kathrine</strong> blev født juleaften 1894.</p><p style="font-size:17px;line-height:1.7;color:#b3ab9c;margin:0 0 0px;text-wrap:pretty;">Og <strong style="font-weight:500;color:#dcd6c8;">Ane Marie</strong> (1880—1960), den ældste, forlod aldrig Husby. Hun blev født i sognet, blev gift i sognet, sad enke på gården i fireogfyrre år og døde i sognet. Hendes søn hed Niels <em>Silkjær</em> Lauridsen.</p>
+              <p style="font-size:17px;line-height:1.7;color:#b3ab9c;margin:0 0 16px;text-wrap:pretty;"><strong style="font-weight:500;color:#dcd6c8;">Jensine Kristine</strong> (1896—1964) giftede sig med Martin Jeppesen Nørfjand fra nabosognet Sønder Nissum, mistede ham i 1936 og blev boende i Fjand i otteogtyve år som enke.</p><p style="font-size:17px;line-height:1.7;color:#b3ab9c;margin:0 0 16px;text-wrap:pretty;"><strong style="font-weight:500;color:#dcd6c8;">Ellen</strong> (1902—1980) — pigen fra skolebilledet — giftede sig med Peder Christian Mathiesen fra Sjelborg og døde i Esbjerg. <strong style="font-weight:500;color:#dcd6c8;">Sidsel Kathrine</strong> blev født juleaften 1894.</p><p style="font-size:17px;line-height:1.7;color:#b3ab9c;margin:0 0 0px;text-wrap:pretty;">Og <strong style="font-weight:500;color:#dcd6c8;">Ane Marie</strong> (1880—1960), den ældste, forlod aldrig Husby. Hun blev født i sognet, blev gift i sognet, sad enke på gården i fireogfyrre år og døde i sognet. Slægtsfilen navngiver seks af hendes børn — Ane Johanne (1909), Agnethe (1910—1998), Niels Silkjær (1911—1986), Kristine og Valdemar (begge 1913) og Maren (1915—1998) — hvor sognebogen taler om otte. Kun én af dem fik gårdnavnet: sønnen, der hed Niels <em>Silkjær</em> Lauridsen.</p>
       </div>
     </div>
 
-    <div data-reveal="1" style="max-width:820px;border-top:1px solid rgba(220,214,200,.2);padding-top:clamp(28px,4vw,40px);opacity:0;transform:translateY(30px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1);">
-      <p style="font-size:clamp(19px,2.3vw,24px);line-height:1.6;font-weight:300;color:#f0ebe0;margin:0 0 22px;">Navnet rejste stort set aldrig som efternavn. Det rejste som mellemnavn — mellem et fornavn og en mands slægtsnavn — og det rejste med kvinderne.</p>
-      <p style="font-size:18px;line-height:1.75;margin:0 0 20px;color:#b3ab9c;text-wrap:pretty;">Fire af Niels Thomsen Silkjærs døtre gav Silkjær videre til børn, der officielt hed Lauridsen, Madsen, Bøndergaard og Torbensen. Ingen af dem kunne arve navnet efter loven. Alle fire sørgede for, at det stod der alligevel.</p>
-      <p style="font-size:18px;line-height:1.75;margin:0;color:#b3ab9c;text-wrap:pretty;">Krøniken her følger Ane Johanne og Laura tættest, fordi det er den linje, hvor navnet er blevet efternavn igen. Men det blev båret lige så ægte i Gudum, på Djursland, på Havnegade og i Fjand — og de grene har deres egne kapitler, som andre må skrive. [S40]</p>
+    <div data-reveal="1" style="display:flex;flex-wrap:wrap;gap:clamp(22px,5vw,64px);padding:clamp(24px,4vw,34px) 0;border-top:1px solid rgba(220,214,200,.2);border-bottom:1px solid rgba(220,214,200,.2);margin:0 0 clamp(32px,5vw,52px);font:11px/1.6 'IBM Plex Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:#8d9aa0;opacity:0;transform:translateY(30px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1);">
+      <div><div style="font-size:30px;font-family:'Newsreader',serif;letter-spacing:0;text-transform:none;color:#f0ebe0;line-height:1;">10</div>børn fra Økjær</div>
+      <div><div style="font-size:30px;font-family:'Newsreader',serif;letter-spacing:0;text-transform:none;color:#f0ebe0;line-height:1;">53</div>børnebørn i slægtsfilen</div>
+      <div><div style="font-size:30px;font-family:'Newsreader',serif;letter-spacing:0;text-transform:none;color:#f0ebe0;line-height:1;">4</div>døtre bar det videre</div>
+      <div><div style="font-size:30px;font-family:'Newsreader',serif;letter-spacing:0;text-transform:none;color:#f0ebe0;line-height:1;">7</div>sogne på én generation</div>
+    </div>
+
+    <div data-reveal="1" style="max-width:820px;padding-top:clamp(8px,2vw,16px);opacity:0;transform:translateY(30px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1);">
+      <p style="font-size:18px;line-height:1.75;margin:0 0 20px;color:#b3ab9c;text-wrap:pretty;">Den syvende gren er den østjyske: Jens Klaus’ seks sønner i Oustrup og Vejlby, hvor Silkjær for første gang blev et ganske almindeligt efternavn — den er fortalt i kapitel 16.</p>
+      <p style="font-size:clamp(19px,2.3vw,24px);line-height:1.6;font-weight:300;color:#f0ebe0;margin:0 0 22px;">Ét mønster går igen på tværs af alle grenene: navnet rejste næsten aldrig som efternavn. Det rejste i midten af et navn — og det rejste med kvinderne.</p>
+      <p style="font-size:18px;line-height:1.75;margin:0;color:#b3ab9c;text-wrap:pretty;">Krøniken her følger Ane Johanne og Laura tættest, fordi det er den linje, hvor navnet til sidst blev efternavn igen. Men det blev båret lige så ægte i Gudum, på Djursland, på Havnegade og i Fjand — og de grene har deres egne kapitler, som andre må skrive. [S40]</p>
     </div>
   </div>
 </section>
@@ -1055,20 +1111,50 @@ button{font-family:inherit}
   <div style="max-width:820px;margin:0 auto;">
     <div data-reveal="1" style="opacity:0;transform:translateY(30px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1);">
       <div style="font:11px/1 'IBM Plex Mono',monospace;letter-spacing:.24em;text-transform:uppercase;color:#8a5a3c;margin-bottom:18px;">Kapitel 18 · hullet i fortællingen</div>
-      <h2 style="font-weight:400;font-size:clamp(34px,5.4vw,62px);line-height:1.02;letter-spacing:-.015em;margin:0 0 28px;">Gården<br>ved siden af</h2>
+      <h2 style="font-weight:400;font-size:clamp(34px,5.4vw,62px);line-height:1.02;letter-spacing:-.015em;margin:0 0 28px;">De to<br>navne</h2>
       <p style="font-size:19px;line-height:1.72;margin:0 0 24px;color:#33302a;text-wrap:pretty;">Og hvad med selve stedet — gården, det hele er opkaldt efter? Her skal krøniken være ærlig, og ærligheden begynder med noget ubehageligt:</p>
-      <blockquote style="margin:0 0 24px;padding:26px 28px;background:#eae5da;border-left:3px solid #8a5a3c;font-size:clamp(19px,2.4vw,24px);line-height:1.55;color:#1e1c18;">I alle led, hvor kilderne siger noget om bopæl, siger de <strong style="font-weight:500;">Økjær</strong> — ikke Silkjær. Thomas Jensen var husmand og fisker i Økjær. Niels Thomsen var husmand og fisker i Økjær. Børnene blev født i Økjær. Navnet er nabogårdens.</blockquote>
-      <p style="font-size:19px;line-height:1.72;margin:0 0 24px;color:#33302a;text-wrap:pretty;">Slægten tog navn efter nabogården Silkjær, Øhusevej 1, skønt den boede i Økjær, Øhusevej 3. Og navnet optræder i kilderne i flere stavemåder — Silkjær og Silkær — undertiden inden for samme dokument. Det gør ikke fortællingen mindre — men det ændrer, hvad den handler om. Familien tog ikke navnet med sig fra en gård, de ejede. De tog navnet fra stedet ved siden af, og gjorde det til deres. Hvorfor, og hvornår, er <strong style="font-weight:500;">det største hul i fortællingen.</strong></p>
-      <p style="font-size:17px;line-height:1.7;margin:0 0 24px;color:#57534a;text-wrap:pretty;">De mest sandsynlige forklaringer er hverdagslige: at slægten på et tidspunkt boede eller havde fæste på Silkjær, før den flyttede de få hundrede meter til Økjær — eller at sognet simpelthen brugte det mest markante af de to navne om begge steder. På redningsmandskabets seddel fra 1915 er Silkjær netop det fikspunkt, naboen får sin adresse af. Men før matriklen og fæsteprotokollerne er læst, er begge forklaringer formodninger.</p>
+      <blockquote style="margin:0 0 24px;padding:26px 28px;background:#eae5da;border-left:3px solid #8a5a3c;font-size:clamp(19px,2.4vw,24px);line-height:1.55;color:#1e1c18;">I alle led, hvor kilderne siger noget om bopæl, siger de <strong style="font-weight:500;">Økjær</strong> — ikke Silkjær. Thomas Jensen var husmand og fisker i Økjær. Niels Thomsen var husmand og fisker i Økjær. Børnene blev født i Økjær. Navnet, familien tog, står aldrig som deres adresse.</blockquote>
+      <p style="font-size:19px;line-height:1.72;margin:0 0 24px;color:#33302a;text-wrap:pretty;">Det er fristende at slutte, at slægten tog navn efter nabogården — at de boede på Øhusevej 3 og lånte navnet fra nummer 1B. Men den slutning hviler på en antagelse, kilderne ikke bærer: at Økjær og Silkjær var to gårde ved siden af hinanden, hver med sin matrikel og sit hegn.</p>
+      <p style="font-size:19px;line-height:1.72;margin:0 0 24px;color:#33302a;text-wrap:pretty;">Det passer dårligt med, hvad kirkebøgerne faktisk gør. I 1878 er <em>både</em> Thomas Jensen og Iver Christian Olesen husmænd og fiskere »i Økjær«; i 1911 dør en kvinde uden for slægten samme sted. Økjær rummer altså flere husstande. Så snart det er en lille bebyggelse eller et områdenavn og ikke én bygning, forsvinder gåden måske helt: <strong style="font-weight:500;">familien kan have boet på Silkjær — i Økjær.</strong></p>
+      <p style="font-size:19px;line-height:1.72;margin:0 0 24px;color:#33302a;text-wrap:pretty;">Geografien taler for det. Økjær lå ikke midt i en landsby, men i det åbne land mellem Øby og Øhuse, hvor matrikel 15 lå side om side med Silkjærs matrikel 13 langs vejen, der siden blev Øhusevej. Når kirkebøgerne skrev, at familien boede i Økjær, kan betegnelsen have dækket mere end én bygning: en gård, dens husmandssteder og jorden omkring det lave kær. Den nuværende ejendom på Øhusevej 3 fører navnet og matriklen videre, men er ikke nødvendigvis identisk med huset, hvor familien boede i 1800-tallet.</p>
+
+      <div style="margin:0 0 28px;border:1px solid rgba(30,28,24,.2);background:#eae5da;padding:clamp(18px,3vw,26px);">
+        <div style="font:10px/1 'IBM Plex Mono',monospace;letter-spacing:.18em;text-transform:uppercase;color:#8a8377;margin-bottom:6px;">To matrikler gennem to hundrede år</div>
+        <p style="font-size:15px;line-height:1.6;color:#57534a;margin:0 0 18px;max-width:44em;">Sporet er læst baglæns: fra dagens 15f og 13b tilbage gennem de historiske matrikelkort til de to hovedmatrikler, de er udstykket af.</p>
+        <div style="display:grid;grid-template-columns:minmax(90px,.8fr) 1fr 1fr;gap:0;font-size:15px;line-height:1.5;">
+          <div style="font:10px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#8a8377;padding:0 12px 10px 0;">Periode</div>
+          <div style="font:10px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#8a5a3c;padding:0 12px 10px 0;">Økjær</div>
+          <div style="font:10px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#2f5d6e;padding:0 0 10px;">Silkjær</div>
+
+          <div style="border-top:1px solid rgba(30,28,24,.16);padding:12px 12px 12px 0;color:#57534a;font:12px/1.5 'IBM Plex Mono',monospace;">1800-tallet</div>
+          <div style="border-top:1px solid rgba(30,28,24,.16);padding:12px 12px 12px 0;color:#33302a;">Del af hovedmatrikel <strong style="font-weight:500;">15</strong></div>
+          <div style="border-top:1px solid rgba(30,28,24,.16);padding:12px 0;color:#33302a;">Del af hovedmatrikel <strong style="font-weight:500;">13</strong></div>
+
+          <div style="border-top:1px solid rgba(30,28,24,.16);padding:12px 12px 12px 0;color:#57534a;font:12px/1.5 'IBM Plex Mono',monospace;">1899</div>
+          <div style="border-top:1px solid rgba(30,28,24,.16);padding:12px 12px 12px 0;color:#33302a;">Udstykningen er begyndt, men ikke i nutidig form</div>
+          <div style="border-top:1px solid rgba(30,28,24,.16);padding:12px 0;color:#33302a;"><strong style="font-weight:500;">13b</strong> findes; parcellerne omkring den ligger anderledes</div>
+
+          <div style="border-top:1px solid rgba(30,28,24,.16);padding:12px 12px 12px 0;color:#57534a;font:12px/1.5 'IBM Plex Mono',monospace;">1935</div>
+          <div style="border-top:1px solid rgba(30,28,24,.16);padding:12px 12px 12px 0;color:#33302a;"><strong style="font-weight:500;">15f</strong> er etableret</div>
+          <div style="border-top:1px solid rgba(30,28,24,.16);padding:12px 0;color:#33302a;"><strong style="font-weight:500;">13b</strong> har sin moderne identitet</div>
+
+          <div style="border-top:1px solid rgba(30,28,24,.16);padding:12px 12px 0 0;color:#57534a;font:12px/1.5 'IBM Plex Mono',monospace;">I dag</div>
+          <div style="border-top:1px solid rgba(30,28,24,.16);padding:12px 12px 0 0;color:#33302a;">Øhusevej 3 · matr. <strong style="font-weight:500;">15f</strong></div>
+          <div style="border-top:1px solid rgba(30,28,24,.16);padding:12px 0 0;color:#33302a;">Øhusevej 1B · matr. <strong style="font-weight:500;">13b</strong></div>
+        </div>
+        <p style="font-size:15px;line-height:1.65;color:#57534a;margin:20px 0 0;border-top:1px solid rgba(30,28,24,.14);padding-top:14px;max-width:44em;">Matriklerne lå altså adskilt hele vejen igennem. Men en hovedmatrikel er ikke ét hus: matr. 15 kunne rumme både gården Økjær og de husmandssteder, der lå på dens jord. At familien boede »i Økjær« udelukker hverken det ene eller det andet.<button type="button" onClick="{{ toggleNext }}" title="Forbehold" style="margin-left:6px;width:17px;height:17px;border-radius:50%;border:1px solid #8a5a3c;background:none;color:#8a5a3c;font:10px/1 'IBM Plex Mono',monospace;cursor:pointer;vertical-align:super;padding:0;">?</button><span data-panel style="display:none;margin-top:12px;padding:12px 14px;background:rgba(138,90,60,.08);border-left:2px solid #8a5a3c;font-size:15px;line-height:1.6;color:#57534a;">Rækkefølgen bygger på matrikelkortene, ikke på realregistret. Den viser, hvordan jorden blev udstykket — ikke hvem der sad på den. Koblingen mellem matr. 15 og Thomas Jensen eller Niels Thomsen mangler stadig at blive gjort i realregister og skøde- og panteprotokoller.</span></p>
+      </div>
+
+      <p style="font-size:17px;line-height:1.7;margin:0 0 24px;color:#57534a;text-wrap:pretty;">Tre forklaringer står lige nu åbne, og de er alle hverdagslige. At slægten boede eller havde fæste på Silkjær, før den flyttede de få hundrede meter. At husmandsstedet lå i skellet mellem de to jorder, så præsten skrev det ene navn og familien tog det andet. Eller at sognet brugte det mest markante af de to navne løst om begge steder. På redningsmandskabets seddel fra 1915 er Silkjær netop det fikspunkt, naboen får sin adresse af. Navnet optræder desuden i flere stavemåder — Silkjær og Silkær — undertiden i samme dokument. Før matrikelkortet fra 1844 og fæsteprotokollerne er læst, er alle tre forklaringer formodninger, og det er <strong style="font-weight:500;">det største hul i fortællingen.</strong></p>
 
       <div style="display:grid;gap:0;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin:0 0 32px;">
         <div style="padding:20px;background:#eae5da;border:1px solid rgba(30,28,24,.18);">
           <div style="font:10px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:#2f5d6e;margin-bottom:12px;">Det ved vi</div>
-          <ul style="margin:0;padding-left:18px;font-size:16px;line-height:1.75;color:#33302a;"><li>Hvor den ligger: Øhusevej 1B</li><li>Hvordan den så ud i 1948 og 2025</li><li>At navnet er mindst fra 1650</li><li>At slægten i alle kendte led boede i Økjær ved siden af</li><li>At Silkjær-navnet alligevel fulgte familien</li><li>At Johannes Madsen købte gården i 1936</li></ul>
+          <ul style="margin:0;padding-left:18px;font-size:16px;line-height:1.75;color:#33302a;"><li>Hvor den ligger: Øhusevej 1B</li><li>Hvordan den så ud i 1948 og 2025</li><li>At navnet er mindst fra 1650</li><li>At kilderne altid skriver Økjær om slægtens bopæl</li><li>At de to steder lå på hver sin hovedmatrikel, 13 og 15</li><li>At Silkjær-navnet alligevel fulgte familien</li><li>At Johannes Madsen købte gården i 1936</li></ul>
         </div>
         <div style="padding:20px;background:#f2efe8;border:1px dashed rgba(30,28,24,.35);border-left:0;">
           <div style="font:10px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:#8a5a3c;margin-bottom:12px;">Det mangler</div>
-          <ul style="margin:0;padding-left:18px;font-size:16px;line-height:1.75;color:#57534a;"><li>Rækken af fæstere og ejere før 1936</li><li><strong style="font-weight:500;">Om slægten nogensinde boede på Silkjær</strong></li><li>Hvorfor navnet blev deres og ikke naboens</li><li>Ejerskifterne i tingbog og matrikel</li></ul>
+          <ul style="margin:0;padding-left:18px;font-size:16px;line-height:1.75;color:#57534a;"><li>Rækken af fæstere og ejere før 1936</li><li><strong style="font-weight:500;">Om slægten nogensinde boede på Silkjær</strong></li><li>Om Økjær var én ejendom eller flere husmandssteder</li><li>Hvilken bygning på matr. 15 familien faktisk boede i</li><li>Ejerskifterne i tingbog og matrikel</li><li>Hvad der siden skete med Økjær</li></ul>
         </div>
       </div>
 
@@ -1079,7 +1165,7 @@ button{font-family:inherit}
           <div>
             <p style="font-size:18px;line-height:1.7;margin:0 0 16px;color:#33302a;text-wrap:pretty;">Husby-sognebogen har en biografi for gården — stavet <em>Silkær</em>. <strong style="font-weight:500;">Johannes Madsen</strong>, født i Husby 15. juni 1891, gift med Marie Jensen fra Madum, syv børn født mellem 1916 og 1933. Og så den sætning, hele kapitlet ledte efter:</p>
             <blockquote style="margin:0 0 16px;padding:16px 18px;background:#f2efe8;border-left:3px solid #8a5a3c;font-size:19px;line-height:1.6;color:#1e1c18;">»Madsen købte Gaarden 1936 med 17 Tdr. Land opdyrket og udyrket samt beplantet.«</blockquote>
-            <p style="font-size:17px;line-height:1.7;margin:0 0 14px;color:#33302a;">Dermed har vi et årstal. Senest i 1936 gik Silkjær ud af den navnebærende slægts hænder — treogtyve år før skolebilledet, hvor gårdnavnet stadig hang ved i sognets omtale. To køer, tre kreaturer, fedesvin, to heste, og mælkekørsel i tredive år: sådan så livet på stedet ud, da navnet for længst var rejst videre uden det.</p>
+            <p style="font-size:17px;line-height:1.7;margin:0 0 14px;color:#33302a;">Dermed har vi et årstal. Senest i 1936 gik Silkjær ud af den navnebærende slægts hænder — fireogtyve år før skolebilledet, hvor gårdnavnet stadig hang ved i sognets omtale. To køer, tre kreaturer, fedesvin, to heste, og mælkekørsel i tredive år: sådan så livet på stedet ud, da navnet for længst var rejst videre uden det.</p>
             <p style="font-size:15px;line-height:1.65;margin:0;color:#57534a;">Tilbage står rækken før 1936 — hvem der sad på gården, da Niels Thomsen tog dens navn til sig, og hvornår slægten selv kom og gik.</p>
           </div>
         </div>
@@ -1092,6 +1178,7 @@ button{font-family:inherit}
         <div data-panel style="display:none;padding:0 0 22px;font-size:17px;line-height:1.75;color:#4a4640;">
           <p style="margin:0 0 14px;">Sognebogen er nu læst. <em>Vort Sogns Historie</em> for Husby Sogn rummer 48 beboerbiografier, og Silkjær optræder i to af dem: Johannes Madsens opslag om selve gården (købt 1936) og Ole Lauridsens opslag, hvor hustruen Ane Marie Nielsen Silkjær får sine forældre og bedsteforældre opregnet. <strong style="font-weight:500;">Rækken før 1936 står ikke i bogen.</strong> Værket blev betalt af abonnenter og medtager kun de steder, der købte plads — og kun den ejer, der sad på stedet omkring 1950.</p>
           <p style="margin:0 0 14px;">Hullet skal derfor lukkes andetsteds: i Ingrid Halkjærs optegnelser fra 1971 over sognets ejendomme <em>med ejernes navne</em>, hvor Silkjær udtrykkeligt er blandt de opregnede gårde — og dernæst i matriklen 1844, tingbogen og Nørre Vosborgs fæsteprotokoller.</p>
+          <p style="margin:0 0 14px;">Det samme gælder <strong style="font-weight:500;">Økjær</strong>, som slægten faktisk boede i gennem tre generationer, og som vi ved endnu mindre om end Silkjær: ingen ejer- eller fæsterække, intet matrikelnummer koblet til Thomas Jensen eller Niels Thomsen, ingen skøder, intet om areal eller bygninger, og intet om hvem der overtog stedet. Vejen dertil går samme sted hen — først matrikelkortet fra 1844, så realregister og skøde- og panteprotokoller.</p>
           <p style="margin:0;">Kilder: <a href="https://www.ulfborgarkiv.dk" target="_blank" rel="noopener">ulfborgarkiv.dk</a> (PDF'erne HUSBY-SOGN og SOeNDER-NISSUM-SOGN) · <a href="https://arkiv.dk/vis/6507768" target="_blank" rel="noopener">arkiv.dk/vis/6507768</a> [S20]</p>
         </div>
       </div>
@@ -1170,7 +1257,7 @@ button{font-family:inherit}
     <div style="font:11px/1 'IBM Plex Mono',monospace;letter-spacing:.24em;text-transform:uppercase;color:#7fa3ae;margin-bottom:18px;">Kapitel 20 · i dag</div>
     <h2 style="font-weight:400;font-size:clamp(34px,5.4vw,62px);line-height:1.02;letter-spacing:-.015em;margin:0 0 28px;color:#f0ebe0;">Navnet nu</h2>
     <p style="font-size:18px;line-height:1.75;margin:0 0 20px;color:#b3ab9c;">I dag bæres Silkjær igen som efternavn af efterkommere i Mikkelsen-linjen — børn og børnebørn af Leif, født 1956.</p>
-    <p style="font-size:18px;line-height:1.75;margin:0 0 20px;color:#b3ab9c;">Cirkelen er ikke helt lukket; den slags cirkler lukker aldrig helt. Ingen af de nulevende har boet på gården, og de fleste har aldrig arbejdet på havet. Men navnet står, hvor det stod hos Niels Thomsen for godt hundrede og halvtreds år siden: som familiens.</p>
+    <p style="font-size:18px;line-height:1.75;margin:0 0 20px;color:#b3ab9c;">Cirkelen er ikke helt lukket; den slags cirkler lukker aldrig helt. Ingen af de nulevende har boet på gården, og de fleste har aldrig arbejdet på havet. Men navnet står, hvor det stod hos Niels Thomsen for godt hundrede og fyrre år siden: som familiens.</p>
     <div style="margin:40px 0;padding:28px 0;border-top:1px solid rgba(220,214,200,.2);border-bottom:1px solid rgba(220,214,200,.2);font-size:clamp(19px,2.4vw,25px);line-height:1.6;color:#f0ebe0;font-weight:300;">
       Det begyndte som en beskrivelse af et vådt stykke jord i Husby Sogn.<br>Det blev til en mand.<br>Det blev til en slægt.<br>Og det blev til det, en familie valgte at huske — hver eneste gang de havde lejlighed til at lade være.
     </div>
@@ -1178,7 +1265,7 @@ button{font-family:inherit}
       <div style="border:1px solid rgba(220,214,200,.22);background:#1b2027;overflow:hidden;">
         <img src="billeder/11a-familien-ved-stenen.jpg" alt="Familie med hund foran en stor kampesten med navnet SILKJÆR hugget ind, den stråtækte gård i baggrunden" style="display:block;width:100%;height:auto;" loading="lazy" decoding="async">
       </div>
-      <figcaption style="margin-top:14px;font-size:17px;line-height:1.65;color:#dcd6c8;max-width:34em;">»Stenen ved indkørslen bærer stadig navnet. Hundrede og halvtreds år efter, at Niels Thomsen begyndte at skrive Silkjær efter sit eget, står efterkommerne på den samme jord — som gæster.«
+      <figcaption style="margin-top:14px;font-size:17px;line-height:1.65;color:#dcd6c8;max-width:34em;">»Stenen ved indkørslen bærer stadig navnet. Hundrede og fyrre år efter, at Niels Thomsen begyndte at skrive Silkjær efter sit eget, står efterkommerne på den samme jord — som gæster.«
         <div style="font:10px/1.6 'IBM Plex Mono',monospace;color:#7c8891;margin-top:10px;text-transform:uppercase;letter-spacing:.05em;">Billede 11 · familiens eget foto</div>
       </figcaption>
     </figure>
@@ -1211,92 +1298,234 @@ button{font-family:inherit}
   </div>
 </section>
 
-<section id="stamtavle" data-place="oversigt" data-chap="21" style="padding:clamp(72px,11vw,160px) clamp(20px,4vw,56px);">
+<section id="navnenoegle" data-place="oversigt" data-chap="21" style="background:#eae5da;padding:clamp(72px,11vw,160px) clamp(20px,6vw,56px);">
   <div style="max-width:1180px;margin:0 auto;">
-    <div data-reveal="1" style="max-width:700px;margin-bottom:clamp(36px,5vw,60px);opacity:0;transform:translateY(30px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1);">
-      <div style="font:11px/1 'IBM Plex Mono',monospace;letter-spacing:.24em;text-transform:uppercase;color:#8a5a3c;margin-bottom:18px;">Slægtstavlen</div>
-      <h2 style="font-weight:400;font-size:clamp(34px,5.4vw,62px);line-height:1.02;letter-spacing:-.015em;margin:0 0 22px;">Ni generationer</h2>
-      <p style="font-size:18px;line-height:1.7;color:#33302a;margin:0 0 16px;">Klik på et navn for at åbne personkortet. Tavlen viser ni generationer, fra fæstegårdene på Sønder Klit i 1710 til i dag; Klit-leddene er uddybet i kapitel 3. En <span style="border-bottom:1px dashed #8a5a3c;">stiplet ramme</span> betyder personer, der endnu ikke er kortlagt ved navn.</p>
+    <div data-reveal="1" style="max-width:740px;margin-bottom:clamp(32px,4vw,52px);opacity:0;transform:translateY(30px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1);">
+      <div style="font:11px/1 'IBM Plex Mono',monospace;letter-spacing:.24em;text-transform:uppercase;color:#8a5a3c;margin-bottom:18px;">Navnenøgle</div>
+      <h2 style="font-weight:400;font-size:clamp(30px,4.4vw,50px);line-height:1.05;margin:0 0 20px;">Seks Niels’er<br>og tre Ane Johanne’r</h2>
+      <p style="font-size:18px;line-height:1.7;color:#33302a;margin:0 0 14px;text-wrap:pretty;">I en slægt, hvor børn blev opkaldt efter bedsteforældre i hver generation, kommer de samme fire eller fem navne igen og igen. Her står navnefællerne over for hinanden, så man kan skille dem.</p>
+      <p style="font-size:17px;line-height:1.7;color:#57534a;margin:0;">En huskeregel: <em>-sen</em> og <em>-datter</em> fortæller, hvem faderen var — Jansdatter er Jans datter, Ibsdatter er Ibs datter. <em>Klit</em> og <em>Silkjær</em> fortæller derimod, hvor man boede. Det første dør med generationen; det andet kan arves.</p>
     </div>
 
-    <div style="overflow-x:auto;padding-bottom:8px;">
-      <div style="min-width:860px;display:flex;flex-direction:column;align-items:center;gap:0;">
+    <div style="display:grid;gap:clamp(16px,2.5vw,22px);grid-template-columns:repeat(auto-fit,minmax(320px,1fr));align-items:start;">
+      <div data-reveal="1" style="border:1px solid rgba(30,28,24,.2);background:#f2efe8;padding:clamp(18px,3vw,26px);opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1);">
+        <div style="font-size:clamp(21px,2.6vw,26px);line-height:1.2;margin-bottom:4px;">Niels</div>
+        <div style="font:10px/1.6 'IBM Plex Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:#8a5a3c;margin-bottom:16px;">seks mænd, ét navn</div>
+        <div style="display:grid;gap:12px;">
+          <div style="display:grid;grid-template-columns:92px 1fr;gap:12px;align-items:baseline;"><span style="font:11px/1.5 'IBM Plex Mono',monospace;color:#8a8377;">1855—1928</span><span style="font-size:16px;line-height:1.6;color:#33302a;"><strong style="font-weight:500;">Niels Thomsen Silkjær</strong> — stamfaderen. Husmand, fisker og bådsmand i Økjær; den første, der bar gårdnavnet.</span></div>
+          <div style="display:grid;grid-template-columns:92px 1fr;gap:12px;align-items:baseline;"><span style="font:11px/1.5 'IBM Plex Mono',monospace;color:#8a8377;">1910—1985</span><span style="font-size:16px;line-height:1.6;color:#33302a;"><strong style="font-weight:500;">Niels Silkær</strong> — fiskeskipperens søn i Årgab. Sejlede våben i Nordsøen i 1945 og ejede E.94 til 1976.</span></div>
+          <div style="display:grid;grid-template-columns:92px 1fr;gap:12px;align-items:baseline;"><span style="font:11px/1.5 'IBM Plex Mono',monospace;color:#8a8377;">1909—1972</span><span style="font-size:16px;line-height:1.6;color:#33302a;"><strong style="font-weight:500;">Niels Silkjær Madsen</strong> — Ane Johannes ældste. Murermester som sin far, død i Ikast.</span></div>
+          <div style="display:grid;grid-template-columns:92px 1fr;gap:12px;align-items:baseline;"><span style="font:11px/1.5 'IBM Plex Mono',monospace;color:#8a8377;">1911—1986</span><span style="font-size:16px;line-height:1.6;color:#33302a;"><strong style="font-weight:500;">Niels Silkjær Lauridsen</strong> — Ane Maries søn. Husmand i Damhus, Sønder Nissum. Drengen på skolebilledet fra 1919.</span></div>
+          <div style="display:grid;grid-template-columns:92px 1fr;gap:12px;align-items:baseline;"><span style="font:11px/1.5 'IBM Plex Mono',monospace;color:#8a8377;">1914—</span><span style="font-size:16px;line-height:1.6;color:#33302a;"><strong style="font-weight:500;">Niels Silkjær</strong> — Jens Klaus’ søn i Oustrup på Djursland. Her er Silkjær et rent efternavn.</span></div>
+          <div style="display:grid;grid-template-columns:92px 1fr;gap:12px;align-items:baseline;"><span style="font:11px/1.5 'IBM Plex Mono',monospace;color:#8a8377;">1915—1996</span><span style="font-size:16px;line-height:1.6;color:#33302a;"><strong style="font-weight:500;">Niels Silkjær Bøndergaard</strong> — Karen Maries søn. Fisker og tankbådsfører i Esbjerg.</span></div>
+        </div>
+      </div>
+      <div data-reveal="1" style="border:1px solid rgba(30,28,24,.2);background:#f2efe8;padding:clamp(18px,3vw,26px);opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1);">
+        <div style="font-size:clamp(21px,2.6vw,26px);line-height:1.2;margin-bottom:4px;">Ane Johanne</div>
+        <div style="font:10px/1.6 'IBM Plex Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:#8a5a3c;margin-bottom:16px;">en hustru, en datter, et barnebarn</div>
+        <div style="display:grid;gap:12px;">
+          <div style="display:grid;grid-template-columns:92px 1fr;gap:12px;align-items:baseline;"><span style="font:11px/1.5 'IBM Plex Mono',monospace;color:#8a8377;">1843—1880</span><span style="font-size:16px;line-height:1.6;color:#33302a;"><strong style="font-weight:500;">Ane Johanne Kristensen</strong> — Niels Thomsens <em>første</em> hustru, tolv år ældre end han. Døde i Økjær et halvt år efter sin eneste fødsel.</span></div>
+          <div style="display:grid;grid-template-columns:92px 1fr;gap:12px;align-items:baseline;"><span style="font:11px/1.5 'IBM Plex Mono',monospace;color:#8a8377;">1883—1956</span><span style="font-size:16px;line-height:1.6;color:#33302a;"><strong style="font-weight:500;">Ane Johanne Nielsen Silkjær</strong> — hans datter med den anden hustru. Gift med murermester Mads Erik Madsen; krønikens omdrejningspunkt, kapitel 9.</span></div>
+          <div style="display:grid;grid-template-columns:92px 1fr;gap:12px;align-items:baseline;"><span style="font:11px/1.5 'IBM Plex Mono',monospace;color:#8a8377;">1909—</span><span style="font-size:16px;line-height:1.6;color:#33302a;"><strong style="font-weight:500;">Ane Johanne Lauridsen</strong> — barnebarnet, opkaldt efter tanten. Datter af Ane Marie i Husby.</span></div>
+        </div>
+      </div>
+      <div data-reveal="1" style="border:1px solid rgba(30,28,24,.2);background:#f2efe8;padding:clamp(18px,3vw,26px);opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1);">
+        <div style="font-size:clamp(21px,2.6vw,26px);line-height:1.2;margin-bottom:4px;">Anne Marie / Ane Marie</div>
+        <div style="font:10px/1.6 'IBM Plex Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:#8a5a3c;margin-bottom:16px;">og en kutter med næsten samme navn</div>
+        <div style="display:grid;gap:12px;">
+          <div style="display:grid;grid-template-columns:92px 1fr;gap:12px;align-items:baseline;"><span style="font:11px/1.5 'IBM Plex Mono',monospace;color:#8a8377;">1827—1863</span><span style="font-size:16px;line-height:1.6;color:#33302a;"><strong style="font-weight:500;">Anne Marie Jansdatter Tarpgaard</strong> — gårdmandsdatter fra Vedersø, gift med Thomas Jensen. Døde 35 år gammel i Økjær.</span></div>
+          <div style="display:grid;grid-template-columns:92px 1fr;gap:12px;align-items:baseline;"><span style="font:11px/1.5 'IBM Plex Mono',monospace;color:#8a8377;">1880—1960</span><span style="font-size:16px;line-height:1.6;color:#33302a;"><strong style="font-weight:500;">Ane Marie Nielsen Silkjær</strong> — hendes sønnedatter og navnearving. Den ældste af søskendeflokken, gift Lauridsen, blev i Husby hele livet.</span></div>
+          <div style="display:grid;grid-template-columns:92px 1fr;gap:12px;align-items:baseline;"><span style="font:11px/1.5 'IBM Plex Mono',monospace;color:#8a8377;">1892—1977</span><span style="font-size:16px;line-height:1.6;color:#33302a;"><strong style="font-weight:500;">Ane Kirstine Nielsen Silkjær</strong> — søsteren, hvis vielse i 1920 gjorde gårdnavnet til faderens navn i kirkebogen.</span></div>
+          <div style="display:grid;grid-template-columns:92px 1fr;gap:12px;align-items:baseline;"><span style="font:11px/1.5 'IBM Plex Mono',monospace;color:#8a8377;">1897—1990</span><span style="font-size:16px;line-height:1.6;color:#33302a;"><strong style="font-weight:500;">ANNE KIRSTINE, E.94</strong> — kutteren. Et fartøj, ikke en person; det er hende, kapitel 14 og 15 handler om.</span></div>
+        </div>
+      </div>
+      <div data-reveal="1" style="border:1px solid rgba(30,28,24,.2);background:#f2efe8;padding:clamp(18px,3vw,26px);opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1);">
+        <div style="font-size:clamp(21px,2.6vw,26px);line-height:1.2;margin-bottom:4px;">Thomas</div>
+        <div style="font:10px/1.6 'IBM Plex Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:#8a5a3c;margin-bottom:16px;">tre generationer, samme fornavn</div>
+        <div style="display:grid;gap:12px;">
+          <div style="display:grid;grid-template-columns:92px 1fr;gap:12px;align-items:baseline;"><span style="font:11px/1.5 'IBM Plex Mono',monospace;color:#8a8377;">1754—1824</span><span style="font-size:16px;line-height:1.6;color:#33302a;"><strong style="font-weight:500;">Thomas Nielsen Langager</strong> — husmand og enroulleret matros i Stadil. Oldefar til den næste.</span></div>
+          <div style="display:grid;grid-template-columns:92px 1fr;gap:12px;align-items:baseline;"><span style="font:11px/1.5 'IBM Plex Mono',monospace;color:#8a8377;">1825—1878</span><span style="font-size:16px;line-height:1.6;color:#33302a;"><strong style="font-weight:500;">Thomas Jensen</strong> — husmand og fisker i Økjær. Omkom på havet 9. november 1878. Bar aldrig selv navnet Silkjær i levende live.</span></div>
+          <div style="display:grid;grid-template-columns:92px 1fr;gap:12px;align-items:baseline;"><span style="font:11px/1.5 'IBM Plex Mono',monospace;color:#8a8377;">1882—1950</span><span style="font-size:16px;line-height:1.6;color:#33302a;"><strong style="font-weight:500;">Thomas Nielsen Silkjær</strong> — hans sønnesøn. Fiskeskipper i Esbjerg, i registrene »T. N. Silkjær«.</span></div>
+        </div>
+      </div>
+      <div data-reveal="1" style="border:1px solid rgba(30,28,24,.2);background:#f2efe8;padding:clamp(18px,3vw,26px);opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1);">
+        <div style="font-size:clamp(21px,2.6vw,26px);line-height:1.2;margin-bottom:4px;">Laura og Laurids</div>
+        <div style="font:10px/1.6 'IBM Plex Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:#8a5a3c;margin-bottom:16px;">to navne, ét ægtepar</div>
+        <div style="display:grid;gap:12px;">
+          <div style="display:grid;grid-template-columns:92px 1fr;gap:12px;align-items:baseline;"><span style="font:11px/1.5 'IBM Plex Mono',monospace;color:#8a8377;">1917—1997</span><span style="font-size:16px;line-height:1.6;color:#33302a;"><strong style="font-weight:500;">Laura</strong>, født Madsen — Ane Johannes datter, husassistent, nummer ti af fjorten.</span></div>
+          <div style="display:grid;grid-template-columns:92px 1fr;gap:12px;align-items:baseline;"><span style="font:11px/1.5 'IBM Plex Mono',monospace;color:#8a8377;">1911—1996</span><span style="font-size:16px;line-height:1.6;color:#33302a;"><strong style="font-weight:500;">Laurids Mikkelsen</strong> — hendes mand, gårdejer på Nygaard i Fjelstervang. Navnene ligner hinanden; de er ikke i familie.</span></div>
+        </div>
+      </div>
+      <div data-reveal="1" style="border:1px solid rgba(30,28,24,.2);background:#f2efe8;padding:clamp(18px,3vw,26px);opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1);">
+        <div style="font-size:clamp(21px,2.6vw,26px);line-height:1.2;margin-bottom:4px;">Jens Claus og Jens Klaus</div>
+        <div style="font:10px/1.6 'IBM Plex Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:#8a5a3c;margin-bottom:16px;">morfaren og barnebarnet</div>
+        <div style="display:grid;gap:12px;">
+          <div style="display:grid;grid-template-columns:92px 1fr;gap:12px;align-items:baseline;"><span style="font:11px/1.5 'IBM Plex Mono',monospace;color:#8a8377;">ca. 1830</span><span style="font-size:16px;line-height:1.6;color:#33302a;"><strong style="font-weight:500;">Jens Claus</strong> — Ane Jensens far, kendt fra sognebogens opregning af morforældre.</span></div>
+          <div style="display:grid;grid-template-columns:92px 1fr;gap:12px;align-items:baseline;"><span style="font:11px/1.5 'IBM Plex Mono',monospace;color:#8a8377;">1886—1959</span><span style="font-size:16px;line-height:1.6;color:#33302a;"><strong style="font-weight:500;">Jens Klaus Nielsen Silkjær</strong> — hans dattersøn, opkaldt efter ham. Graver ved Vejlby Kirke; grundlægger af Djursland-grenen.</span></div>
+        </div>
+      </div>
+      <div data-reveal="1" style="border:1px solid rgba(30,28,24,.2);background:#f2efe8;padding:clamp(18px,3vw,26px);opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1);">
+        <div style="font-size:clamp(21px,2.6vw,26px);line-height:1.2;margin-bottom:4px;">Klit · Silkjær · Silkær</div>
+        <div style="font:10px/1.6 'IBM Plex Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:#8a5a3c;margin-bottom:16px;">samme slægt, tre stavemåder</div>
+        <div style="display:grid;gap:12px;">
+          <div style="display:grid;grid-template-columns:92px 1fr;gap:12px;align-items:baseline;"><span style="font:11px/1.5 'IBM Plex Mono',monospace;color:#8a8377;">1710—1861</span><span style="font-size:16px;line-height:1.6;color:#33302a;"><strong style="font-weight:500;">Klit</strong> — slægtens tilnavn, mens den sad på Sønder Klit og Husby Klit.</span></div>
+          <div style="display:grid;grid-template-columns:92px 1fr;gap:12px;align-items:baseline;"><span style="font:11px/1.5 'IBM Plex Mono',monospace;color:#8a8377;">fra ca. 1900</span><span style="font-size:16px;line-height:1.6;color:#33302a;"><strong style="font-weight:500;">Silkjær</strong> — gårdnavnet, som blev slægtsnavn. Den form, familien selv skriver.</span></div>
+          <div style="display:grid;grid-template-columns:92px 1fr;gap:12px;align-items:baseline;"><span style="font:11px/1.5 'IBM Plex Mono',monospace;color:#8a8377;">1904—1985</span><span style="font-size:16px;line-height:1.6;color:#33302a;"><strong style="font-weight:500;">Silkær</strong> — Esbjerg-grenens stavemåde i kirkebøger og fartøjsregistre. Samme navn, blot uden j’et.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <div style="background:#f2efe8;border:1px solid rgba(30,28,24,.2);padding:14px 18px;text-align:center;width:544px;">
+<section id="stamtavle" data-place="oversigt" data-chap="22" style="padding:clamp(72px,11vw,160px) clamp(20px,4vw,56px);">
+  <div style="max-width:1180px;margin:0 auto;">
+    <div data-reveal="1" style="max-width:720px;margin-bottom:clamp(28px,4vw,44px);opacity:0;transform:translateY(30px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1);">
+      <div style="font:11px/1 'IBM Plex Mono',monospace;letter-spacing:.24em;text-transform:uppercase;color:#8a5a3c;margin-bottom:18px;">Slægtstavlen</div>
+      <h2 style="font-weight:400;font-size:clamp(34px,5.4vw,62px);line-height:1.02;letter-spacing:-.015em;margin:0 0 22px;">Ni generationer</h2>
+      <p style="font-size:18px;line-height:1.7;color:#33302a;margin:0 0 14px;">Fra fæstegårdene på Sønder Klit i 1710 til i dag. Alle ti af Niels Thomsen Silkjærs kendte børn står med hver sin søjle, og under hver søjle deres børn — treoghalvtreds navne i alt. Navne i <span style="color:#8a5a3c;">brunt</span> er dem, der bar Silkjær videre i deres eget navn.</p>
+      <p style="font-size:17px;line-height:1.7;color:#57534a;margin:0;">Klik på et navn for at åbne personkortet. Tavlen er bredere end skærmen: <strong style="font-weight:500;">træk i den</strong> — eller brug pilene.</p>
+    </div>
+
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:14px;">
+      <div style="font:10px/1.5 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#8a8377;">Træk · swipe · pile</div>
+      <div style="display:flex;gap:8px;">
+        <button type="button" data-pan-btn="[data-pan]" data-dir="l" style="background:#eae5da;border:1px solid rgba(30,28,24,.28);width:44px;height:38px;cursor:pointer;font-size:17px;color:#1e1c18;" style-hover="background:#e0dacc">←</button>
+        <button type="button" data-pan-btn="[data-pan]" data-dir="r" style="background:#eae5da;border:1px solid rgba(30,28,24,.28);width:44px;height:38px;cursor:pointer;font-size:17px;color:#1e1c18;" style-hover="background:#e0dacc">→</button>
+      </div>
+    </div>
+
+    <div data-pan style="overflow-x:auto;overflow-y:hidden;padding-bottom:10px;cursor:grab;-webkit-overflow-scrolling:touch;border:1px solid rgba(30,28,24,.14);background:#eae5da;">
+      <div style="min-width:2480px;display:flex;flex-direction:column;align-items:center;gap:0;padding:24px;">
+
+        <div style="background:#f2efe8;border:1px solid rgba(30,28,24,.2);padding:14px 18px;text-align:center;width:600px;">
           <div style="font:10px/1.5 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#8a8377;">Klit-slægten · fæstegårde på Sønder Klit</div>
           <div style="font-size:15px;line-height:1.5;margin-top:6px;color:#4a4640;">Ib Jensen Klit <span style="color:#8a8377;">1710—1769</span> &amp; Jens Nielsen Klit <span style="color:#8a8377;">ca. 1720—1784</span></div>
           <div style="font-size:16px;line-height:1.45;margin-top:4px;color:#4a4640;">Ole Jensen Klit <span style="color:#8a8377;">1753—1816, strandfoged</span> &nbsp;→&nbsp; Jens Olesen Klit <span style="color:#8a8377;">1785—1861</span></div>
         </div>
         <div style="width:1px;height:26px;background:rgba(30,28,24,.3);"></div>
 
-        <div style="display:flex;align-items:stretch;gap:0;">
-          <button type="button" data-person="thomasjensen" onClick="{{ openPerson }}" style="cursor:pointer;text-align:left;background:#eae5da;border:1px solid rgba(30,28,24,.3);padding:16px 20px;font-family:inherit;color:inherit;width:250px;" style-hover="border-color:#8a5a3c">
+        <div style="display:flex;align-items:stretch;">
+          <button type="button" data-person="thomasjensen" onClick="{{ openPerson }}" style="cursor:pointer;text-align:left;background:#f2efe8;border:1px solid rgba(30,28,24,.3);padding:16px 20px;font-family:inherit;color:inherit;width:250px;" style-hover="border-color:#8a5a3c">
             <div style="font-size:19px;line-height:1.25;">Thomas Jensen</div>
             <div style="font:10px/1.6 'IBM Plex Mono',monospace;color:#57534a;margin-top:6px;">1825—1878 · husmand og fisker, Økjær<br>omkom på havet</div>
           </button>
-          <div style="width:44px;display:flex;align-items:center;justify-content:center;font:11px/1 'IBM Plex Mono',monospace;color:#8a8377;border-top:1px solid rgba(30,28,24,.3);border-bottom:1px solid rgba(30,28,24,.3);background:#eae5da;">∞&nbsp;1853</div>
-          <button type="button" data-person="annemarie" onClick="{{ openPerson }}" style="cursor:pointer;text-align:left;background:#eae5da;border:1px solid rgba(30,28,24,.3);padding:16px 20px;font-family:inherit;color:inherit;width:250px;" style-hover="border-color:#8a5a3c">
+          <div style="width:44px;display:flex;align-items:center;justify-content:center;font:11px/1 'IBM Plex Mono',monospace;color:#8a8377;border-top:1px solid rgba(30,28,24,.3);border-bottom:1px solid rgba(30,28,24,.3);background:#f2efe8;">∞&nbsp;1853</div>
+          <button type="button" data-person="annemarie" onClick="{{ openPerson }}" style="cursor:pointer;text-align:left;background:#f2efe8;border:1px solid rgba(30,28,24,.3);padding:16px 20px;font-family:inherit;color:inherit;width:250px;" style-hover="border-color:#8a5a3c">
             <div style="font-size:19px;line-height:1.25;">Anne Marie Jansdatter</div>
             <div style="font:10px/1.6 'IBM Plex Mono',monospace;color:#57534a;margin-top:6px;">1827—1863 · Tarp, Vedersø<br>Tarpgaard-slægten</div>
           </button>
         </div>
+        <div style="width:1px;height:30px;background:rgba(30,28,24,.3);"></div>
 
-        <div style="width:1px;height:34px;background:rgba(30,28,24,.3);"></div>
-
-        <div style="display:flex;align-items:stretch;gap:0;">
+        <div style="display:flex;align-items:stretch;">
+          <button type="button" data-person="anejohannek" onClick="{{ openPerson }}" style="cursor:pointer;text-align:left;background:#f2efe8;border:1px solid rgba(30,28,24,.26);padding:14px 16px;font-family:inherit;color:inherit;width:220px;" style-hover="border-color:#8a5a3c">
+            <div style="font-size:16px;line-height:1.25;">Ane Johanne Kristensen</div>
+            <div style="font:10px/1.6 'IBM Plex Mono',monospace;color:#57534a;margin-top:5px;">1843—1880 · 1. hustru<br>∞ 14.11.1878</div>
+          </button>
+          <div style="width:34px;display:flex;align-items:center;justify-content:center;font:11px/1 'IBM Plex Mono',monospace;color:#8a8377;">1)</div>
           <button type="button" data-person="nielsthomsen" onClick="{{ openPerson }}" style="cursor:pointer;text-align:left;background:#f2efe8;border:2px solid #8a5a3c;padding:16px 20px;font-family:inherit;color:inherit;width:290px;" style-hover="background:#eae5da">
             <div style="font-size:21px;line-height:1.25;">Niels Thomsen <span style="color:#8a5a3c;">Silkjær</span></div>
-            <div style="font:10px/1.6 'IBM Plex Mono',monospace;color:#57534a;margin-top:6px;">1855—1928 · husmand, fisker, bådsmand<br>dannebrogsmand</div>
+            <div style="font:10px/1.6 'IBM Plex Mono',monospace;color:#57534a;margin-top:6px;">1855—1928 · husmand, fisker, bådsmand<br>dannebrogsmand · d. Esbjerg</div>
           </button>
-          <div style="width:44px;display:flex;align-items:center;justify-content:center;font:11px/1 'IBM Plex Mono',monospace;color:#8a8377;border-top:1px solid rgba(30,28,24,.3);border-bottom:1px solid rgba(30,28,24,.3);background:#eae5da;">∞&nbsp;2)</div>
-          <button type="button" data-person="anejensen" onClick="{{ openPerson }}" style="cursor:pointer;text-align:left;background:#eae5da;border:1px solid rgba(30,28,24,.3);padding:16px 20px;font-family:inherit;color:inherit;width:250px;" style-hover="border-color:#8a5a3c">
-            <div style="font-size:19px;line-height:1.25;">Ane Jensen</div>
-            <div style="font:10px/1.6 'IBM Plex Mono',monospace;color:#57534a;margin-top:6px;">1858—1936 · f. Ejsing v. Vinderup<br>d. Havnegade 179, Esbjerg</div>
+          <div style="width:34px;display:flex;align-items:center;justify-content:center;font:11px/1 'IBM Plex Mono',monospace;color:#8a8377;">2)</div>
+          <button type="button" data-person="anejensen" onClick="{{ openPerson }}" style="cursor:pointer;text-align:left;background:#f2efe8;border:1px solid rgba(30,28,24,.3);padding:14px 16px;font-family:inherit;color:inherit;width:240px;" style-hover="border-color:#8a5a3c">
+            <div style="font-size:17px;line-height:1.25;">Ane Jensen</div>
+            <div style="font:10px/1.6 'IBM Plex Mono',monospace;color:#57534a;margin-top:5px;">1858—1936 · ∞ 10.11.1881<br>d. Havnegade 179, Esbjerg</div>
           </button>
         </div>
 
-        <div style="width:1px;height:26px;background:rgba(30,28,24,.3);"></div>
-        <div style="width:calc(100% - 90px);height:1px;background:rgba(30,28,24,.3);"></div>
+        <div style="width:1px;height:22px;background:rgba(30,28,24,.3);"></div>
+        <div style="width:calc(100% - 230px);height:1px;background:rgba(30,28,24,.3);"></div>
 
-        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px;width:100%;align-items:start;">
-          <div style="display:flex;flex-direction:column;align-items:stretch;"><div style="height:22px;width:1px;background:rgba(30,28,24,.3);margin:0 auto;"></div>
-            <button type="button" data-person="anemarie" onClick="{{ openPerson }}" style="cursor:pointer;text-align:left;background:#eae5da;border:1px solid rgba(30,28,24,.26);padding:14px;font-family:inherit;color:inherit;" style-hover="border-color:#8a5a3c"><div style="font-size:17px;">Ane Marie</div><div style="font:10px/1.6 'IBM Plex Mono',monospace;color:#57534a;margin-top:5px;">f. 1880 · 1. ægteskab<br>∞ Ole Lauridsen »Klem«</div></button>
-            <div style="height:18px;width:1px;background:rgba(30,28,24,.3);margin:0 auto;"></div>
-            <div style="background:#f2efe8;border:1px solid rgba(30,28,24,.18);padding:12px 14px;"><div style="font-size:15px;line-height:1.3;">Niels <span style="color:#8a5a3c;">Silkjær</span> Lauridsen</div><div style="font:10px/1.5 'IBM Plex Mono',monospace;color:#8a8377;margin-top:5px;">1911—1986 · Damhus, Sdr. Nissum</div></div>
+        <div style="display:flex;gap:14px;align-items:start;width:100%;">
+          <div style="display:flex;flex-direction:column;align-items:stretch;gap:8px;width:230px;flex:0 0 230px;">
+            <div style="height:20px;width:1px;background:rgba(30,28,24,.3);margin:0 auto;"></div>
+            <button type="button" data-person="anemarie" onClick="{{ openPerson }}" style="cursor:pointer;text-align:left;width:100%;background:#eae5da;border:1px solid rgba(30,28,24,.26);padding:13px;font-family:inherit;color:inherit;" style-hover="border-color:#8a5a3c"><div style="font-size:17px;line-height:1.2;">Ane Marie</div><div style="font:10px/1.6 'IBM Plex Mono',monospace;color:#57534a;margin-top:5px;">1880—1960<br>1. ægteskab · blev i Husby</div><div style="font:9px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#2f5d6e;margin-top:8px;">personkort →</div></button>
+            <div style="font:10px/1.5 'IBM Plex Mono',monospace;color:#8a8377;padding:0 2px;">∞ 1908 Ole Lauridsen »Klem« 1861—1916</div>
+            <div style="background:#f2efe8;border:1px solid rgba(30,28,24,.14);padding:11px 12px;display:grid;gap:6px;"><div style="font:10px/1.45 'IBM Plex Mono',monospace;color:#4a4640;">Ane Johanne 1909</div><div style="font:10px/1.45 'IBM Plex Mono',monospace;color:#4a4640;">Agnethe 1910—1998</div><div style="font:10px/1.45 'IBM Plex Mono',monospace;color:#4a4640;"><span style="color:#8a5a3c;">Niels Silkjær Lauridsen</span> 1911—1986</div><div style="font:10px/1.45 'IBM Plex Mono',monospace;color:#4a4640;">Kristine 1913</div><div style="font:10px/1.45 'IBM Plex Mono',monospace;color:#4a4640;">Valdemar 1913</div><div style="font:10px/1.45 'IBM Plex Mono',monospace;color:#4a4640;">Maren 1915—1998</div></div>
+            
+            <div style="font:10px/1.5 'IBM Plex Mono',monospace;color:#8a8377;padding:2px;">Sognebogen taler om otte børn; seks er navngivet.</div>
           </div>
-
-          <div style="display:flex;flex-direction:column;align-items:stretch;"><div style="height:22px;width:1px;background:rgba(30,28,24,.3);margin:0 auto;"></div>
-            <button type="button" data-person="thomasns" onClick="{{ openPerson }}" style="cursor:pointer;text-align:left;background:#f2efe8;border:2px solid #8a5a3c;padding:14px;font-family:inherit;color:inherit;" style-hover="background:#eae5da"><div style="font-size:17px;">Thomas Nielsen <span style="color:#8a5a3c;">Silkjær</span></div><div style="font:10px/1.6 'IBM Plex Mono',monospace;color:#57534a;margin-top:5px;">1882—1950 · fiskeskipper, Esbjerg<br>∞ 1906 Christiane Enevoldsen<br>E.94 ANNE KIRSTINE 1923—48</div></button>
-            <div style="height:18px;width:1px;background:rgba(30,28,24,.3);margin:0 auto;"></div>
-            <div style="background:#f2efe8;border:1px solid rgba(30,28,24,.18);padding:12px 14px;margin-bottom:8px;"><div style="font-size:15px;line-height:1.3;">Kristen &amp; Kirsten Silkær</div><div style="font:10px/1.5 'IBM Plex Mono',monospace;color:#8a8377;margin-top:5px;">tvillinger, f. 4.5.1904 i Aargab<br>Kristen = skipper, E.426 BERGIT</div></div>
-            <div style="background:#f2efe8;border:1px solid rgba(30,28,24,.18);padding:12px 14px;"><div style="font-size:15px;line-height:1.3;">Niels Silkær <span style="color:#8a8377;">1910—1985</span></div><div style="font:10px/1.5 'IBM Plex Mono',monospace;color:#8a8377;margin-top:5px;">Aargab · våbensejladsen 1945</div></div>
-            <div style="background:#f2efe8;border:1px solid rgba(30,28,24,.18);padding:12px 14px;margin-top:8px;"><div style="font-size:15px;line-height:1.3;">Ejlerth Marius Silkær <span style="color:#8a8377;">1915—1985</span></div><div style="font:10px/1.5 'IBM Plex Mono',monospace;color:#8a8377;margin-top:5px;">Zions Kirke, Esbjerg · E.714 LACERTA</div></div>
-            <div style="background:#f2efe8;border:1px solid rgba(30,28,24,.18);padding:12px 14px;margin-top:8px;"><div style="font-size:15px;line-height:1.3;">Anna Silkær <span style="color:#8a8377;">1907—1952</span></div><div style="font:10px/1.5 'IBM Plex Mono',monospace;color:#8a8377;margin-top:5px;">f. Esbjerg</div></div>
+          <div style="display:flex;flex-direction:column;align-items:stretch;gap:8px;width:230px;flex:0 0 230px;">
+            <div style="height:20px;width:1px;background:rgba(30,28,24,.3);margin:0 auto;"></div>
+            <button type="button" data-person="thomasns" onClick="{{ openPerson }}" style="cursor:pointer;text-align:left;width:100%;background:#f2efe8;border:2px solid #8a5a3c;padding:13px;font-family:inherit;color:inherit;" style-hover="border-color:#8a5a3c"><div style="font-size:17px;line-height:1.2;">Thomas</div><div style="font:10px/1.6 'IBM Plex Mono',monospace;color:#57534a;margin-top:5px;">1882—1950<br>fiskeskipper, Esbjerg</div><div style="font:9px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#2f5d6e;margin-top:8px;">personkort →</div></button>
+            <div style="font:10px/1.5 'IBM Plex Mono',monospace;color:#8a8377;padding:0 2px;">∞ 1906 Kristiane Enevoldsen 1873—1963</div>
+            <div style="background:#f2efe8;border:1px solid rgba(30,28,24,.14);padding:11px 12px;display:grid;gap:6px;"><div style="font:10px/1.45 'IBM Plex Mono',monospace;color:#4a4640;">Kristen Lauridsen Silkær 1904—1985 · E.426 BERGIT</div><div style="font:10px/1.45 'IBM Plex Mono',monospace;color:#4a4640;">Kirsten Lauridsen Silkær 1904—1981</div><div style="font:10px/1.45 'IBM Plex Mono',monospace;color:#4a4640;">Anna Silkær 1907—1952</div><div style="font:10px/1.45 'IBM Plex Mono',monospace;color:#4a4640;"><span style="color:#8a5a3c;">Niels Silkær</span> 1910—1985 · våbensejladsen 1945</div><div style="font:10px/1.45 'IBM Plex Mono',monospace;color:#4a4640;">Ejlerth Marius Silkær 1915—1985 · E.714 LACERTA</div></div>
+            
+            <div style="font:10px/1.5 'IBM Plex Mono',monospace;color:#8a8377;padding:2px;">Ejer af E.94 ANNE KIRSTINE 1923—48.</div>
           </div>
-
-          <div style="display:flex;flex-direction:column;align-items:stretch;"><div style="height:22px;width:1px;background:rgba(30,28,24,.3);margin:0 auto;"></div>
-            <button type="button" data-person="anejohanne" onClick="{{ openPerson }}" style="cursor:pointer;text-align:left;background:#f2efe8;border:2px solid #8a5a3c;padding:14px;font-family:inherit;color:inherit;" style-hover="background:#eae5da"><div style="font-size:17px;">Ane Johanne</div><div style="font:10px/1.6 'IBM Plex Mono',monospace;color:#57534a;margin-top:5px;">1883—1956<br>∞ Mads Erik Madsen, murermester</div></button>
-            <div style="height:18px;width:1px;background:rgba(30,28,24,.3);margin:0 auto;"></div>
-            <div style="background:#f2efe8;border:1px solid rgba(30,28,24,.18);padding:12px 14px;margin-bottom:8px;"><div style="font-size:15px;line-height:1.3;">Niels <span style="color:#8a5a3c;">Silkjær</span> Madsen</div><div style="font:10px/1.5 'IBM Plex Mono',monospace;color:#8a8377;margin-top:5px;">1909—1972 · murermester<br>∞ 1933 Isenvad Kirke · d. Ikast</div></div>
-            <button type="button" data-person="laura" onClick="{{ openPerson }}" style="cursor:pointer;text-align:left;background:#f2efe8;border:1px solid rgba(30,28,24,.26);padding:12px 14px;font-family:inherit;color:inherit;" style-hover="border-color:#8a5a3c"><div style="font-size:15px;line-height:1.3;">Laura</div><div style="font:10px/1.5 'IBM Plex Mono',monospace;color:#8a8377;margin-top:5px;">1917—1997 ∞ Laurids Mikkelsen<br>Knud · Edith · Birthe · Ernst · Leif</div></button>
+          <div style="display:flex;flex-direction:column;align-items:stretch;gap:8px;width:230px;flex:0 0 230px;">
+            <div style="height:20px;width:1px;background:rgba(30,28,24,.3);margin:0 auto;"></div>
+            <button type="button" data-person="anejohanne" onClick="{{ openPerson }}" style="cursor:pointer;text-align:left;width:100%;background:#f2efe8;border:2px solid #8a5a3c;padding:13px;font-family:inherit;color:inherit;" style-hover="border-color:#8a5a3c"><div style="font-size:17px;line-height:1.2;">Ane Johanne</div><div style="font:10px/1.6 'IBM Plex Mono',monospace;color:#57534a;margin-top:5px;">1883—1956<br>forlod kysten</div><div style="font:9px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#2f5d6e;margin-top:8px;">personkort →</div></button>
+            <div style="font:10px/1.5 'IBM Plex Mono',monospace;color:#8a8377;padding:0 2px;">∞ 1906 Mads Erik Madsen, murermester, 1879—1951</div>
+            <div style="background:#f2efe8;border:1px solid rgba(30,28,24,.14);padding:11px 12px;display:grid;gap:6px;"><div style="font:10px/1.45 'IBM Plex Mono',monospace;color:#4a4640;">Anne 1907</div><div style="font:10px/1.45 'IBM Plex Mono',monospace;color:#4a4640;">Knud 1908—1973</div><div style="font:10px/1.45 'IBM Plex Mono',monospace;color:#4a4640;"><span style="color:#8a5a3c;">Niels Silkjær Madsen</span> 1909—1972</div><div style="font:10px/1.45 'IBM Plex Mono',monospace;color:#4a4640;">Alma 1910—1948</div><div style="font:10px/1.45 'IBM Plex Mono',monospace;color:#4a4640;">Kristine 1911—1995</div><div style="font:10px/1.45 'IBM Plex Mono',monospace;color:#4a4640;">Erik 1912—1983</div><div style="font:10px/1.45 'IBM Plex Mono',monospace;color:#4a4640;">Dagmar 1913—1991</div><div style="font:10px/1.45 'IBM Plex Mono',monospace;color:#4a4640;">Georg 1914—1975</div><div style="font:10px/1.45 'IBM Plex Mono',monospace;color:#4a4640;">Ninna 1915</div><div style="font:10px/1.45 'IBM Plex Mono',monospace;color:#4a4640;"><span style="color:#8a5a3c;">Laura</span> 1917—1997</div><div style="font:10px/1.45 'IBM Plex Mono',monospace;color:#4a4640;">Ellen Marie 1918</div><div style="font:10px/1.45 'IBM Plex Mono',monospace;color:#4a4640;">Signe 1922</div><div style="font:10px/1.45 'IBM Plex Mono',monospace;color:#4a4640;">Christian 1923—1997</div><div style="font:10px/1.45 'IBM Plex Mono',monospace;color:#4a4640;">Elisabeth 1925</div></div>
+            <div style="display:grid;gap:0;justify-items:center;"><div style="width:1px;height:14px;background:rgba(30,28,24,.3);"></div><div style="background:#f2efe8;border:1px solid #8a5a3c;padding:9px 11px;font:10px/1.5 'IBM Plex Mono',monospace;color:#1e1c18;width:100%;">Laura 1917—1997 ∞ Laurids Mikkelsen</div><div style="width:1px;height:14px;background:rgba(30,28,24,.3);"></div><div style="background:#f2efe8;border:1px solid #8a5a3c;padding:9px 11px;font:10px/1.5 'IBM Plex Mono',monospace;color:#1e1c18;width:100%;">Knud 1943—2019 · Leif f. 1956</div><div style="width:1px;height:14px;background:rgba(30,28,24,.3);"></div><div style="background:#f2efe8;border:1px solid #8a5a3c;padding:9px 11px;font:10px/1.5 'IBM Plex Mono',monospace;color:#1e1c18;width:100%;">Silkjær som efternavn igen — i dag</div></div>
+            
           </div>
-
-          <div style="display:flex;flex-direction:column;align-items:stretch;gap:8px;"><div style="height:22px;width:1px;background:rgba(30,28,24,.3);margin:0 auto;"></div>
-            <button type="button" data-person="jensclaus" onClick="{{ openPerson }}" style="cursor:pointer;text-align:left;background:#eae5da;border:1px solid rgba(30,28,24,.26);padding:12px 14px;font-family:inherit;color:inherit;" style-hover="border-color:#8a5a3c"><div style="font-size:16px;">Jens Claus</div><div style="font:10px/1.5 'IBM Plex Mono',monospace;color:#8a8377;margin-top:4px;">1886—1959 · Djursland-grenen<br>seks sønner med Silkjær</div></button>
-            <button type="button" data-person="esper" onClick="{{ openPerson }}" style="cursor:pointer;text-align:left;background:#eae5da;border:1px solid rgba(30,28,24,.26);padding:12px 14px;font-family:inherit;color:inherit;" style-hover="border-color:#8a5a3c"><div style="font-size:16px;">Esper</div><div style="font:10px/1.5 'IBM Plex Mono',monospace;color:#8a8377;margin-top:4px;">1888—1960 · Gudum-grenen<br>landmand og møllebygger</div></button>
-            <button type="button" data-person="anekirstine" onClick="{{ openPerson }}" style="cursor:pointer;text-align:left;background:#eae5da;border:1px solid rgba(30,28,24,.26);padding:12px 14px;font-family:inherit;color:inherit;display:flex;gap:10px;align-items:center;" style-hover="border-color:#8a5a3c"><img src="billeder/22-ane-kirstine-silkjaer.png" alt="Ane Kirstine Nielsen Silkjær som ældre" style="width:44px;height:44px;object-fit:cover;flex:0 0 auto;border:1px solid rgba(30,28,24,.2);" loading="lazy" decoding="async"><span><span style="font-size:16px;">Ane Kirstine</span><span style="display:block;font:10px/1.5 'IBM Plex Mono',monospace;color:#8a8377;margin-top:4px;">1892—1977 · ∞ Christen Tarbensen</span></span></button>
-            <button type="button" data-person="karenmarie" onClick="{{ openPerson }}" style="cursor:pointer;text-align:left;background:#eae5da;border:1px solid rgba(30,28,24,.26);padding:12px 14px;font-family:inherit;color:inherit;" style-hover="border-color:#8a5a3c"><div style="font-size:16px;">Karen Marie</div><div style="font:10px/1.5 'IBM Plex Mono',monospace;color:#8a8377;margin-top:4px;">1890—1933 · ∞ K. K. Bøndergård<br>Niels <span style="color:#8a5a3c;">Silkjær</span> Bøndergaard, f. 1915</div></button>
-            <button type="button" data-person="jensine" onClick="{{ openPerson }}" style="cursor:pointer;text-align:left;background:#eae5da;border:1px solid rgba(30,28,24,.26);padding:12px 14px;font-family:inherit;color:inherit;" style-hover="border-color:#8a5a3c"><div style="font-size:16px;">Jensine Kirstine</div><div style="font:10px/1.5 'IBM Plex Mono',monospace;color:#8a8377;margin-top:4px;">1896—1964 · Fjand<br>∞ Martin Jeppesen Nørfjand</div></button>
-            <div style="border:1px dashed rgba(30,28,24,.3);padding:12px 14px;font:10px/1.5 'IBM Plex Mono',monospace;color:#8a8377;">samt flere søskende</div>
+          <div style="display:flex;flex-direction:column;align-items:stretch;gap:8px;width:230px;flex:0 0 230px;">
+            <div style="height:20px;width:1px;background:rgba(30,28,24,.3);margin:0 auto;"></div>
+            <button type="button" data-person="jensclaus" onClick="{{ openPerson }}" style="cursor:pointer;text-align:left;width:100%;background:#eae5da;border:1px solid rgba(30,28,24,.26);padding:13px;font-family:inherit;color:inherit;" style-hover="border-color:#8a5a3c"><div style="font-size:17px;line-height:1.2;">Jens Klaus</div><div style="font:10px/1.6 'IBM Plex Mono',monospace;color:#57534a;margin-top:5px;">1886—1959<br>graver, Vejlby · Djursland</div><div style="font:9px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#2f5d6e;margin-top:8px;">personkort →</div></button>
+            <div style="font:10px/1.5 'IBM Plex Mono',monospace;color:#8a8377;padding:0 2px;">∞ 1911 Bodil Marie Bossow 1887—1969</div>
+            <div style="background:#f2efe8;border:1px solid rgba(30,28,24,.14);padding:11px 12px;display:grid;gap:6px;"><div style="font:10px/1.45 'IBM Plex Mono',monospace;color:#4a4640;">Johannes 1912</div><div style="font:10px/1.45 'IBM Plex Mono',monospace;color:#4a4640;">Niels 1914</div><div style="font:10px/1.45 'IBM Plex Mono',monospace;color:#4a4640;">Henry Johan 1915—1989</div><div style="font:10px/1.45 'IBM Plex Mono',monospace;color:#4a4640;">Tage Ewald 1917</div><div style="font:10px/1.45 'IBM Plex Mono',monospace;color:#4a4640;">Oluf Kristian 1920—2005</div><div style="font:10px/1.45 'IBM Plex Mono',monospace;color:#4a4640;">Verner</div></div>
+            
+            <div style="font:10px/1.5 'IBM Plex Mono',monospace;color:#8a8377;padding:2px;">Første gren med Silkjær som rent efternavn.</div>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:stretch;gap:8px;width:230px;flex:0 0 230px;">
+            <div style="height:20px;width:1px;background:rgba(30,28,24,.3);margin:0 auto;"></div>
+            <button type="button" data-person="esper" onClick="{{ openPerson }}" style="cursor:pointer;text-align:left;width:100%;background:#eae5da;border:1px solid rgba(30,28,24,.26);padding:13px;font-family:inherit;color:inherit;" style-hover="border-color:#8a5a3c"><div style="font-size:17px;line-height:1.2;">Esper</div><div style="font:10px/1.6 'IBM Plex Mono',monospace;color:#57534a;margin-top:5px;">1888—1960<br>møllebygger, Gudum</div><div style="font:9px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#2f5d6e;margin-top:8px;">personkort →</div></button>
+            <div style="font:10px/1.5 'IBM Plex Mono',monospace;color:#8a8377;padding:0 2px;">∞ Jensine Mortensen 1889—1982</div>
+            <div style="background:#f2efe8;border:1px solid rgba(30,28,24,.14);padding:11px 12px;display:grid;gap:6px;"><div style="font:10px/1.45 'IBM Plex Mono',monospace;color:#4a4640;">Knud Vagnsgaard 1913</div><div style="font:10px/1.45 'IBM Plex Mono',monospace;color:#4a4640;">Jens 1916—2000 · kværnbilder</div><div style="font:10px/1.45 'IBM Plex Mono',monospace;color:#4a4640;">Anne Kristiane 1917—2009</div></div>
+            
+            <div style="font:10px/1.5 'IBM Plex Mono',monospace;color:#8a8377;padding:2px;">Sognerådsformand i næste led.</div>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:stretch;gap:8px;width:230px;flex:0 0 230px;">
+            <div style="height:20px;width:1px;background:rgba(30,28,24,.3);margin:0 auto;"></div>
+            <button type="button" data-person="karenmarie" onClick="{{ openPerson }}" style="cursor:pointer;text-align:left;width:100%;background:#eae5da;border:1px solid rgba(30,28,24,.26);padding:13px;font-family:inherit;color:inherit;" style-hover="border-color:#8a5a3c"><div style="font-size:17px;line-height:1.2;">Karen Marie</div><div style="font:10px/1.6 'IBM Plex Mono',monospace;color:#57534a;margin-top:5px;">1890—1933<br>husmandskone, Sjælborg</div><div style="font:9px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#2f5d6e;margin-top:8px;">personkort →</div></button>
+            <div style="font:10px/1.5 'IBM Plex Mono',monospace;color:#8a8377;padding:0 2px;">∞ 1913 Kristian Kornelius Bøndergaard 1888—1955</div>
+            <div style="background:#f2efe8;border:1px solid rgba(30,28,24,.14);padding:11px 12px;display:grid;gap:6px;"><div style="font:10px/1.45 'IBM Plex Mono',monospace;color:#4a4640;">Kristen Magnus 1913</div><div style="font:10px/1.45 'IBM Plex Mono',monospace;color:#4a4640;"><span style="color:#8a5a3c;">Niels Silkjær B.</span> 1915—1996</div><div style="font:10px/1.45 'IBM Plex Mono',monospace;color:#4a4640;"><span style="color:#8a5a3c;">Anna Silkjær B.</span> 1916—1979</div><div style="font:10px/1.45 'IBM Plex Mono',monospace;color:#4a4640;">Theodor Salomon 1917</div><div style="font:10px/1.45 'IBM Plex Mono',monospace;color:#4a4640;">Henry 1918—2016</div><div style="font:10px/1.45 'IBM Plex Mono',monospace;color:#4a4640;">Ida Marentha 1919</div><div style="font:10px/1.45 'IBM Plex Mono',monospace;color:#4a4640;">Kaj 1920</div><div style="font:10px/1.45 'IBM Plex Mono',monospace;color:#4a4640;">Anker 1921—2005</div><div style="font:10px/1.45 'IBM Plex Mono',monospace;color:#4a4640;">Ninna Dagny 1922</div><div style="font:10px/1.45 'IBM Plex Mono',monospace;color:#4a4640;">Edith 1923—1962</div><div style="font:10px/1.45 'IBM Plex Mono',monospace;color:#4a4640;">Josva 1925—2015</div><div style="font:10px/1.45 'IBM Plex Mono',monospace;color:#4a4640;">Inga 1926</div><div style="font:10px/1.45 'IBM Plex Mono',monospace;color:#4a4640;">Bent Karl 1927</div></div>
+            
+            <div style="font:10px/1.5 'IBM Plex Mono',monospace;color:#8a8377;padding:2px;">Tretten børn på fjorten år.</div>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:stretch;gap:8px;width:230px;flex:0 0 230px;">
+            <div style="height:20px;width:1px;background:rgba(30,28,24,.3);margin:0 auto;"></div>
+            <button type="button" data-person="anekirstine" onClick="{{ openPerson }}" style="cursor:pointer;text-align:left;width:100%;background:#eae5da;border:1px solid rgba(30,28,24,.26);padding:13px;font-family:inherit;color:inherit;" style-hover="border-color:#8a5a3c"><div style="font-size:17px;line-height:1.2;">Ane Kirstine</div><div style="font:10px/1.6 'IBM Plex Mono',monospace;color:#57534a;margin-top:5px;">1892—1977<br>Holmslands Klit · Esbjerg</div><div style="font:9px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#2f5d6e;margin-top:8px;">personkort →</div></button>
+            <div style="font:10px/1.5 'IBM Plex Mono',monospace;color:#8a8377;padding:0 2px;">∞ 1920 Christen Cilius Tarbensen 1896—1966</div>
+            <div style="background:#f2efe8;border:1px solid rgba(30,28,24,.14);padding:11px 12px;display:grid;gap:6px;"><div style="font:10px/1.45 'IBM Plex Mono',monospace;color:#4a4640;">Christian Fjord <span style="color:#8a5a3c;">Silkjær</span> T. 1920—1985</div><div style="font:10px/1.45 'IBM Plex Mono',monospace;color:#4a4640;">Kamma <span style="color:#8a5a3c;">Silkjær</span> T. 1926—1997</div><div style="font:10px/1.45 'IBM Plex Mono',monospace;color:#4a4640;">Anna Kirstine <span style="color:#8a5a3c;">Silkjær</span> T. 1929—2018</div><div style="font:10px/1.45 'IBM Plex Mono',monospace;color:#4a4640;">Gerda <span style="color:#8a5a3c;">Silkjær</span> T. 1938—1986</div></div>
+            
+            <div style="font:10px/1.5 'IBM Plex Mono',monospace;color:#8a8377;padding:2px;">Alle fire født i Esbjerg, alle med Silkjær i navnet.</div>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:stretch;gap:8px;width:230px;flex:0 0 230px;">
+            <div style="height:20px;width:1px;background:rgba(30,28,24,.3);margin:0 auto;"></div>
+            <div style="background:#eae5da;border:1px dashed rgba(30,28,24,.3);padding:13px;"><div style="font-size:17px;line-height:1.2;">Sidsel Kathrine</div><div style="font:10px/1.6 'IBM Plex Mono',monospace;color:#57534a;margin-top:5px;">f. 24.12.1894<br>juleaftensbarnet</div></div>
+            
+            
+            
+            <div style="font:10px/1.5 'IBM Plex Mono',monospace;color:#8a8377;padding:2px;">Kilderne siger hendes fødselsdag og intet andet.</div>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:stretch;gap:8px;width:230px;flex:0 0 230px;">
+            <div style="height:20px;width:1px;background:rgba(30,28,24,.3);margin:0 auto;"></div>
+            <button type="button" data-person="jensine" onClick="{{ openPerson }}" style="cursor:pointer;text-align:left;width:100%;background:#eae5da;border:1px solid rgba(30,28,24,.26);padding:13px;font-family:inherit;color:inherit;" style-hover="border-color:#8a5a3c"><div style="font-size:17px;line-height:1.2;">Jensine Kristine</div><div style="font:10px/1.6 'IBM Plex Mono',monospace;color:#57534a;margin-top:5px;">1896—1964<br>Fjand, Sønder Nissum</div><div style="font:9px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#2f5d6e;margin-top:8px;">personkort →</div></button>
+            <div style="font:10px/1.5 'IBM Plex Mono',monospace;color:#8a8377;padding:0 2px;">∞ Martin Jeppesen Nørfjand 1894—1936</div>
+            <div style="background:#f2efe8;border:1px solid rgba(30,28,24,.14);padding:11px 12px;display:grid;gap:6px;"><div style="font:10px/1.45 'IBM Plex Mono',monospace;color:#4a4640;">Niels 1917</div><div style="font:10px/1.45 'IBM Plex Mono',monospace;color:#4a4640;">Evald Jeppesen Nørfjand 1927—1991</div></div>
+            
+            <div style="font:10px/1.5 'IBM Plex Mono',monospace;color:#8a8377;padding:2px;">Enke i otteogtyve år.</div>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:stretch;gap:8px;width:230px;flex:0 0 230px;">
+            <div style="height:20px;width:1px;background:rgba(30,28,24,.3);margin:0 auto;"></div>
+            <div style="background:#eae5da;border:1px dashed rgba(30,28,24,.3);padding:13px;"><div style="font-size:17px;line-height:1.2;">Ellen</div><div style="font:10px/1.6 'IBM Plex Mono',monospace;color:#57534a;margin-top:5px;">1902—1980<br>yngste barn · d. Esbjerg</div></div>
+            <div style="font:10px/1.5 'IBM Plex Mono',monospace;color:#8a8377;padding:0 2px;">∞ Peder Christian Mathiesen 1901—1979</div>
+            
+            
+            <div style="font:10px/1.5 'IBM Plex Mono',monospace;color:#8a8377;padding:2px;">Pigen på skolebilledet fra Husby.</div>
           </div>
         </div>
       </div>
     </div>
-    <div style="font:10px/1.6 'IBM Plex Mono',monospace;color:#8a8377;margin-top:14px;text-transform:uppercase;letter-spacing:.08em;">Træk til siden for at se hele tavlen · tavlen viser den direkte linje og de maritime grene; slægten har flere</div>
+    <div style="font:10px/1.6 'IBM Plex Mono',monospace;color:#8a8377;margin-top:12px;text-transform:uppercase;letter-spacing:.08em;">Tavlen viser slægtsfilens navne · en stiplet ramme betyder, at kilderne ikke rækker længere [S40]</div>
   </div>
 </section>
 
-<section id="billeder" data-place="oversigt" data-chap="22" style="background:#eae5da;padding:clamp(72px,11vw,160px) clamp(20px,6vw,56px);">
+<section id="billeder" data-place="oversigt" data-chap="23" style="background:#eae5da;padding:clamp(72px,11vw,160px) clamp(20px,6vw,56px);">
   <div style="max-width:1180px;margin:0 auto;">
     <div data-reveal="1" style="max-width:760px;margin-bottom:clamp(32px,4vw,48px);opacity:0;transform:translateY(30px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1);">
       <div style="font:11px/1 'IBM Plex Mono',monospace;letter-spacing:.24em;text-transform:uppercase;color:#8a5a3c;margin-bottom:18px;">Billedregister</div>
@@ -1322,7 +1551,7 @@ button{font-family:inherit}
   </div>
 </section>
 
-<section id="kilder" data-place="oversigt" data-chap="23" style="padding:clamp(72px,11vw,160px) clamp(20px,6vw,56px);">
+<section id="kilder" data-place="oversigt" data-chap="24" style="padding:clamp(72px,11vw,160px) clamp(20px,6vw,56px);">
   <div style="max-width:1180px;margin:0 auto;">
     <div data-reveal="1" style="max-width:760px;margin-bottom:clamp(32px,4vw,48px);opacity:0;transform:translateY(30px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1);">
       <div style="font:11px/1 'IBM Plex Mono',monospace;letter-spacing:.24em;text-transform:uppercase;color:#8a5a3c;margin-bottom:18px;">Om kilderne</div>
@@ -1410,6 +1639,43 @@ class Component extends DCLogic {
     this._observePlaces();
     this._chrome();
     this._zoomable();
+    this._pan();
+  }
+
+  _pan() {
+    const centre = () => document.querySelectorAll('[data-pan]').forEach((el) => {
+      if (el.dataset.panTouched) return;
+      const max = el.scrollWidth - el.clientWidth;
+      if (max > 0) el.scrollLeft = max / 2;
+    });
+    centre();
+    setTimeout(centre, 400);
+    setTimeout(centre, 1600);
+    window.addEventListener('resize', centre);
+    document.querySelectorAll('[data-pan]').forEach((el) => {
+      let down = false, x0 = 0, l0 = 0;
+      el.addEventListener('pointerdown', (e) => {
+        if (e.target.closest && e.target.closest('button')) return;
+        down = true; x0 = e.clientX; l0 = el.scrollLeft; el.style.cursor = 'grabbing';
+        el.dataset.panTouched = '1';
+      });
+      const up = () => { down = false; el.style.cursor = 'grab'; };
+      window.addEventListener('pointerup', up);
+      window.addEventListener('pointercancel', up);
+      el.addEventListener('wheel', () => { el.dataset.panTouched = '1'; }, { passive: true });
+      el.addEventListener('touchstart', () => { el.dataset.panTouched = '1'; }, { passive: true });
+      el.addEventListener('pointermove', (e) => {
+        if (!down) return;
+        el.scrollLeft = l0 - (e.clientX - x0);
+      });
+    });
+    document.querySelectorAll('[data-pan-btn]').forEach((b) => {
+      b.addEventListener('click', () => {
+        const t = document.querySelector(b.getAttribute('data-pan-btn'));
+        if (t) t.dataset.panTouched = '1';
+        if (t) t.scrollBy({ left: b.getAttribute('data-dir') === 'r' ? 460 : -460, behavior: 'smooth' });
+      });
+    });
   }
 
   _zoomable() {
@@ -1475,38 +1741,62 @@ class Component extends DCLogic {
     const rail = document.querySelector('[data-rail]');
     const locator = document.querySelector('[data-locator]');
     const toggle = document.querySelector('[data-loc-toggle]');
-    let collapsed = false;
+    const tocBtn = document.querySelector('[data-toc-open]');
+    const toc = document.querySelector('[data-toc]');
+    let collapsed = false, userSet = false;
+
+    const setCollapsed = (v) => {
+      collapsed = v;
+      const box = locator && locator.firstElementChild;
+      if (box) { box.style.transition = 'height .4s ease'; box.style.height = v ? '0px' : '170px'; }
+      if (toggle) toggle.textContent = v ? 'VIS KORT' : 'SKJUL KORT';
+      if (!v) setTimeout(() => { const m = document.querySelector('silkjaer-map'); if (m && m.refresh) m.refresh(); }, 420);
+    };
 
     const layout = () => {
       const w = window.innerWidth;
       const wide = w >= 1180;
       if (rail) rail.style.display = wide ? 'flex' : 'none';
+      if (tocBtn) tocBtn.style.display = wide ? 'none' : 'block';
       document.querySelectorAll('section,header,footer').forEach((el) => {
-        if (el.closest('[data-locator]')) return;
+        if (el.closest('[data-locator]') || el.closest('[data-toc]')) return;
         el.style.marginLeft = wide ? '250px' : '';
       });
       if (locator) {
-        locator.style.display = w >= 560 ? 'block' : 'none';
+        const narrow = w < 700;
+        locator.style.display = 'block';
         locator.style.transition = 'opacity .5s ease';
+        locator.style.left = narrow ? '10px' : '';
+        locator.style.right = narrow ? '10px' : '22px';
+        locator.style.bottom = narrow ? '10px' : '22px';
+        locator.style.width = narrow ? 'auto' : 'min(300px,42vw)';
+        if (!userSet) setCollapsed(narrow);
       }
     };
     layout();
     window.addEventListener('resize', layout);
 
     const onScroll = () => {
-      const h = document.documentElement.scrollHeight - window.innerHeight;
-      if (bar) bar.style.width = (h > 0 ? (window.scrollY / h) * 100 : 0) + '%';
+      const hh = document.documentElement.scrollHeight - window.innerHeight;
+      if (bar) bar.style.width = (hh > 0 ? (window.scrollY / hh) * 100 : 0) + '%';
     };
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
 
-    if (toggle && locator) {
-      toggle.addEventListener('click', () => {
-        collapsed = !collapsed;
-        const box = locator.firstElementChild;
-        if (box) { box.style.height = collapsed ? '0px' : '170px'; box.style.transition = 'height .4s ease'; }
-        toggle.textContent = collapsed ? 'VIS KORT' : 'SKJUL';
+    if (toggle) {
+      toggle.addEventListener('click', () => { userSet = true; setCollapsed(!collapsed); });
+    }
+
+    if (tocBtn && toc) {
+      const openToc = () => { toc.style.display = 'block'; toc.scrollTop = 0; };
+      const closeToc = () => { toc.style.display = 'none'; };
+      tocBtn.addEventListener('click', openToc);
+      const cls = toc.querySelector('[data-toc-close]');
+      if (cls) cls.addEventListener('click', closeToc);
+      toc.addEventListener('click', (e) => {
+        if (e.target.closest && e.target.closest('[data-goto]')) setTimeout(closeToc, 60);
       });
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeToc(); });
     }
 
     document.addEventListener('keydown', (e) => {
@@ -1654,7 +1944,7 @@ Component.PERSONER = {
     intro: 'Hvor søsteren Ane Johanne gik ind i landet, gik han ud mod havet — til Esbjerg, byen der på én generation voksede fra plan mark til Danmarks fiskeriby nummer ét. Han står med fuld biografi i Dansk Fiskeristat 1935—36.',
     facts: [
       { k: 'Døbt', v: '5. februar 1882' },
-      { k: 'Gift', v: '5. maj 1906 på Holmsland Klit med Christiane Enevoldsen, f. 27.3.1873, datter af fiskeren Simon Enevoldsen fra Haurvig. Hun døde 31.7.1963 på De Gamles Hjem i Esbjerg, begravet Gormsgade Kirkegård.' },
+      { k: 'Gift', v: '5. maj 1906 på Holmsland Klit med Kristiane Enevoldsen, f. 27.3.1873, datter af fiskeren Simon Enevoldsen fra Haurvig. Hun døde 31.7.1963 på De Gamles Hjem i Esbjerg, begravet Gormsgade Kirkegård.' },
       { k: 'Uddannet', v: 'Fiskeskipperskolen i Esbjerg 1916—17' },
       { k: 'Fartøj', v: 'Fører og ejer af kutteren E.94 ANNE KIRSTINE, 1923—1948. Registreret som »T. N. Silkjær«.' },
       { k: 'Bopæl', v: 'Havnegade 179, Esbjerg — broen mellem slægtens to verdener' },
@@ -1684,8 +1974,7 @@ Component.PERSONER = {
       { k: 'Gift', v: '28. oktober 1911 i Fausing med Bodil Marie Bossow, f. 8. april 1887 i Auning' },
       { k: 'Erhverv', v: 'Kirkebetjent og graver ved Vejlby Kirke, Allingåbro' },
       { k: 'Bopæl', v: 'Øster Alling → Vejlby (Vejlbyvej 2, 1925) → en tid Nimtofte. Om Vejlbyvej 2 var graverbolig er ikke afklaret.' },
-      { k: 'Fem sønner', v: 'Niels 1914 · Henry Johan 1915 · Tage Evald 1917 (alle Øster Alling) · Olaf Christian 1920 (Vejlby) · Verner 1921 (Nimtofte)' },
-      { k: 'Muligt sjette', v: 'Johannes Silkjær, f. 13.9.1912 i Øster Alling, tjenestedreng i Vejlby 1925/1930 — muligvis det ældste barn, men ubekræftet' },
+      { k: 'Seks sønner', v: 'Johannes 1912 · Niels 1914 · Henry Johan 1915—1989 · Tage Ewald 1917 (alle født i Oustrup, Øster Alling) · Oluf Kristian 1920—2005 · Verner (Nimtofte)' },
       { k: 'Navnet', v: 'Silkjær som fast efternavn — sønnen omtales som »søn af graver og kirketjener Jens Silkjær i Allingåbro«' }
     ],
     kilder: 'S18, S34, S35, S36'
@@ -1733,7 +2022,7 @@ Component.PERSONER = {
     facts: [
       { k: 'Gift', v: 'Nytårsdag 1920 i Nysogns Kirke med fiskeren Christen Tarbensen fra Houvig' },
       { k: 'Betydning', v: 'Kirkebogens formulering dokumenterer navneskiftet i sognets egne bøger' },
-      { k: 'Grenen', v: 'Førte familien ned langs Holmslands Klit. Svogeren Christen Torbensen boede Havnegade 132 i Esbjerg — halvfjerds numre fra broderen Thomas.' },
+      { k: 'Grenen', v: 'Førte familien ned langs Holmslands Klit og siden til Esbjerg, hvor alle fire børn blev født med Silkjær i navnet.' },
       { k: 'Død', v: '24. november 1977 i Tjæreborg, 85 år gammel — den længstlevende af søskendeflokken fra Økjær' }
     ],
     kilder: 'S2'
@@ -1808,7 +2097,7 @@ Component.BILLEDER = [
   { nr: '11', motiv: 'Silkjær i dag — stenen med navnet, gårdsplads, længe, udhus, eng og bageovn', ejer: 'Familiens egne fotos', ret: 'Familiens eget materiale' },
   { nr: '12', motiv: 'Silkjær, skråfoto 31. marts 2025', ejer: 'Skråfoto / familiens materiale', ret: 'Familiens materiale' },
   { nr: '13', motiv: 'Sognebogen og Dansk Fiskeristat — Johannes Madsen, Niels Silkjær Lauridsen, Thomas Nielsen Silkjær, Christian Lauritsen Silkjær, Christen Torbensen', ejer: 'Vort Sogns Historie ca. 1950 · Dansk Fiskeristat 1935', ret: 'Arkivmateriale' },
-  { nr: '14', motiv: 'Portrætter fra slægtstræet: Niels Thomsen Silkjær, Christiane Enevoldsen, Ane Kirstine, Niels Silkjær Bøndergaard', ejer: 'Familiens slægtsarkiv', ret: 'Familiens eget materiale' },
+  { nr: '14', motiv: 'Portrætter fra slægtstræet: Niels Thomsen Silkjær, Kristiane Enevoldsen, Ane Kirstine, Niels Silkjær Bøndergaard', ejer: 'Familiens slægtsarkiv', ret: 'Familiens eget materiale' },
   { nr: '15', motiv: 'Havbåd hjemvendt fra fiskeri på åben strand — maleri, »Fiskeri med gl. Havskibe«', ejer: 'J. Chr. Fjord, 1924', ret: 'Maleri, privat eje' },
   { nr: '16', motiv: 'Laura Mikkelsen, født Madsen, og Laurids Mikkelsen — portrætter (små udsnit)', ejer: 'Slægtsfilen, MH:P500108 og MH:P500110 · Hesselvig Web Site', ret: 'Familiens materiale' },
   { nr: '17', motiv: 'Laurids og Laura Mikkelsens gravsten, Fjelstervang — bekræfter begge dødsdatoer', ejer: 'Slægtsfilen, MH:P500004', ret: 'Familiens materiale' },
