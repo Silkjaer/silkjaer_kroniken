@@ -13,6 +13,7 @@
     landting:      { c: [56.5167, 8.7333], z: 9, navn: "Landting Mark",         note: "Ane Jensens fødested" },
     raekkermoelle: { c: [55.9539, 8.5322], z: 10, navn: "Rækker Mølle, Sædding", note: "Murermesterens by" },
     ikast:         { c: [56.1394, 9.1547], z: 9, navn: "Ikast-egnen",           note: "Sporet fortsætter" },
+    vorgod:        { c: [56.1339, 8.7539], z: 10, navn: "Vorgod Kirke",          note: "Lauras sidste sogn" },
     esbjerg:       { c: [55.4640, 8.4400], z: 10, navn: "Havnegade, Esbjerg",    note: "Fiskeskipperens hjem" },
     nordsoen:      { c: [55.7000, 7.2000], z: 7,  navn: "Nordsøen",              note: "16. marts 1945" },
     holmsland:     { c: [56.0500, 8.1300], z: 9, navn: "Holmslands Klit",       note: "Tarbensen-grenen" },
