@@ -15,4 +15,4 @@ date: 2026-07-26T00:00:00Z
 | Familiekrønike (19 kapitler, stamtavle, billedregister, kilder) | Silkjaer.dc.html · index.html (genereret kopi) |
 | Kort i sidefod | silkjaer-map.js |
 | DC-runtime | support.js |
-| Billeder | billeder/ (47 filer) |
+| Billeder | billeder/ (66 filer) |
