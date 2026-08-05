@@ -8,7 +8,7 @@ import subprocess
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-SRC = ROOT / "Silkjaer.dc.html"
+SRC = ROOT / "index.html"
 
 
 def dims(path):

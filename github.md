@@ -6,7 +6,7 @@ date: 2026-07-30T00:00:00Z
 
 ### Updated in this project
 - Repo'et var tomt ved tilknytningen — intet importeret, projektet er kilden.
-- Krøniken publiceres som `index.html` (kopi af `Silkjaer.dc.html`) til GitHub Pages.
+- Krøniken publiceres som `index.html` til GitHub Pages. August 2026: `Silkjaer.dc.html` slettet — `index.html` er nu den eneste kildefil.
 - `uploads/` bør ikke pushes: rå kildefiler og GEDCOM med persondata.
 - Juli 2026: redaktionel omstrukturering — Del I—V, 1896—1930-forløbet løftet ud af efterskriften til kap. 9—13, »De to navne« flyttet til appendiks A, forskningsdagbogssproget fjernet.
 - Juli 2026: folketællingerne 1880, 1890, 1901 og 1911 placerer husstanden på matr. 13b i Øe — appendiks A, kapitel 1 og kapitel 6 skrevet om efter det, med nyt forbehold nr. 21 og kilde S60.
@@ -21,16 +21,15 @@ date: 2026-07-30T00:00:00Z
 ## Værktøjer
 | Kommando | Gør |
 |---|---|
-| `python3 tools/add-img-dims.py` | Skriver `width`/`height` og `data-fuld` på billedtags i `Silkjaer.dc.html` |
+| `python3 tools/add-img-dims.py` | Skriver `width`/`height` og `data-fuld` på billedtags i `index.html` |
 | `node tools/tjek.js` | Kører siden igennem i otte bredder og melder overløb, kontrastfejl, små berøringsmål og konsolfejl |
-| `cp Silkjaer.dc.html index.html` | Bygger den publicerede kopi |
 
 `tools/tjek.js` kræver `npm install --no-save playwright && npx playwright install chromium` og en lokal server, fx `python3 -m http.server 8765`.
 
 ## Screen map
 | Skærm | Filer |
 |---|---|
-| Familiekrønike (22 kapitler + appendiks A—E) | Silkjaer.dc.html · index.html (genereret kopi) |
+| Familiekrønike (22 kapitler + appendiks A—E) | index.html |
 | Kort i venstre kolonne | silkjaer-map.js |
 | DC-runtime | support.js |
 | Billeder | billeder/ (66 visningsfiler) · billeder/fuld/ (64 originaler) |

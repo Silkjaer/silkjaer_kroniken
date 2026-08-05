@@ -7,7 +7,7 @@ import re
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-SRC = ROOT / (sys.argv[1] if len(sys.argv) > 1 else "Silkjaer.dc.html")
+SRC = ROOT / (sys.argv[1] if len(sys.argv) > 1 else "index.html")
 
 
 def rgb(v):
