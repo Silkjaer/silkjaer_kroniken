@@ -19,6 +19,7 @@
     holmsland:     { c: [56.0500, 8.1300], z: 9, navn: "Holmslands Klit",       note: "Tarbensen-grenen" },
     vejlby:        { c: [56.4550, 10.0700], z: 8, navn: "Vejlby ved Allingåbro", note: "Graveren og navnet mod øst" },
     aargab:        { c: [55.9700, 8.1250], z: 11, navn: "Årgab, Holmsland Klit", note: "Enken fra Årgab" },
+    vridsloeselille: { c: [55.6664, 12.3489], z: 8, navn: "Vridsløselille, Albertslund", note: "Fange nr. 240, 1913" },
     hartlepool:    { c: [54.6900, -1.2100], z: 7, navn: "Hartlepool, England",  note: "Grundstødningen 1948" }
   };
 

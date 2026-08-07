@@ -11,6 +11,11 @@ date: 2026-07-30T00:00:00Z
 - Juli 2026: redaktionel omstrukturering — Del I—V, 1896—1930-forløbet løftet ud af efterskriften til kap. 9—13, »De to navne« flyttet til appendiks A, forskningsdagbogssproget fjernet.
 - Juli 2026: folketællingerne 1880, 1890, 1901 og 1911 placerer husstanden på matr. 13b i Øe — appendiks A, kapitel 1 og kapitel 6 skrevet om efter det, med nyt forbehold nr. 21 og kilde S60.
 - Juli 2026: designgennemgang — billedvægten skåret fra 73 MB til 12 MB, mobilklipning rettet, delmarkørerne bragt på sektionernes akse, kortet flyttet til venstre kolonne, kontrasten hævet til WCAG AA, metadata og favicon tilføjet.
+- August 2026: genealogisk orienteringslag — hovedlinje-blok efter introen (forfatterens linje, klikbare navne), overgangssætninger ved gren-skift (kap. 9, 17, 19, 20), »Kapitler«-linje i alle 18 personkort, flere klikbare første omtaler i brødteksten. Vridsløselille føjet til kortet med stedskift midt i kapitel 12 (kapitelstriben slår nu op via nærmeste sektion). `parsed.json` slettet: ubrugt, forældet og indeholdt persondata på nulevende; nu gitignoret.
+- August 2026: Gudum-grenen fortalt færdig efter modtaget slægtsoptegnelse (ny kilde S149, krydstjekket mod opdateret GEDCOM) — Espers ni børn på Nørre Tangshus i kap. 20, slægtstavlen og personkortet, heriblandt Knud Vognsgaard (omkom ved eksplosionen på Stålvalseværket 1959) og Otto (udvandret til Australien). Navnenøglen er nu »Syv Niels'er« — Espers søn Niels (f. 17.11.1914) er navnefælle til Jens Klaus' søn (f. 28.2.1914). Børnebørns-statistikken 53→58.
+
+## Revisionsdato
+Footeren har en `data-revision`-linje (»Senest revideret …«). Opdater datoen, hver gang der publiceres indholdsændringer.
 
 ## Billeder
 - `billeder/fuld/` rummer originalerne. De vises kun i zoom.
