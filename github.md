@@ -1,10 +1,6 @@
 repo: Silkjaer/silkjaer_kroniken
 branch: main
 
-## Last sync
-date: 2026-07-30T00:00:00Z
-
-
 ## Revisionsdato
 Footeren har en `data-revision`-linje (»Senest revideret …«). Opdater datoen, hver gang der publiceres indholdsændringer.
 
