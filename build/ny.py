@@ -788,6 +788,17 @@ class Site:
             r = r.replace('//', '/')
         return r if r != './' else './'
 
+    def ver(self, name):
+        """A short fingerprint of an asset, so a browser fetches the new stylesheet and script after each publish."""
+        if self.o.target != 'site':
+            return ''
+        if not hasattr(self, '_ver'):
+            self._ver = {}
+        if name not in self._ver:
+            import hashlib
+            self._ver[name] = '?v=' + hashlib.md5(open(os.path.join(HERE, '..', 'assets', name), 'rb').read()).hexdigest()[:8]
+        return self._ver[name]
+
     def site_rel(self, frm, site_path):
         """Relative URL from page frm to a path at the site root (billeder/ …)."""
         page_site = os.path.join(self.o.site_prefix, frm)
@@ -828,7 +839,7 @@ class Site:
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="{a}favicon.svg" type="image/svg+xml">
 {pre}
-<link rel="stylesheet" href="{a}ny.css">
+<link rel="stylesheet" href="{a}ny.css{self.ver('ny.css')}">
 <script>document.documentElement.classList.add('js');try{{if(matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('rm')}}catch(e){{}}</script>
 <script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>
 {extra}'''
@@ -1041,7 +1052,7 @@ class Site:
 {self.defs()}
 {self.dialogs(e)}
 {self.page_data(e)}
-<script src="{self.rel(path, 'assets/')}ny.js" defer></script>
+<script src="{self.rel(path, 'assets/')}ny.js{self.ver('ny.js')}" defer></script>
 </body>
 </html>
 '''
@@ -1140,7 +1151,7 @@ class Site:
 {self.defs()}
 {self.dialogs(e)}
 {self.page_data(e)}
-<script src="{self.rel(path, 'assets/')}ny.js" defer></script>
+<script src="{self.rel(path, 'assets/')}ny.js{self.ver('ny.js')}" defer></script>
 </body>
 </html>
 '''
@@ -1223,7 +1234,7 @@ class Site:
 {''.join(parts)}
 <section class="chap bk-colo">{foot.decode_contents()}</section>
 </main>
-<script src="{self.rel(path, 'assets/')}ny.js" defer></script>
+<script src="{self.rel(path, 'assets/')}ny.js{self.ver('ny.js')}" defer></script>
 </body>
 </html>
 '''

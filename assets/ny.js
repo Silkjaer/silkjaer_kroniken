@@ -671,8 +671,8 @@
     });
     return (p, r, vh) => {
       target = RM ? steps.length : measure(vh);
-      const sp = isSplit(), vb = sp ? vis.getBoundingClientRect().bottom : 0;
-      steps.forEach((x) => { const q = (sp ? cards[steps.indexOf(x)] : x).getBoundingClientRect(); x.classList.toggle('on', sp ? q.top < vh * .92 && q.bottom > vb + 40 : q.top < vh * .72 && q.bottom > vh * .28); });
+      const sp = isSplit();
+      steps.forEach((x) => { const q = (sp ? cards[steps.indexOf(x)] : x).getBoundingClientRect(); x.classList.toggle('on', sp ? q.top < vh * .92 && q.bottom > 0 : q.top < vh * .72 && q.bottom > vh * .28); });
       if (RM && V) V.draw(target, 0, 16);
     };
   };
@@ -1066,12 +1066,13 @@ void main(){
       const cs = $$('.stage-card', el).map((c) => c.getBoundingClientRect()).filter((q) => q.width > 0);
       edge = cs.length ? { l: Math.min(...cs.map((q) => q.left)), r: Math.max(...cs.map((q) => q.right)) } : null;
       SPL = !!el.closest('.chap') && splitNow() && !BOOK;
-      if (!SPL) { vis.style.height = ''; return; }
+      if (!SPL) { vis.style.height = ''; el.style.removeProperty('--vis-h'); return; }
       const W = vis.getBoundingClientRect().width || innerWidth, allC = steps.every((st) => (st.fit || shots[st.shot].mode) === 'contain' && !st.vw && st.z <= 1.05);
       const isMap = !!$('.sv-route', vis);
       const need = allC ? Math.max(...shots.map((sh) => { const [iw, ih] = nat(sh); return (W - 16) * ih / iw / .9; }))
         : isMap ? innerHeight * .58 : Math.max(...shots.map((sh) => { const [iw, ih] = nat(sh); return W * ih / iw / .86; }));
-      vis.style.height = Math.round(clamp(need, innerHeight * .44, innerHeight * .6)) + 'px';
+      const vh = Math.round(clamp(need, innerHeight * .44, innerHeight * .6));
+      vis.style.height = vh + 'px'; el.style.setProperty('--vis-h', vh + 'px');
     };
     fitSplit(); listen(window, 'resize', fitSplit);
     // a picture is never blown up past what its pixels carry: an old small print that cannot fill the screen is shown
@@ -2192,7 +2193,7 @@ void main(){
   addEventListener('hashchange', () => hashTarget(true));
 
   /* print: every note and every "read more" open, every reveal shown */
-  let openedForPrint = [];
+  let openedForPrint = [], armedForPrint = [];
   /* on paper a picture stage becomes a run of pictures, each in front of the passage it belongs to; where the camera
      went close to a document, the paper shows the same detail cut out beneath it */
   function flattenStages() {
@@ -2229,8 +2230,10 @@ void main(){
     if (!$('.pr-flat')) flattenStages();
     $$('.sea-chart').forEach((x) => { if (x._print) x._print(); });
     // a family tree wider than the sheet is set smaller so it fits between the margins (otherwise the browser shrinks every page)
-    $$('[data-pan]').forEach((el) => { const w = el.scrollWidth; if (w > 640) { el.dataset.przoom = '1'; el.style.zoom = (640 / w).toFixed(3); } });
+    $$('[data-pan]').forEach((el) => { const w = el.scrollWidth; if (w > 700) { el.dataset.przoom = '1'; el.style.zoom = (640 / w).toFixed(3); } });
     openedForPrint = $$('details:not([open])'); openedForPrint.forEach((x) => { x.open = true; });
+    // a scene that waits for the reader (a ladder, a log, three portraits) is printed as it stands when it has all played
+    armedForPrint = $$('.armed'); armedForPrint.forEach((x) => x.classList.remove('armed'));
     $$('[data-rv]').forEach((x) => x.classList.add('in'));
     $$('.route .leg, .route .stop, .reg .nm').forEach((x) => x.classList.add('on'));
     root.classList.add('printing');
@@ -2238,7 +2241,7 @@ void main(){
     if (!BOOK) { body.classList.add('bookpage', 'as-book'); }
     $$('img[loading="lazy"]').forEach((x) => { x.loading = 'eager'; });
   }
-  function afterPrint() { unflattenStages(); $$('[data-przoom]').forEach((el) => { el.style.zoom = ''; delete el.dataset.przoom; }); openedForPrint.forEach((x) => { x.open = false; }); openedForPrint = []; root.classList.remove('printing'); body.classList.remove('as-book'); if (!body.classList.contains('as-book') && !BOOK) body.classList.remove('bookpage'); }
+  function afterPrint() { unflattenStages(); $$('[data-przoom]').forEach((el) => { el.style.zoom = ''; delete el.dataset.przoom; }); openedForPrint.forEach((x) => { x.open = false; }); openedForPrint = []; armedForPrint.forEach((x) => x.classList.add('armed')); armedForPrint = []; root.classList.remove('printing'); body.classList.remove('as-book'); if (!body.classList.contains('as-book') && !BOOK) body.classList.remove('bookpage'); }
   addEventListener('beforeprint', prepPrint);
   addEventListener('afterprint', afterPrint);
 

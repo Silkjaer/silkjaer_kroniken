@@ -1786,3 +1786,105 @@ img[data-zoom]{cursor:zoom-in}
 .branches.on-map .br-p.o circle{fill:#b3452f}
 .branches.on-map .br-p text{font:italic 600 34px var(--serif);fill:#1f2d3a;stroke:#efe6d0;stroke-width:8px;paint-order:stroke;stroke-linejoin:round}
 @media screen and (max-width:720px){.branches.on-map .br-p text{font-size:52px}}
+/* the cover title is sized to its cartouche, not to the window: the name keeps inside the frame at every width */
+.cartouche{width:min(640px,100%);container-type:inline-size}
+.cover-t{font-size:clamp(60px,11vw,124px);font-size:min(23cqi,136px)}
+/* phone and upright tablet: the picture keeps the top of the screen, and each card rises from under it and passes
+   on over it, so the whole height of the screen reads; between two cards the picture always has a clear stretch */
+@media screen and (max-width:719.98px),screen and (max-width:1100px) and (orientation:portrait){
+  .chap .stage .stage-steps{z-index:4;padding-bottom:12vh;padding-bottom:12svh}
+  .chap .stage .stage-step,.chap .stage .stage-step:has(>.stage-card>.stage-cap:only-child){min-height:0;padding-bottom:calc(var(--vis-h,58vh) + 6vh);padding-bottom:calc(var(--vis-h,58svh) + 6svh)}
+  .chap .stage .stage-step.empty{min-height:34vh;min-height:34svh;padding-bottom:0}
+  .chap .stage .stage-step:last-child{padding-bottom:0}
+  .chap .stage .stage-card{background:rgb(243,236,222);transition:opacity .45s var(--ease)}
+}
+/* print: boxes are read one after the other, as on a page of a book — never two columns of boxes running on side by
+   side over several pages */
+@media print{
+  .people{display:block!important}
+  .people>.person{margin:0 0 5mm!important}
+  .caveats.b-grid{columns:auto!important;column-count:1!important}
+  .caveats.b-grid>.caveat{margin:0 0 4mm!important}
+  /* the before-and-after slider: on paper the two pictures lie side by side, each with its year */
+  .sf:has(input[type=range])>div:first-child,.sf [data-fade-label],.sf input[type=range]{display:none!important}
+  .sf>.sf2{position:static!important;aspect-ratio:auto!important;overflow:visible!important;display:grid!important;grid-template-columns:1fr 1fr;gap:1.6mm 4mm;align-items:start}
+  .sf>.sf2>img{position:static!important;inset:auto!important;opacity:1!important;width:100%!important;height:auto!important;max-height:none!important;object-fit:contain!important;filter:none!important}
+  .sf>.sf2>img:first-of-type{order:1}.sf>.sf2>img:last-of-type{order:2}
+  .sf>.sf2::before,.sf>.sf2::after{order:3;font:500 7.5pt/1.2 var(--serif);letter-spacing:.14em;text-transform:uppercase;color:#555}
+  .sf>.sf2::before{content:"1948"}
+  .sf>.sf2::after{content:"2025";order:4}
+}
+/* print: the page is filled the way a book is set — a long box or a scene's paragraphs run on over the page break
+   rather than leaving half a page empty; a picture is never taller than half the page and keeps its caption, and
+   keeps the first lines of the text it belongs to */
+@media print{
+  p{orphans:3;widows:3}
+  .b-box,.box,.bx,.note,.stage-step,.stage.pr-flat .stage-step,figure,.b-fig,.pc-card{break-inside:auto!important}
+  img,svg,.pr-shot,.pr-detail,.sv-shot,blockquote,.person,.caveat,.crew-roll>.nm,tr{break-inside:avoid}
+  .pr-shot,.pr-detail{break-after:avoid}
+  figcaption,.cap,.b-cap{break-before:avoid}
+  img{max-height:125mm!important}
+  .pr-shot img{max-height:115mm!important}
+  /* a part opens on its own page with its title set in the middle of it, as a part title in a book */
+  .bk-part{break-before:page;break-after:page;min-height:235mm;display:flex!important;flex-direction:column;justify-content:center;gap:4mm}
+}
+@media print{
+  /* a figure is one thing: picture and caption on the same page */
+  figure,figcaption,.stage-cap{break-inside:avoid!important}
+  /* text boxes set side by side on the screen are read one after the other on paper */
+  .b-grid:has(>.bx){display:block!important}
+  .b-grid:has(>.bx)>.bx{margin:0 0 4mm!important;break-inside:avoid}
+  .b-grid:has(>.bx)>.bx:last-child{margin-bottom:0!important}
+  /* the family tree: the screen's wide board becomes a register — the forebears as short rows at the head, then each
+     of Niels Thomsen Silkjær's children as a row of its own: the child on the left, marriage and children beside */
+  .b-grid:has([data-pan-btn]),p.b-p:has(+.b-grid [data-pan-btn]){display:none!important}
+  [data-pan]{overflow:visible!important;zoom:1!important;padding:0!important;border:0!important;background:none!important;box-shadow:none!important}
+  [data-pan]>div{min-width:0!important;width:auto!important;padding:0!important;align-items:stretch!important;flex-wrap:nowrap!important}
+  [data-pan] .fill-line{display:none!important}
+  [data-pan]>div>.sf.bx{width:auto!important;margin:0 0 3mm}
+  [data-pan]>div>div:has(>.pn-card){display:flex!important;flex-wrap:nowrap!important;justify-content:center;margin:0 0 3mm;break-inside:avoid}
+  [data-pan]>div>div>.pn-card{width:auto!important;flex:1 1 0;min-width:0}
+  [data-pan]>div>div:has(>div>.pn-card){display:block!important;width:auto!important;margin-top:2mm}
+  [data-pan]>div>div:has(>div>.pn-card)>div{display:grid!important;grid-template-columns:55mm 1fr;gap:1.5mm 5mm;width:auto!important;flex:none!important;align-items:start;break-inside:avoid;padding:3mm 0;border-top:.3mm solid #c9c3b6}
+  [data-pan]>div>div:has(>div>.pn-card)>div>a.pn-card:first-of-type{grid-column:1;grid-row:1 / span 9}
+  [data-pan]>div>div:has(>div>.pn-card)>div>:not(a.pn-card:first-of-type){grid-column:2}
+  [data-pan] .m-xs.uc.c-sea{display:none!important}
+}
+@media print{
+  [data-pan]>div>div:has(>div>.pn-card)>div>a.pn-card:first-of-type{align-self:start}
+  /* a person card runs on over the page like any long box; its head stays with the first lines, each fact stays whole */
+  .person{break-inside:auto!important}
+  .person-role,.person h3,.person-life{break-after:avoid}
+  .person dt,.person dd{break-inside:avoid}
+  .person dt{break-after:avoid}
+}
+@media print{
+  /* the scroll-driven pictures are printed at rest, fully drawn */
+  .lv-track,.pan-fig .pan-track,.pan-fig .pan-in{height:auto!important}
+  .sweep .lv-stage{position:static!important}
+  .sweep .life i{transform:none!important}
+  .sweep .lives>div,.sweep .lv-m{opacity:1!important}
+  .lv-cur{display:none!important}
+  .lv-arc{opacity:1!important;transform:none!important}
+}
+@media print{
+  /* a short box stays whole on one page; only a box of several paragraphs or a long list runs on over the break */
+  .b-box,.box,.bx,.note{break-inside:avoid!important}
+  .b-box:has(p+p,li:nth-child(5),dl dt:nth-of-type(5)),.box:has(p+p,li:nth-child(5)),.bx:has(p+p,li:nth-child(5),dl dt:nth-of-type(5)),.note:has(p+p){break-inside:auto!important}
+  .sf:has(input[type=range]){break-inside:avoid!important}
+  /* screen furniture has no place on paper */
+  .pn-card>.m-s.uc.c-sea:last-child,input[type=search],div:has(>input[type=search]:only-child){display:none!important}
+}
+@media print{
+  /* a scene's steps are plain blocks on paper, so a step can begin at the foot of one page and go on over the next */
+  .stage-step,.stage.pr-flat .stage-step,.stage-steps{display:block!important}
+  .stage-card{display:block!important}
+}
+@media print{
+  img{max-height:110mm!important}
+  .pr-shot img{max-height:98mm!important}
+}
+@media print{
+  /* a credit line closes its caption: it does not hold on to whatever follows */
+  :is(figcaption,.stage-cap,.cap,.b-cap,.stage-card) .m-s:last-child,:is(figcaption,.stage-cap,.stage-card)>:last-child{break-after:auto!important}
+}
