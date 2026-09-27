@@ -1,0 +1,6 @@
+# GitHub Pages publishes the built edition at the root of the repository.
+# The build, the manuscript it is built from and the notes are not part of the site.
+exclude:
+  - build
+  - README.md
+  - node_modules

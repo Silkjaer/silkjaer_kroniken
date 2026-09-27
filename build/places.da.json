@@ -1,0 +1,173 @@
+{
+ "oversigt": {
+  "c": [
+   56.15,
+   8.55
+  ],
+  "z": 7,
+  "navn": "Vestjylland",
+  "note": "Slægtens landskab"
+ },
+ "silkjaer": {
+  "c": [
+   56.2716,
+   8.132
+  ],
+  "z": 12,
+  "navn": "Silkjær, Øhusevej",
+  "note": "Gården, navnet kom fra"
+ },
+ "husby": {
+  "c": [
+   56.2818,
+   8.17633
+  ],
+  "z": 11,
+  "navn": "Husby Kirke",
+  "note": "Døbt, viet, begravet"
+ },
+ "husbyklit": {
+  "c": [
+   56.283,
+   8.105
+  ],
+  "z": 11,
+  "navn": "Husby Klit",
+  "note": "Havbjergene og stranden"
+ },
+ "oekjaer": {
+  "c": [
+   56.274,
+   8.136
+  ],
+  "z": 12,
+  "navn": "Økjær",
+  "note": "Husmandsstedet"
+ },
+ "tarp": {
+  "c": [
+   56.162,
+   8.195
+  ],
+  "z": 11,
+  "navn": "Tarp, Vedersø",
+  "note": "Anne Marie Jansdatters hjem"
+ },
+ "havet": {
+  "c": [
+   56.24,
+   7.96
+  ],
+  "z": 9,
+  "navn": "Ud for Husby",
+  "note": "9. november 1878"
+ },
+ "vedersoe": {
+  "c": [
+   56.159,
+   8.098
+  ],
+  "z": 10,
+  "navn": "Vedersø Redningsstation",
+  "note": "Mandskabet 1915"
+ },
+ "landting": {
+  "c": [
+   56.5167,
+   8.7333
+  ],
+  "z": 9,
+  "navn": "Landting Mark",
+  "note": "Ane Jensens fødested"
+ },
+ "raekkermoelle": {
+  "c": [
+   55.9539,
+   8.5322
+  ],
+  "z": 10,
+  "navn": "Rækker Mølle, Sædding",
+  "note": "Murermesterens by"
+ },
+ "ikast": {
+  "c": [
+   56.1394,
+   9.1547
+  ],
+  "z": 9,
+  "navn": "Ikast-egnen",
+  "note": "Sporet fortsætter"
+ },
+ "vorgod": {
+  "c": [
+   56.1339,
+   8.7539
+  ],
+  "z": 10,
+  "navn": "Vorgod Kirke",
+  "note": "Lauras sidste sogn"
+ },
+ "esbjerg": {
+  "c": [
+   55.464,
+   8.44
+  ],
+  "z": 10,
+  "navn": "Havnegade, Esbjerg",
+  "note": "Fiskeskipperens hjem"
+ },
+ "nordsoen": {
+  "c": [
+   55.7,
+   7.2
+  ],
+  "z": 7,
+  "navn": "Nordsøen",
+  "note": "16. marts 1945"
+ },
+ "holmsland": {
+  "c": [
+   56.05,
+   8.13
+  ],
+  "z": 9,
+  "navn": "Holmslands Klit",
+  "note": "Tarbensen-grenen"
+ },
+ "vejlby": {
+  "c": [
+   56.455,
+   10.07
+  ],
+  "z": 8,
+  "navn": "Vejlby ved Allingåbro",
+  "note": "Graveren og navnet mod øst"
+ },
+ "aargab": {
+  "c": [
+   55.97,
+   8.125
+  ],
+  "z": 11,
+  "navn": "Årgab, Holmsland Klit",
+  "note": "Enken fra Årgab"
+ },
+ "vridsloeselille": {
+  "c": [
+   55.6664,
+   12.3489
+  ],
+  "z": 8,
+  "navn": "Vridsløselille, Albertslund",
+  "note": "Fange nr. 240, 1913"
+ },
+ "hartlepool": {
+  "c": [
+   54.69,
+   -1.21
+  ],
+  "z": 7,
+  "navn": "Hartlepool, England",
+  "note": "Grundstødningen 1948"
+ }
+}
