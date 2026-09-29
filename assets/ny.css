@@ -1948,10 +1948,20 @@ img[data-zoom]{cursor:zoom-in}
 .tree-sheet .fill-line{height:4mm!important}
 .tree-sheet .fill-line[style*="height:1px"]{height:1px!important}
 
+/* the shared SVG definitions take no line of their own (in Safari that line could start an empty last page) */
+svg.defs{position:absolute;width:0;height:0;overflow:hidden}
+
 /* print: a viewport unit means the page, in every browser. Safari measures vw (and width media queries) against the
    window, not the paper; --vw carries Chrome's value for an A4 page between 16 mm margins, and the full-bleed
    blocks are simply as wide as the page */
 @media print{
   :root{--vw:6.73px}
+  /* WebKit can print a filtered picture as a black box: on paper the pictures there are printed as they are */
+  .wk img{filter:none!important}
+  /* a chapter ends where its text ends: the next one starts a page anyway, and Safari would carry a trailing
+     padding or margin onto a page of its own */
+  .chap{padding-bottom:0!important}
+  .chap :is(section,.flow)>:last-child,.chap :is(section,.flow)>:last-child>:last-child,.stage.pr-flat .stage-step:last-child{margin-bottom:0!important}
+  .chap :is(section,.flow)>figure:last-child{padding-bottom:0!important}
   .w-full,.b.w-full,.w-xwide{width:auto!important;max-width:100%!important;margin-left:0!important;margin-right:0!important}
 }

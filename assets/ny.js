@@ -16,6 +16,7 @@
   // inch; Safari, and every browser on an iPhone or iPad, lay a page out 1.25 x its width in points
   const WEBKIT = /AppleWebKit/.test(navigator.userAgent) && !/Chrome\/|Chromium\/|Edg\//.test(navigator.userAgent);
   const PAGE_W = WEBKIT ? 630 : 673, PAGE_H = WEBKIT ? 914 : 975;
+  if (WEBKIT) root.classList.add('wk');
   const ease = (t) => (t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
   const readJSON = (sel) => { try { return JSON.parse(($(sel) || {}).textContent || '{}'); } catch (e) { return {}; } };
   const SCRIPT = d.currentScript;
