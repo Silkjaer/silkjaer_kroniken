@@ -1423,6 +1423,9 @@ class Site:
         for path, html in pages:
             L = 'en' if path.startswith('en/') else 'da'
             html = re.sub(r'(<div[^>]*data-revision[^>]*>)[^<]*(</div>)', lambda m: m.group(1) + rev[L] + m.group(2), html)
+            # a vw in the manuscript's own styles is read through --vw, which on paper is the page's width in every
+            # browser (Safari otherwise measures it against the window)
+            html = re.sub(r'style="[^"]*\dvw\b[^"]*"', lambda m: re.sub(r'(?<![\w.#-])(-?)(\d*\.?\d+)vw\b', r'calc(\1\2*var(--vw))', m.group(0)), html)
             fn = os.path.join(out, path)
             os.makedirs(os.path.dirname(fn), exist_ok=True)
             open(fn, 'w', encoding='utf-8').write(html)

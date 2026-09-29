@@ -12,6 +12,10 @@
   const SPLITQ = 'screen and (max-width: 719.98px), screen and (max-width: 1100px) and (orientation: portrait)';
   const splitNow = () => { try { return matchMedia(SPLITQ).matches; } catch (e) { return innerWidth < 720; } };
   const lerp = (a, b, t) => a + (b - a) * t;
+  // the page between the margins (178 x 258 mm) in the CSS pixels each engine prints with: Chrome and Firefox 96 to the
+  // inch; Safari, and every browser on an iPhone or iPad, lay a page out 1.25 x its width in points
+  const WEBKIT = /AppleWebKit/.test(navigator.userAgent) && !/Chrome\/|Chromium\/|Edg\//.test(navigator.userAgent);
+  const PAGE_W = WEBKIT ? 630 : 673, PAGE_H = WEBKIT ? 914 : 975;
   const ease = (t) => (t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
   const readJSON = (sel) => { try { return JSON.parse(($(sel) || {}).textContent || '{}'); } catch (e) { return {}; } };
   const SCRIPT = d.currentScript;
@@ -2268,8 +2272,9 @@ void main(){
         sh.remove(); sh.style.cssText = '';
         return [w, h];
       };
-      // the page between the margins: 178 x 258 mm; a page may be set down to 90 % to hold one more child
-      const PW = 673, PH = 975, Z = .9;
+      // a page may be set down to 90 % to hold one more child
+      // (Safari prints a CSS pixel 1/15 larger, so there the same printed size is reached at 85 %)
+      const PW = PAGE_W, PH = PAGE_H, Z = WEBKIT ? .85 : .9;
       const groups = [];
       let cur = [];
       for (let j = 0; j < n; j++) {
@@ -2291,7 +2296,7 @@ void main(){
     if (!$('.tree-sheet')) treeSheets();
     $$('.sea-chart').forEach((x) => { if (x._print) x._print(); });
     // a family tree wider than the sheet is set smaller so it fits between the margins (otherwise the browser shrinks every page)
-    $$('[data-pan]').forEach((el) => { const w = el.scrollWidth; if (w > 700) { el.dataset.przoom = '1'; el.style.zoom = (640 / w).toFixed(3); } });
+    $$('[data-pan]').forEach((el) => { const w = el.scrollWidth; if (w > PAGE_W) { el.dataset.przoom = '1'; el.style.zoom = ((PAGE_W - 30) / w).toFixed(3); } });
     openedForPrint = $$('details:not([open])'); openedForPrint.forEach((x) => { x.open = true; });
     // a scene that waits for the reader (a ladder, a log, three portraits) is printed as it stands when it has all played
     armedForPrint = $$('.armed'); armedForPrint.forEach((x) => x.classList.remove('armed'));
