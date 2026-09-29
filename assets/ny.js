@@ -899,7 +899,7 @@ void main(){
           pin(tN1, x1, y1 - 12, a1 * clamp((u2 - .55) / .12), s, vx, vy, W, Hh);
           pin(tN2, up > 0 ? ASH : x2, up > 0 ? AGY - 30 : y2 - 12, inW * clamp((u3 - .1) / .12), s, vx, vy, W, Hh);
           const ap = qpt(Q[0], .5);
-          pin(tRk, ap[0], ap[1] - 4, aRk, s, vx, vy, W, Hh);
+          pin(tRk, ap[0], ap[1] - 4 - (W < 760 ? 34 / s : 0), aRk, s, vx, vy, W, Hh);   // on a phone the rockets' name stands clear above the swimmer's
           pin(tCl, INN, 300, aClock, s, vx, vy, W, Hh);
         }
         // sound at the moments
@@ -1060,6 +1060,18 @@ void main(){
     if (!shots.length || !steps.length) return null;
     const nat = (sh) => [+sh.img.getAttribute('width') || sh.img.naturalWidth || 1600, +sh.img.getAttribute('height') || sh.img.naturalHeight || 1000];
     shots.forEach((sh) => { const [w, h] = nat(sh); sh.pic.style.width = w + 'px'; sh.pic.style.height = h + 'px'; });
+    // phone: the band under the picture is filled with the same picture, blurred and darkened — the room it hangs in
+    let amb = null, ambSrc = '';
+    const ambSet = (k) => {
+      if (!amb || !SPL || k < 0) return;
+      const im = shots[steps[k].shot].img, src = im.currentSrc || im.src;
+      if (!src || src === ambSrc) return;
+      ambSrc = src;
+      const [a, b] = amb.children, nx = a.classList.contains('on') ? b : a, od = nx === a ? b : a;
+      nx.onload = () => { nx.classList.add('on'); od.classList.remove('on'); };
+      nx.src = src;
+    };
+    if (el.closest('.chap') && !BOOK) { amb = d.createElement('div'); amb.className = 'sv-amb'; amb.setAttribute('aria-hidden', 'true'); amb.innerHTML = '<img alt="" decoding="async"><img alt="" decoding="async">'; el.insertBefore(amb, vis); }
     const R = el.dataset.side === 'right';
     let edge = null, SPL = false;
     const fitSplit = () => {
@@ -1074,7 +1086,7 @@ void main(){
       const vh = Math.round(clamp(need, innerHeight * .44, innerHeight * .6));
       vis.style.height = vh + 'px'; el.style.setProperty('--vis-h', vh + 'px');
     };
-    fitSplit(); listen(window, 'resize', fitSplit);
+    fitSplit(); listen(window, 'resize', () => { fitSplit(); ambSet(lastI); });
     // a picture is never blown up past what its pixels carry: an old small print that cannot fill the screen is shown
     // whole, as a print on the table, at the size it holds — not stretched into a blur
     const LIM = 1;
@@ -1146,6 +1158,7 @@ void main(){
         });
         if (i !== lastI) {
           lastI = i;
+          ambSet(i);
           const m = steps[i].mark, set = m === 'all' ? null : m.split(' ').filter(Boolean);
           shots.forEach((sh) => sh.mk.forEach((x) => { x.classList.toggle('on', !!m && (set === null || set.includes(x.dataset.n))); x.classList.toggle('hi', !!set && set.includes(x.dataset.n)); }));
           if (t > .05) Sound.sfx('page');
@@ -2225,9 +2238,57 @@ void main(){
       st.classList.add('pr-flat');
     });
   }
+  /* print: the family tree set on whole pages — the forebears at the head of each, Niels Thomsen Silkjær's children
+     side by side below, as many to a page as the page will hold at print size. The sheets are measured before
+     printing (their sizes are in millimetres and points), and set a little smaller only if a page must hold more. */
+  function treeSheets() {
+    $$('main [data-pan]').forEach((pan) => {
+      const root = pan.firstElementChild;
+      const row = root && Array.from(root.children).find((c) => $(':scope > div > .pn-card', c));
+      if (!row) return;
+      const ri = Array.from(root.children).indexOf(row), n = row.children.length;
+      const sheet = (list) => {
+        const sh = d.createElement('div');
+        sh.className = 'tree-sheet pr-only';
+        const c = root.cloneNode(true);
+        c.style.minWidth = '0'; c.style.width = 'max-content';
+        const r = c.children[ri];
+        r.style.width = 'auto';
+        Array.from(r.children).forEach((k, j) => { if (!list.includes(j)) k.remove(); });
+        // the line the children hang from reaches from the first of them on this page to the last
+        const hl = r.previousElementSibling;
+        if (hl && hl.classList.contains('fill-line')) { hl.style.setProperty('width', ((list.length - 1) * 47.5) + 'mm', 'important'); hl.style.setProperty('height', '1px', 'important'); }
+        sh.appendChild(c);
+        return sh;
+      };
+      const size = (sh) => {
+        pan.after(sh);
+        sh.style.cssText = 'display:block;position:absolute;left:-20000px;top:0;visibility:hidden';
+        const w = sh.firstElementChild.scrollWidth, h = sh.firstElementChild.scrollHeight;
+        sh.remove(); sh.style.cssText = '';
+        return [w, h];
+      };
+      // the page between the margins: 178 x 258 mm; a page may be set down to 90 % to hold one more child
+      const PW = 673, PH = 975, Z = .9;
+      const groups = [];
+      let cur = [];
+      for (let j = 0; j < n; j++) {
+        const [w, h] = size(sheet([...cur, j]));
+        if (cur.length && (w > PW / Z || h > PH / Z)) { groups.push(cur); cur = [j]; } else cur.push(j);
+      }
+      if (cur.length) groups.push(cur);
+      const sheets = groups.map(sheet);
+      const z = Math.min(1, ...sheets.map((sh) => { const [w, h] = size(sh); return Math.min(PW / w, PH / h); }));
+      let at = pan;
+      sheets.forEach((sh) => { if (z < .999) sh.firstElementChild.style.zoom = z.toFixed(3); at.after(sh); at = sh; });
+      pan.classList.add('has-sheets');
+    });
+  }
+  function untreeSheets() { $$('.tree-sheet').forEach((x) => x.remove()); $$('.has-sheets').forEach((x) => x.classList.remove('has-sheets')); }
   function unflattenStages() { $$('.pr-only').forEach((x) => x.remove()); $$('.pr-flat').forEach((x) => x.classList.remove('pr-flat')); }
   function prepPrint() {
     if (!$('.pr-flat')) flattenStages();
+    if (!$('.tree-sheet')) treeSheets();
     $$('.sea-chart').forEach((x) => { if (x._print) x._print(); });
     // a family tree wider than the sheet is set smaller so it fits between the margins (otherwise the browser shrinks every page)
     $$('[data-pan]').forEach((el) => { const w = el.scrollWidth; if (w > 700) { el.dataset.przoom = '1'; el.style.zoom = (640 / w).toFixed(3); } });
@@ -2241,7 +2302,7 @@ void main(){
     if (!BOOK) { body.classList.add('bookpage', 'as-book'); }
     $$('img[loading="lazy"]').forEach((x) => { x.loading = 'eager'; });
   }
-  function afterPrint() { unflattenStages(); $$('[data-przoom]').forEach((el) => { el.style.zoom = ''; delete el.dataset.przoom; }); openedForPrint.forEach((x) => { x.open = false; }); openedForPrint = []; armedForPrint.forEach((x) => x.classList.add('armed')); armedForPrint = []; root.classList.remove('printing'); body.classList.remove('as-book'); if (!body.classList.contains('as-book') && !BOOK) body.classList.remove('bookpage'); }
+  function afterPrint() { unflattenStages(); untreeSheets(); $$('[data-przoom]').forEach((el) => { el.style.zoom = ''; delete el.dataset.przoom; }); openedForPrint.forEach((x) => { x.open = false; }); openedForPrint = []; armedForPrint.forEach((x) => x.classList.add('armed')); armedForPrint = []; root.classList.remove('printing'); body.classList.remove('as-book'); if (!body.classList.contains('as-book') && !BOOK) body.classList.remove('bookpage'); }
   addEventListener('beforeprint', prepPrint);
   addEventListener('afterprint', afterPrint);
 
