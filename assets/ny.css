@@ -1899,7 +1899,10 @@ img[data-zoom]{cursor:zoom-in}
 /* phone: the blurred picture that fills the band under a photograph or a map */
 .sv-amb{display:none}
 @media screen and (max-width:719.98px),screen and (max-width:1100px) and (orientation:portrait){
-  .chap .stage>.sv-amb{display:block;position:sticky;top:0;height:100vh;height:100svh;margin-bottom:-100vh;margin-bottom:-100svh;overflow:hidden;z-index:2;pointer-events:none;background:#0c0f10}
+  .chap .stage>.sv-amb{display:block;position:sticky;top:0;height:100vh;height:100lvh;margin-bottom:-100vh;margin-bottom:-100lvh;overflow:hidden;z-index:2;pointer-events:none;background:#0c0f10}
+  /* the band is as tall as the largest viewport (no dark strip under it when the browser bar folds away), and it
+     ends where the scene ends: the text after the scene is never covered */
+  .chap .stage:has(>.sv-amb){clip-path:inset(0)}
   .sv-amb img{position:absolute;left:-8%;top:-8%;width:116%;height:116%;max-width:none;object-fit:cover;filter:blur(24px) saturate(1.1) brightness(.58);opacity:0;transition:opacity 1s var(--ease)}
   .sv-amb img.on{opacity:1}
   .sv-amb::after{content:"";position:absolute;inset:0;background:linear-gradient(rgba(12,15,16,.25),rgba(12,15,16,.6))}
